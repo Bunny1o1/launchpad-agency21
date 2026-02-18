@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Saasible — AI Growth Agency for Builders</title>
+<title>SAASIBLE — AI Growth Agency for Builders</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
@@ -483,7 +483,7 @@ footer { background: var(--text); padding: 72px 0 40px; }
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">LAUNCH<span>PAD</span></a>
+  <a class="nav-logo" href="#">SAASI<span>BLE</span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#process">Process</a></li>
@@ -823,7 +823,7 @@ footer { background: var(--text); padding: 72px 0 40px; }
       </div>
       <div class="t-card reveal">
         <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"I've worked with 3 marketing agencies before. None of them understood what I was building. Launchpad spoke my language from day one. 6 weeks in, organic traffic is up 300%."</p>
+        <p class="t-quote">"I've worked with 3 marketing agencies before. None of them understood what I was building. Saasible spoke my language from day one. 6 weeks in, organic traffic is up 300%."</p>
         <div class="t-author">
           <div class="t-avatar">MK</div>
           <div><div class="t-name">Maya Krishnan</div><div class="t-role">Solo Founder, Patchwork</div></div>
@@ -854,7 +854,7 @@ footer { background: var(--text); padding: 72px 0 40px; }
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">LAUNCH<span>PAD</span></div>
+        <div class="footer-logo">SAASI<span>BLE</span></div>
         <p class="footer-about">The AI-native growth agency for technical founders who are done just shipping and ready to start selling.</p>
       </div>
       <div class="f-col">
@@ -886,7 +886,7 @@ footer { background: var(--text); padding: 72px 0 40px; }
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2025 Launchpad Agency. Built for builders.</div>
+      <div class="footer-copy">© 2025 Saasible Agency. Built for builders.</div>
       <div class="footer-tag">Stop building. Start selling.</div>
     </div>
   </div>
