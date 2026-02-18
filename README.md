@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCBH6JKG');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>SAASIBLE — AI Growth Agency for Builders</title>
@@ -477,6 +484,21 @@ footer { background: var(--text); padding: 72px 0 40px; }
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCBH6JKG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCBH6JKG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCBH6JKG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCBH6JKG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
@@ -723,25 +745,8 @@ footer { background: var(--text); padding: 72px 0 40px; }
         <div class="nl-form">
           <div class="nl-form-title">Join 2,400+ builders</div>
           <div class="nl-form-sub">Get the free GTM checklist when you subscribe.</div>
-          <form id="newsletterForm">
-            <div style="display:flex;flex-direction:column;gap:12px;">
-              <div class="form-field">
-                <label class="form-label" for="nameInput">Your Name</label>
-                <input class="form-input" type="text" id="nameInput" placeholder="Alex Chen" required/>
-              </div>
-              <div class="form-field">
-                <label class="form-label" for="emailInput">Work Email</label>
-                <input class="form-input" type="email" id="emailInput" placeholder="alex@yourstartup.com" required/>
-              </div>
-              <div class="form-field">
-                <label class="form-label" for="stageInput">Current stage</label>
-                <input class="form-input" type="text" id="stageInput" placeholder="e.g. Pre-revenue, $5k MRR"/>
-              </div>
-              <button type="submit" class="form-submit">Subscribe Free →</button>
-              <p class="form-note">No spam. Unsubscribe anytime. Sent every Tuesday.</p>
-              <div class="success-msg" id="successMsg">✓ You're in! Check your inbox for the GTM checklist.</div>
-            </div>
-          </form>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIV2kDJk2f9lWDCMihqymmkrzW4_afrQpxaZTytexwn_lmfg/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px;margin-top:12px;">Loading…</iframe>
+          <p class="form-note" style="margin-top:10px;text-align:center;">No spam. Unsubscribe anytime. Sent every Tuesday.</p>
         </div>
       </div>
     </div>
