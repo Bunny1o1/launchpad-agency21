@@ -646,7 +646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>We tear down your landing page, messaging, and positioning. You get a detailed playbook with exact fixes — copy rewrites, CTA strategy, ICP clarity, and your 3-channel GTM plan.</p>
         <div class="svc-price">$499</div>
         <div class="svc-note">Delivered in 5 business days</div>
-        <a href="#newsletter" class="svc-link">Get Started →</a>
+        <div id="paypal-container-KQUSB3BGFLR98"></div>
       </div>
       <div class="svc-card reveal">
         <span class="svc-tag">Most Popular</span>
@@ -961,6 +961,7 @@ document.querySelector('a[href="#privacy"]').addEventListener('click', function(
 <!-- PayPal Buttons -->
 <script>
 function initPayPal() {
+  paypal.HostedButtons({ hostedButtonId: "KQUSB3BGFLR98" }).render("#paypal-container-KQUSB3BGFLR98");
   paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N");
   paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S");
 }
