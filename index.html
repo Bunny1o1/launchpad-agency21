@@ -491,7 +491,6 @@ footer { background: var(--text); padding: 72px 0 40px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 </style>
-<script src="https://www.paypal.com/sdk/js?client-id=BAABMlwrq21-t4s558PCetmDyxCpuLqKbmPcjlfMSWGF_L_vu4-0LvQvgX8lR46bGnuHdasbPfyUBd7-xo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -806,7 +805,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Slack access to your growth team</li>
         </ul>
         <div id="paypal-container-VF5ZQPNT3P69N"></div>
-        <script>paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N")</script>
       </div>
       <div class="price-card reveal">
         <div class="price-name">Revenue Sprint</div>
@@ -822,7 +820,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Results guaranteed or we work free</li>
         </ul>
         <div id="paypal-container-6ZX5T6SU8SD9S"></div>
-        <script>paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S")</script>
       </div>
     </div>
   </div>
@@ -952,4 +949,22 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // Newsletter handled by Google Form iframe
 
-// Privac
+// Privac// Privacy Policy toggle
+document.querySelector('a[href="#privacy"]').addEventListener('click', function(e){
+  e.preventDefault();
+  const sec = document.getElementById('privacy');
+  sec.style.display = 'block';
+  sec.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+
+<!-- PayPal Buttons -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAABMlwrq21-t4s558PCetmDyxCpuLqKbmPcjlfMSWGF_L_vu4-0LvQvgX8lR46bGnuHdasbPfyUBd7-xo&components=hosted-buttons&disable-funding=venmo&currency=USD" onload="initPayPal()"></script>
+<script>
+function initPayPal() {
+  paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N");
+  paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S");
+}
+</script>
+</body>
+</html>
