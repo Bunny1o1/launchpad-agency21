@@ -490,6 +490,7 @@ footer { background: var(--text); padding: 72px 0 40px; }
   .nl-box { padding: 40px 24px; border-radius: 16px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
+[id^="paypal-container-"] { min-height: 45px; margin-top: 16px; }
 </style>
 </head>
 <body>
@@ -654,7 +655,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Your fractional growth co-founder. Monthly: 4 SEO articles, email sequences, landing page iteration, weekly distribution report, and Slack access to your growth team.</p>
         <div class="svc-price">$2,400<span style="font-size:17px;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;color:var(--text-3)">/mo</span></div>
         <div class="svc-note">3-month minimum · cancel anytime</div>
-        <a href="#newsletter" class="svc-link">Start Today →</a>
+        <div id="paypal-container-VF5ZQPNT3P69N"></div>
       </div>
       <div class="svc-card reveal">
         <span class="svc-tag">Done-For-You</span>
@@ -662,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>30-day intensive. We rebuild your entire GTM from scratch — new positioning, new landing page, outbound sequences, and a full content calendar. You ship. We sell.</p>
         <div class="svc-price">$6,500</div>
         <div class="svc-note">Flat fee · 30 days · results guaranteed</div>
-        <a href="#newsletter" class="svc-link">Book a Call →</a>
+        <div id="paypal-container-6ZX5T6SU8SD9S"></div>
       </div>
     </div>
   </div>
@@ -804,9 +805,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Weekly distribution report</li>
           <li>Slack access to your growth team</li>
         </ul>
-        <div id="paypal-container-VF5ZQPNT3P69N"></div>
-      </div>
-      <div class="price-card reveal">
+        <div id="paypal-container-VF5ZQPNT3P69N-2"></div>
         <div class="price-name">Revenue Sprint</div>
         <div class="price-val"><sup>$</sup>6,500</div>
         <div class="price-period">flat fee · 30-day sprint</div>
@@ -819,7 +818,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Full 90-day content calendar</li>
           <li>Results guaranteed or we work free</li>
         </ul>
-        <div id="paypal-container-6ZX5T6SU8SD9S"></div>
+        <div id="paypal-container-6ZX5T6SU8SD9S-2"></div>
       </div>
     </div>
   </div>
@@ -963,7 +962,9 @@ document.querySelector('a[href="#privacy"]').addEventListener('click', function(
 function initPayPal() {
   paypal.HostedButtons({ hostedButtonId: "KQUSB3BGFLR98" }).render("#paypal-container-KQUSB3BGFLR98");
   paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N");
+  paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N-2");
   paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S");
+  paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S-2");
 }
 </script>
 <script src="https://www.paypal.com/sdk/js?client-id=BAABMlwrq21-t4s558PCetmDyxCpuLqKbmPcjlfMSWGF_L_vu4-0LvQvgX8lR46bGnuHdasbPfyUBd7-xo&components=hosted-buttons&disable-funding=venmo&currency=USD" onload="initPayPal()"></script>
