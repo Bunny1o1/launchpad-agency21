@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -712,7 +711,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://blog.saasible.in" class="btn-outline" target="_blank">View All →</a>
     </div>
     <div class="articles-grid">
-      <a href="https://blog.saasible.in/how-to-get-your-first-100-paying-customers-without-an-audience" target="_blank" style="text-decoration:none;color:inherit;">
+      <a href="https://blog.saasible.in/how-to-get-your-first-100-paying-customers-without-an-audiencef" target="_blank" style="text-decoration:none;color:inherit;">
       <div class="art-card reveal">
         <div class="art-tag">GTM Strategy</div>
         <h3>How to Get Your First 100 Paying Customers Without an Audience</h3>
@@ -931,13 +930,7 @@ const obs = new IntersectionObserver(entries=>{
 },{ threshold:0.08, rootMargin:'0px 0px -32px 0px' });
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// NEWSLETTER
-document.getElementById('newsletterForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const btn=this.querySelector('.form-submit');
-  btn.textContent='Subscribing...'; btn.style.opacity='0.7';
-  setTimeout(()=>{ btn.style.display='none'; document.getElementById('successMsg').style.display='block'; },1200);
-});
+// Newsletter handled by Google Form iframe
 </script>
 </body>
 </html>
