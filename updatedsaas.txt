@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCBH6JKG');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYBV9QLJKS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-JYBV9QLJKS");
+</script>
+<!-- End Google Analytics -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Saasible — AI Growth Agency for Technical Founders | GTM, SEO &amp; Positioning</title>
+<meta name="description" content="Saasible is an AI-native growth agency for technical founders. We help SaaS builders go from invisible to first paying customer with GTM strategy, SEO content, and positioning — starting at $499."/>
+<link rel="canonical" href="https://saasible.in/"/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="IN"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://saasible.in/"/>
+<meta property="og:title" content="Saasible — AI Growth Agency for Technical Founders"/>
+<meta property="og:description" content="We help SaaS builders go from invisible to first paying customer. AI-powered GTM strategy, SEO content, and positioning — built for builders who are done just shipping."/>
+<meta property="og:image" content="https://saasible.in/og-image.png"/>
+<meta property="og:site_name" content="Saasible"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Saasible — AI Growth Agency for Technical Founders"/>
+<meta name="twitter:description" content="We help SaaS builders go from invisible to first paying customer. GTM strategy, SEO, and positioning — built for builders."/>
+<meta name="twitter:image" content="https://saasible.in/og-image.png"/>
+
+<link rel="icon" type="image/png" href="/favicon.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+<!-- Structured Data — Organization (updated with founder info) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Saasible",
+  "url": "https://saasible.in",
+  "logo": "https://saasible.in/favicon.png",
+  "description": "AI-native growth agency for technical founders. GTM strategy, SEO content, and positioning for SaaS builders.",
+  "founder": { "@type": "Person", "name": "Vinod Yadav", "url": "https://www.linkedin.com/in/yuvinod/" },
+  "areaServed": "IN",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Siddharth Hegde" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "We had 400 signups and zero paying users. After the Revenue Sprint, we closed $18k in the first 3 weeks. They rebuilt how we think about selling."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Maya Krishnan" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "6 weeks in, organic traffic is up 300%. Saasible spoke my language from day one."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Rohan Agarwal" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "The GTM checklist alone saved me 3 months of wasted effort. We got our first enterprise customer in month one."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Priya Venkat" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "After the audit, trial conversion went from 2% to 11%. The clarity was like turning on a light."
+    }
+  ]
+}
+</script>
+
+<!-- Structured Data — Services -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Saasible Services",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Launch Audit",
+        "description": "One-time GTM and positioning audit for technical founders. Delivered in 5 business days.",
+        "offers": { "@type": "Offer", "price": "499", "priceCurrency": "USD" },
+        "provider": { "@type": "Organization", "name": "Saasible" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Growth Retainer",
+        "description": "Monthly fractional growth service: 4 SEO articles, email sequences, landing page iteration, and distribution reports.",
+        "offers": { "@type": "Offer", "price": "2400", "priceCurrency": "USD" },
+        "provider": { "@type": "Organization", "name": "Saasible" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Revenue Sprint",
+        "description": "30-day intensive GTM rebuild: new positioning, landing page, outbound sequences, and full content calendar.",
+        "offers": { "@type": "Offer", "price": "6500", "priceCurrency": "USD" },
+        "provider": { "@type": "Organization", "name": "Saasible" }
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Structured Data — FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why isn't my SaaS product getting users?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most technical founders build great products but struggle to explain the value clearly. If your homepage talks about features instead of outcomes, users land and bounce. Fixing your positioning and messaging is the first step to getting paying users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which marketing channel should a technical founder focus on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The right channel depends on where your ideal buyers actually hang out. Rather than trying every channel briefly, run a lightweight 2-week validation test to identify the single channel with the most traction before investing heavily."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to get the first paying customer for a SaaS product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the right GTM strategy and positioning, technical founders can see their first paying customer in as little as 11 days. Saasible's average across clients is 11 days to first paying customer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a Revenue Sprint include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Revenue Sprint is a 30-day intensive engagement that includes a complete GTM rebuild: new positioning, new landing page, outbound email sequences, and a full content calendar — for a flat fee of $6,500 with results guaranteed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the Growth Retainer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Growth Retainer includes 4 SEO articles per month, email sequences, landing page iteration, a weekly distribution report, and direct Slack access to your growth team. It runs on a 3-month minimum at $2,400/month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does results guaranteed mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the Revenue Sprint, if you don't see measurable improvement in organic traffic or landing page conversion within 30 days, we keep working for free until you do — or we refund 50% of the fee, no questions asked."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #1D4ED8;
+  --blue-hover: #1E40AF;
+  --blue-light: #EFF6FF;
+  --blue-mid: #DBEAFE;
+  --blue-border: #BFDBFE;
+  --text: #0F172A;
+  --text-2: #334155;
+  --text-3: #64748B;
+  --text-4: #94A3B8;
+  --white: #FFFFFF;
+  --bg: #F8FAFC;
+  --border: #E2E8F0;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 4px rgba(15,23,42,0.06), 0 8px 32px rgba(15,23,42,0.08);
+  --shadow-blue: 0 4px 20px rgba(29,78,216,0.28);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px; line-height: 1.6;
+  overflow-x: hidden; cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CURSOR */
+.cursor {
+  position: fixed; width: 10px; height: 10px;
+  background: var(--blue); border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: transform 0.15s ease, width 0.25s, height 0.25s;
+}
+.cursor-ring {
+  position: fixed; width: 34px; height: 34px;
+  border: 1.5px solid rgba(29,78,216,0.35); border-radius: 50%;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 64px; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-size: 19px; font-weight: 800; letter-spacing: -0.02em;
+  color: var(--text); text-decoration: none;
+}
+.nav-logo span { color: var(--blue); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--text-3);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  font-size: 14px; font-weight: 600; padding: 9px 22px;
+  background: var(--blue); color: #fff; border-radius: var(--radius-sm);
+  text-decoration: none; cursor: none;
+  box-shadow: var(--shadow-blue); transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--blue-hover); }
+
+/* HERO */
+.hero {
+  padding-top: 64px; min-height: 100vh;
+  display: flex; align-items: center; position: relative; overflow: hidden;
+}
+.hero-glow {
+  position: absolute; pointer-events: none;
+  top: -80px; right: -160px; width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(29,78,216,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hero-glow2 {
+  position: absolute; pointer-events: none;
+  bottom: -120px; left: -80px; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(29,78,216,0.04) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto; padding: 80px 48px;
+  display: grid; grid-template-columns: 1fr 440px;
+  gap: 80px; align-items: center; position: relative; z-index: 1; width: 100%;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; background: var(--blue-light);
+  border: 1px solid var(--blue-border); border-radius: 100px;
+  font-size: 12px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 28px;
+  opacity: 0; animation: slideUp 0.6s 0.1s ease forwards;
+}
+.badge-dot { width: 7px; height: 7px; background: var(--blue); border-radius: 50%; animation: pulse 2s infinite; }
+h1.hero-title {
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 800; line-height: 1.06;
+  letter-spacing: -0.03em; color: var(--text); margin-bottom: 24px;
+  opacity: 0; animation: slideUp 0.7s 0.2s ease forwards;
+}
+h1.hero-title em { font-family: 'Lora', serif; font-style: italic; font-weight: 600; color: var(--blue); }
+.hero-desc {
+  font-size: 18px; font-weight: 400; line-height: 1.75;
+  color: var(--text-2); max-width: 500px; margin-bottom: 40px;
+  opacity: 0; animation: slideUp 0.7s 0.35s ease forwards;
+}
+.hero-btns {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 36px;
+  opacity: 0; animation: slideUp 0.7s 0.5s ease forwards;
+}
+.btn-blue {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 15px; font-weight: 600; padding: 13px 26px;
+  background: var(--blue); color: #fff; border-radius: var(--radius-sm);
+  text-decoration: none; cursor: none; box-shadow: var(--shadow-blue);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-blue:hover { background: var(--blue-hover); transform: translateY(-2px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 15px; font-weight: 600; padding: 13px 26px;
+  background: white; color: var(--text-2); border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); text-decoration: none; cursor: none; transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+.hero-trust {
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: slideUp 0.7s 0.65s ease forwards;
+}
+.trust-faces { display: flex; }
+.trust-face {
+  width: 30px; height: 30px; border-radius: 50%; border: 2px solid white;
+  background: var(--blue-mid); display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700; color: var(--blue); margin-left: -8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.trust-face:first-child { margin-left: 0; }
+.trust-text { font-size: 13px; font-weight: 500; color: var(--text-3); }
+.trust-text strong { color: var(--text); font-weight: 700; }
+
+/* HERO CARD */
+.hero-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: 20px; padding: 32px; box-shadow: var(--shadow);
+  opacity: 0; animation: slideIn 0.8s 0.5s ease forwards;
+}
+.hc-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 20px; border-bottom: 1px solid var(--border);
+}
+.hc-title { font-size: 12px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.07em; }
+.hc-live {
+  display: flex; align-items: center; gap: 6px;
+  background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 100px;
+  padding: 3px 10px; font-size: 11px; font-weight: 700; color: #16A34A;
+}
+.live-dot { width: 6px; height: 6px; background: #22C55E; border-radius: 50%; animation: pulse 2s infinite; }
+.hc-stat { padding: 18px 0; border-bottom: 1px solid var(--border); }
+.hc-stat:last-child { border-bottom: none; padding-bottom: 0; }
+.hc-num { font-family: 'Lora', serif; font-size: 40px; font-weight: 600; color: var(--text); line-height: 1; margin-bottom: 5px; }
+.hc-num span { color: var(--blue); }
+.hc-label { font-size: 13px; color: var(--text-3); font-weight: 500; }
+
+/* MARQUEE */
+.marquee-wrap {
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  background: var(--bg); padding: 15px 0; overflow: hidden;
+}
+.marquee-track { display: flex; gap: 56px; white-space: nowrap; animation: marquee 25s linear infinite; }
+.marquee-item {
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+  font-size: 13px; font-weight: 600; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.07em;
+}
+.marquee-item::before { content: ''; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; flex-shrink: 0; }
+
+/* SECTION LAYOUT */
+.section-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+.section-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;
+}
+.section-kicker::before { content: ''; width: 20px; height: 2px; background: var(--blue); border-radius: 2px; }
+h2.section-title {
+  font-size: clamp(30px, 4vw, 50px); font-weight: 800;
+  letter-spacing: -0.025em; line-height: 1.1; color: var(--text); margin-bottom: 16px;
+}
+h2.section-title em { font-family: 'Lora', serif; font-style: italic; font-weight: 600; color: var(--blue); }
+.section-desc { font-size: 17px; color: var(--text-2); line-height: 1.7; max-width: 540px; }
+
+/* SCROLL REVEAL */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── PROBLEM ─── */
+.problem-section { padding: 100px 0; }
+.problem-top { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 56px; }
+.problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.prob-card { background: white; padding: 40px 36px; transition: background 0.25s; }
+.prob-card:hover { background: var(--bg); }
+.prob-num { font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 18px; display: block; }
+.prob-card h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.015em; color: var(--text); margin-bottom: 12px; line-height: 1.3; }
+.prob-card p { font-size: 15px; color: var(--text-2); line-height: 1.75; }
+
+/* ─── SERVICES ─── */
+.services-section { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.services-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; gap: 40px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.svc-card {
+  background: white; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 36px 32px; display: flex; flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+}
+.svc-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); border-color: var(--blue-border); }
+.svc-card.featured { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue), var(--shadow); }
+.svc-tag {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  color: var(--blue); background: var(--blue-light); border-radius: 6px;
+  padding: 4px 10px; text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 20px; align-self: flex-start;
+}
+.svc-tag.pop { background: var(--blue); color: white; }
+.svc-card h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 12px; line-height: 1.25; }
+.svc-card > p { font-size: 14px; color: var(--text-2); line-height: 1.75; margin-bottom: 16px; }
+.svc-features { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; flex: 1; }
+.svc-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.svc-features li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.svc-price { font-family: 'Lora', serif; font-size: 34px; font-weight: 600; color: var(--text); line-height: 1; }
+.svc-note { font-size: 12px; color: var(--text-3); font-weight: 500; margin-top: 5px; }
+.guarantee-box {
+  margin-top: 12px; padding: 12px 14px;
+  background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-sm);
+  font-size: 12px; color: #15803D; line-height: 1.6;
+}
+.guarantee-box strong { display: block; margin-bottom: 4px; font-size: 13px; }
+
+/* ─── COMPARISON ─── */
+.comparison-section { padding: 100px 0; }
+.comparison-wrap { overflow-x: auto; margin-top: 48px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.comparison-table { width: 100%; border-collapse: collapse; min-width: 580px; }
+.comparison-table th, .comparison-table td { padding: 15px 20px; text-align: center; border-bottom: 1px solid var(--border); font-size: 14px; }
+.comparison-table th { background: var(--bg); font-size: 14px; font-weight: 700; color: var(--text); border-bottom: 2px solid var(--border); }
+.comparison-table th:first-child, .comparison-table td:first-child { text-align: left; color: var(--text-2); font-weight: 500; }
+.comparison-table th.hl { color: var(--blue); background: var(--blue-light); border-bottom-color: var(--blue-border); }
+.comparison-table td.hl { background: #FAFCFF; }
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.comparison-table tbody tr:hover td { background: var(--bg); }
+.comparison-table tbody tr:hover td.hl { background: var(--blue-light); }
+.cmp-yes { color: var(--blue); font-weight: 700; font-size: 16px; }
+.cmp-no { color: var(--text-4); font-size: 15px; }
+.cmp-maybe { color: var(--text-3); font-size: 12px; font-style: italic; }
+.cmp-price { font-weight: 700; color: var(--blue); font-size: 13px; }
+.cmp-price-other { font-size: 13px; color: var(--text-3); }
+
+/* ─── PROCESS ─── */
+.process-section { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.process-rows { margin-top: 64px; }
+.proc-row {
+  display: grid; grid-template-columns: 68px 1fr 1fr;
+  gap: 40px; align-items: start;
+  padding: 36px 0; border-bottom: 1px solid var(--border);
+  transition: padding-left 0.3s;
+}
+.proc-row:first-child { border-top: 1px solid var(--border); }
+.proc-row:hover { padding-left: 12px; }
+.proc-num { font-family: 'Lora', serif; font-size: 42px; font-weight: 600; color: var(--blue-mid); line-height: 1; }
+.proc-left h3 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 6px; letter-spacing: -0.01em; }
+.proc-tag { font-size: 12px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.06em; }
+.proc-right p { font-size: 15px; color: var(--text-2); line-height: 1.75; }
+
+/* ─── ARTICLES ─── */
+.articles-section { padding: 100px 0; }
+.articles-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.art-card {
+  background: white; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 32px; display: flex; flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s; cursor: none;
+}
+.art-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.art-tag { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 14px; }
+.art-card h3 { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 12px; }
+.art-card p { font-size: 14px; color: var(--text-2); line-height: 1.75; flex: 1; margin-bottom: 24px; }
+.art-meta { font-size: 12px; color: var(--text-4); font-weight: 500; }
+
+/* ─── ABOUT / FOUNDER ─── */
+.about-section { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 80px; align-items: center; margin-top: 56px; }
+.about-photo {
+  width: 100%; aspect-ratio: 3/4; border-radius: 20px;
+  background: var(--blue-light); border: 2px solid var(--blue-border);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative;
+}
+/* To use a real photo: replace the .about-initials div inside with:
+   <img src="/vinod.jpg" alt="Vinod Yadav" style="width:100%;height:100%;object-fit:cover;"> */
+.about-initials {
+  font-family: 'Lora', serif; font-size: 5rem; font-weight: 600;
+  color: var(--blue-border); user-select: none;
+}
+.about-caption {
+  text-align: center; margin-top: 14px;
+  font-size: 13px; font-weight: 600; color: var(--text-3);
+}
+.about-content p { font-size: 16px; color: var(--text-2); line-height: 1.8; margin-bottom: 20px; }
+.about-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.about-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); font-size: 14px; font-weight: 600;
+  color: var(--text-2); text-decoration: none; cursor: none; transition: all 0.2s;
+}
+.about-link:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+.about-link.primary { background: var(--blue); color: white; border-color: var(--blue); box-shadow: var(--shadow-blue); }
+.about-link.primary:hover { background: var(--blue-hover); }
+.about-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ─── NEWSLETTER ─── */
+.newsletter-section { padding: 100px 0; }
+.nl-box {
+  background: linear-gradient(135deg, var(--blue) 0%, #1E3A8A 100%);
+  border-radius: 24px; padding: 72px;
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 80px; align-items: center; position: relative; overflow: hidden;
+}
+.nl-orb1 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: rgba(255,255,255,0.04); top: -220px; right: -80px; pointer-events: none; }
+.nl-orb2 { position: absolute; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,0.03); bottom: -100px; left: 120px; pointer-events: none; }
+.nl-kicker { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.nl-kicker::before { content: ''; width: 16px; height: 1.5px; background: rgba(255,255,255,0.4); border-radius: 2px; }
+.nl-box h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: white; margin-bottom: 16px; }
+.nl-box h2 em { font-family: 'Lora', serif; font-style: italic; font-weight: 600; color: rgba(255,255,255,0.7); }
+.nl-desc { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.72; margin-bottom: 28px; }
+.nl-perks { display: flex; flex-direction: column; gap: 10px; }
+.nl-perk { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 500; }
+.nl-perk-dot { width: 5px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; }
+.nl-form-wrap { position: relative; z-index: 1; }
+.nl-form { background: white; border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+.nl-form-title { font-size: 16px; font-weight: 700; color: var(--text); }
+.nl-form-sub { font-size: 13px; color: var(--text-3); }
+.form-note { font-size: 11px; color: var(--text-4); text-align: center; }
+
+/* ─── TESTIMONIALS ─── */
+.testimonials-section { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.t-head { text-align: center; margin-bottom: 56px; }
+.t-head .section-kicker { justify-content: center; }
+.t-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.t-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; transition: box-shadow 0.25s, transform 0.25s; }
+.t-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.t-stars { color: #F59E0B; font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+.t-quote { font-family: 'Lora', serif; font-size: 17px; font-style: italic; color: var(--text); line-height: 1.65; margin-bottom: 28px; }
+.t-author { display: flex; align-items: center; gap: 14px; }
+.t-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--blue-mid); border: 2px solid var(--blue-border); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--blue); flex-shrink: 0; }
+.t-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.t-role { font-size: 12px; color: var(--text-3); font-weight: 500; }
+
+/* ─── FAQ ─── */
+.faq-section { padding: 100px 0; }
+.faq-inner { max-width: 720px; margin: 56px auto 0; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-btn {
+  width: 100%; background: none; border: none; color: var(--text);
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 600;
+  padding: 22px 0; text-align: left; cursor: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  transition: color 0.2s;
+}
+.faq-btn:hover { color: var(--blue); }
+.faq-icon {
+  width: 26px; height: 26px; border: 1.5px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 18px; line-height: 1; color: var(--text-3);
+  transition: transform 0.3s, border-color 0.3s, color 0.3s;
+}
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-answer-inner { padding-bottom: 22px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+.faq-item.open .faq-answer { max-height: 320px; }
+.faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--blue); color: var(--blue); }
+
+/* ─── CTA / BOOK ─── */
+.cta-section { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); }
+.cta-box {
+  background: white; border: 1px solid var(--border); border-radius: 24px;
+  padding: 72px; text-align: center; position: relative; overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.cta-glow { position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 500px; height: 400px; background: radial-gradient(circle, rgba(29,78,216,0.07) 0%, transparent 70%); pointer-events: none; }
+.cta-box .section-kicker { justify-content: center; margin-bottom: 20px; }
+.cta-box h2.section-title { margin-bottom: 16px; }
+.cta-box p { font-size: 17px; color: var(--text-2); max-width: 520px; margin: 0 auto 40px; line-height: 1.75; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-note { margin-top: 20px; font-size: 13px; color: var(--text-4); }
+
+/* ─── FOOTER ─── */
+footer { background: var(--text); padding: 72px 0 40px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; padding-bottom: 56px; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: white; margin-bottom: 14px; }
+.footer-logo span { color: #93C5FD; }
+.footer-about { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 20px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 36px; height: 36px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); text-decoration: none; cursor: none; transition: all 0.2s; }
+.footer-social a:hover { border-color: rgba(255,255,255,0.3); color: white; background: rgba(255,255,255,0.07); }
+.f-col h4 { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 20px; }
+.f-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.f-col ul a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.f-col ul a:hover { color: white; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+.footer-tag { font-family: 'Lora', serif; font-style: italic; font-size: 14px; color: rgba(255,255,255,0.3); }
+
+/* ─── KEYFRAMES ─── */
+@keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes slideIn { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:translateX(0); } }
+@keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.6; transform:scale(0.85); } }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .nl-box { grid-template-columns: 1fr; gap: 48px; padding: 48px 40px; }
+  .problem-top { grid-template-columns: 1fr; gap: 20px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo { aspect-ratio: 16/9; max-height: 280px; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .section-wrap { padding: 0 20px; }
+  .hero-inner { padding: 60px 20px; }
+  .problem-grid, .services-grid, .articles-grid, .t-grid { grid-template-columns: 1fr; }
+  .services-top, .articles-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .proc-row { grid-template-columns: 52px 1fr; }
+  .proc-right { display: none; }
+  .nl-box { padding: 40px 24px; border-radius: 16px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .cta-box { padding: 48px 24px; }
+  .cta-btns { flex-direction: column; align-items: center; }
+}
+[id^="paypal-container-"] { min-height: 45px; margin-top: 16px; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCBH6JKG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ─── NAV ─── -->
+<nav aria-label="Main navigation">
+  <a href="/" aria-label="Saasible — Home" style="display:block;width:160px;height:40px;overflow:hidden;border-radius:8px;background:#EBEBED;flex-shrink:0;">
+    <img src="a-minimal-professional-wordmark-logo-fea_he66d6WzRw-UzYL_bitMrg_gnsPMMkLTy24Is3naZ5u_A.jpeg" alt="Saasible" style="width:100%;margin-top:-30%;"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">Book a Call →</a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow2" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="badge-dot" aria-hidden="true"></span> AI-Native Growth Agency</div>
+      <h1 class="hero-title">You built something great.<br/><em>Nobody's using it.</em></h1>
+      <p class="hero-desc">We help technical founders go from invisible to undeniable. AI-powered GTM strategy, positioning, and distribution — built for builders who are done just shipping.</p>
+      <div class="hero-btns">
+        <a href="#book" class="btn-blue">Book a Free Strategy Call →</a>
+        <a href="#articles" class="btn-outline">Read the Blog</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-faces" aria-hidden="true">
+          <div class="trust-face" role="img" aria-label="Siddharth Hegde">SH</div>
+          <div class="trust-face" role="img" aria-label="Maya Krishnan">MK</div>
+          <div class="trust-face" role="img" aria-label="Rohan Agarwal">RA</div>
+          <div class="trust-face" aria-hidden="true">+</div>
+        </div>
+        <span class="trust-text"><strong>2,400+ builders</strong> learning to sell</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card" aria-label="Live results dashboard">
+        <div class="hc-head">
+          <span class="hc-title">Live Results</span>
+          <div class="hc-live"><span class="live-dot" aria-hidden="true"></span> Updated Weekly</div>
+        </div>
+        <div class="hc-stat">
+          <div class="hc-num">47<span>×</span></div>
+          <div class="hc-label">Average traffic increase in 90 days</div>
+        </div>
+        <div class="hc-stat">
+          <div class="hc-num"><span>$</span>2.4M</div>
+          <div class="hc-label">Pipeline generated for builders in 2024</div>
+        </div>
+        <div class="hc-stat">
+          <div class="hc-num">11<span>d</span></div>
+          <div class="hc-label">Average time to first paying customer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">GTM Strategy</div>
+    <div class="marquee-item">Landing Page Conversion</div>
+    <div class="marquee-item">Email Sequences</div>
+    <div class="marquee-item">SEO Content</div>
+    <div class="marquee-item">Distribution Playbooks</div>
+    <div class="marquee-item">AI Copywriting</div>
+    <div class="marquee-item">Founder Brand</div>
+    <div class="marquee-item">Revenue Ops</div>
+    <div class="marquee-item">GTM Strategy</div>
+    <div class="marquee-item">Landing Page Conversion</div>
+    <div class="marquee-item">Email Sequences</div>
+    <div class="marquee-item">SEO Content</div>
+    <div class="marquee-item">Distribution Playbooks</div>
+    <div class="marquee-item">AI Copywriting</div>
+    <div class="marquee-item">Founder Brand</div>
+    <div class="marquee-item">Revenue Ops</div>
+  </div>
+</div>
+
+<!-- ─── PROBLEM ─── -->
+<section class="problem-section">
+  <div class="section-wrap">
+    <div class="problem-top">
+      <div class="reveal">
+        <div class="section-kicker">The Problem</div>
+        <h2 class="section-title">Builders build.<br/><em>Sellers sell.</em><br/>You're a builder.</h2>
+      </div>
+      <div class="reveal">
+        <p class="section-desc">Great products die every day because the people who built them didn't know how to sell them. We fix that — without turning you into a marketer.</p>
+      </div>
+    </div>
+    <div class="problem-grid">
+      <div class="prob-card reveal">
+        <span class="prob-num">01 — You don't know what to say</span>
+        <h3>Your homepage talks about features, not outcomes.</h3>
+        <p>You built a brilliant tool but can't explain its value in one sentence. Users land, don't get it, and bounce. So you build more features instead of fixing the message.</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-num">02 — You don't know where to go</span>
+        <h3>You've tried every channel for a week and got nothing.</h3>
+        <p>Twitter, Reddit, ProductHunt, LinkedIn, cold email — you tried them all briefly, saw no results, and concluded growth doesn't work. It does. You just need the right channel.</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-num">03 — You can't hire your way out</span>
+        <h3>Generic agencies don't speak builder.</h3>
+        <p>A $10k/month marketing agency will give you generic content and vanity reports. You need someone who understands your product, your audience, and moves at startup speed.</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-num">04 — You're running out of runway</span>
+        <h3>Every week without revenue burns the clock.</h3>
+        <p>You need growth that compounds — content, SEO, email — assets that work while you sleep. Not ad spend that stops the second you pause the campaign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section class="services-section" id="services">
+  <div class="section-wrap">
+    <div class="services-top">
+      <div class="reveal">
+        <div class="section-kicker">Services</div>
+        <h2 class="section-title">Everything from<br/><em>0 to revenue</em></h2>
+      </div>
+      <p class="section-desc reveal" style="max-width:320px;">Three tiers for different stages. Start with the audit. Scale with the retainer. Go all-in with the sprint.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Launch Audit -->
+      <div class="svc-card reveal">
+        <span class="svc-tag">One-Time</span>
+        <h3>Launch Audit</h3>
+        <p>A deep-dive review of your positioning, landing page, and distribution strategy. You'll get a clear action plan — what's broken, what to fix first, and how.</p>
+        <ul class="svc-features">
+          <li>Full homepage &amp; copy teardown</li>
+          <li>Positioning &amp; messaging scorecard</li>
+          <li>Top 3 channel recommendations</li>
+          <li>Priority action plan (30/60/90 days)</li>
+          <li>Async Loom walkthrough included</li>
+        </ul>
+        <div class="svc-price">$499</div>
+        <div class="svc-note">Delivered in 5 business days</div>
+        <div id="paypal-container-KQUSB3BGFLR98"></div>
+      </div>
+
+      <!-- Growth Retainer -->
+      <div class="svc-card featured reveal">
+        <span class="svc-tag pop">⭐ Most Popular</span>
+        <h3>Growth Retainer</h3>
+        <p>Your fractional growth co-founder. We embed into your startup and drive consistent, compounding growth every month.</p>
+        <ul class="svc-features">
+          <li>4 SEO articles per month (published)</li>
+          <li>Email sequences written &amp; optimised</li>
+          <li>Landing page iteration &amp; A/B testing</li>
+          <li>Weekly distribution report &amp; insights</li>
+          <li>Dedicated Slack channel access</li>
+          <li>Monthly strategy call (60 min)</li>
+          <li>Competitor monitoring &amp; alerts</li>
+        </ul>
+        <div class="svc-price">$2,400<span style="font-size:17px;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;color:var(--text-3)">/mo</span></div>
+        <div class="svc-note">3-month minimum · cancel anytime after</div>
+        <div id="paypal-container-VF5ZQPNT3P69N"></div>
+      </div>
+
+      <!-- Revenue Sprint -->
+      <div class="svc-card reveal">
+        <span class="svc-tag">Done-For-You</span>
+        <h3>Revenue Sprint</h3>
+        <p>30-day intensive. We rebuild your entire GTM from scratch — new positioning, new landing page, outbound sequences, and a full content calendar. You ship. We sell.</p>
+        <ul class="svc-features">
+          <li>Full GTM rebuild from scratch</li>
+          <li>New positioning &amp; messaging doc</li>
+          <li>Redesigned landing page copy</li>
+          <li>3 outbound email sequence variants</li>
+          <li>60-day content calendar</li>
+          <li>Channel strategy &amp; launch playbook</li>
+          <li>2 weeks post-sprint support</li>
+        </ul>
+        <div class="svc-price">$6,500</div>
+        <div class="svc-note">Flat fee · 30 days</div>
+        <div class="guarantee-box">
+          <strong>🛡 Results Guarantee</strong>
+          If you don't see measurable improvement in traffic or conversions within 30 days, we work for free until you do — or refund 50% of the fee. No questions asked.
+        </div>
+        <div id="paypal-container-6ZX5T6SU8SD9S"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── COMPARISON ─── -->
+<section class="comparison-section">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+      <div class="section-kicker" style="justify-content:center;">Why Saasible</div>
+      <h2 class="section-title">Saasible vs <em>the alternatives</em></h2>
+      <p class="section-desc" style="max-width:100%; margin:0 auto;">How we stack up against your other options — honestly.</p>
+    </div>
+    <div class="comparison-wrap reveal">
+      <table class="comparison-table" role="table" aria-label="Comparison of Saasible vs alternatives">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col" class="hl">Saasible</th>
+            <th scope="col">Generic Agency</th>
+            <th scope="col">Freelancer</th>
+            <th scope="col">DIY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Understands SaaS / technical products</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-maybe">Sometimes</span></td>
+            <td><span class="cmp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>AI-assisted execution speed</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-maybe">Rarely</span></td>
+            <td><span class="cmp-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Positioning + GTM strategy (not just content)</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-maybe">Partial</span></td>
+          </tr>
+          <tr>
+            <td>Startup-speed iteration</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Founder-focused strategy</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-maybe">Sometimes</span></td>
+            <td><span class="cmp-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Results guarantee</td>
+            <td class="hl"><span class="cmp-yes">✓</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-no">✗</span></td>
+            <td><span class="cmp-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Typical monthly cost</td>
+            <td class="hl"><span class="cmp-price">$499 – $2,400</span></td>
+            <td><span class="cmp-price-other">$5k – $15k</span></td>
+            <td><span class="cmp-price-other">$1k – $5k</span></td>
+            <td><span class="cmp-price-other">Your time</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESS ─── -->
+<section class="process-section" id="process">
+  <div class="section-wrap">
+    <div class="reveal" style="max-width:580px;">
+      <div class="section-kicker">How It Works</div>
+      <h2 class="section-title">From <em>zero signal</em><br/>to compounding growth</h2>
+    </div>
+    <div class="process-rows">
+      <div class="proc-row reveal">
+        <div class="proc-num" aria-hidden="true">01</div>
+        <div class="proc-left"><h3>Positioning Session</h3><div class="proc-tag">Days 1–3</div></div>
+        <div class="proc-right"><p>We run a 90-minute deep dive into your product, users, and competitors. We map the emotional job your product does and write the one-sentence positioning that unlocks everything else.</p></div>
+      </div>
+      <div class="proc-row reveal">
+        <div class="proc-num" aria-hidden="true">02</div>
+        <div class="proc-left"><h3>Channel Diagnosis</h3><div class="proc-tag">Days 3–7</div></div>
+        <div class="proc-right"><p>We identify the single channel where your ideal buyers actually hang out. Then we build a lightweight test to validate it in 2 weeks — before spending a dollar on ads or months on SEO.</p></div>
+      </div>
+      <div class="proc-row reveal">
+        <div class="proc-num" aria-hidden="true">03</div>
+        <div class="proc-left"><h3>Content Engine</h3><div class="proc-tag">Weeks 2–4</div></div>
+        <div class="proc-right"><p>We build the distribution machine — SEO articles, email sequences, founder content, and landing page copy. All AI-assisted and human-refined. Built to compound month over month.</p></div>
+      </div>
+      <div class="proc-row reveal">
+        <div class="proc-num" aria-hidden="true">04</div>
+        <div class="proc-left"><h3>Revenue Loop</h3><div class="proc-tag">Ongoing</div></div>
+        <div class="proc-right"><p>Traffic becomes leads. Leads become trials. Trials become paying customers. We optimize every step with real data — reinvesting what works and cutting what doesn't every week.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ARTICLES ─── -->
+<section class="articles-section" id="articles">
+  <div class="section-wrap">
+    <div class="articles-top reveal">
+      <div>
+        <div class="section-kicker">Articles</div>
+        <h2 class="section-title">Builder-first <em>growth playbooks</em></h2>
+      </div>
+      <a href="https://blog.saasible.in" class="btn-outline" target="_blank" rel="noopener">View All →</a>
+    </div>
+    <div class="articles-grid">
+      <!-- FIX: Removed trailing 'f' from the first article URL slug -->
+      <a href="https://blog.saasible.in/how-to-get-your-first-100-paying-customers-without-an-audience" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" aria-label="Read: How to Get Your First 100 Paying Customers Without an Audience">
+        <div class="art-card reveal">
+          <div class="art-tag">GTM Strategy</div>
+          <h3>How to Get Your First 100 Paying Customers Without an Audience</h3>
+          <p>Most builders wait for an audience before selling. That's backwards. Here's the exact playbook we use to find early buyers hiding in plain sight.</p>
+          <div class="art-meta">8 min read &nbsp;·&nbsp; Feb 2025</div>
+        </div>
+      </a>
+      <a href="https://blog.saasible.in/the-one-sentence-that-unlocked-40k-mrr-for-a-solo-founder" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" aria-label="Read: The One Sentence That Unlocked $40k MRR for a Solo Founder">
+        <div class="art-card reveal">
+          <div class="art-tag">Copywriting</div>
+          <h3>The One Sentence That Unlocked $40k MRR for a Solo Founder</h3>
+          <p>Your homepage probably talks about features. Here's why positioning around the outcome — and only the outcome — changes everything about conversion.</p>
+          <div class="art-meta">6 min read &nbsp;·&nbsp; Jan 2025</div>
+        </div>
+      </a>
+      <a href="https://blog.saasible.in/the-channel-selection-framework-every-technical-founder-needs" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" aria-label="Read: The Channel Selection Framework Every Technical Founder Needs">
+        <div class="art-card reveal">
+          <div class="art-tag">Distribution</div>
+          <h3>The Channel Selection Framework Every Technical Founder Needs</h3>
+          <p>Stop trying every channel at once. There's a systematic way to find where your buyers hang out — and it only takes 2 weeks to validate.</p>
+          <div class="art-meta">11 min read &nbsp;·&nbsp; Jan 2025</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT / FOUNDER ─── -->
+<section class="about-section" id="about">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-kicker">About the Founder</div>
+      <h2 class="section-title">Built by a founder,<br/><em>for founders.</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="about-photo" style="background:#fff;border:none;box-shadow:none;">
+          <img src="Untitled.png" alt="Vinod Yadav, Founder of Saasible" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"/>
+        </div>
+        <p class="about-caption">Vinod Yadav · Founder, Saasible</p>
+      </div>
+      <div class="about-content reveal">
+        <p>I'm <strong>Vinod Yadav</strong>, the founder of Saasible. I've spent years at the intersection of product and growth, watching brilliant builders ship products that never found their audience.</p>
+        <p>I started Saasible because I was tired of seeing technical founders get burned by generic marketing agencies that didn't understand what they were building. We're not a content farm. We're a small, focused team that embeds into your company and moves at your speed.</p>
+        <p>Every strategy we run, we've tested ourselves. Every playbook we share, we've used to drive real revenue — not vanity metrics. If something doesn't work, we tell you and we change it.</p>
+        <div class="about-links">
+          <a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener" class="about-link primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a href="/cdn-cgi/l/email-protection#a4ccc1c8c8cbe4d7c5c5d7cdc6c8c18acdca" class="about-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="__cf_email__" data-cfemail="f29a979e9e9db2819393819b909e97dc9b9c">[email&#160;protected]</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NEWSLETTER ─── -->
+<section class="newsletter-section" id="newsletter">
+  <div class="section-wrap">
+    <div class="nl-box reveal">
+      <div class="nl-orb1" aria-hidden="true"></div>
+      <div class="nl-orb2" aria-hidden="true"></div>
+      <div>
+        <div class="nl-kicker">Newsletter</div>
+        <h2>Growth tactics for builders.<br/><em>Every Tuesday.</em></h2>
+        <p class="nl-desc">No fluff. No generic marketing advice. One actionable growth insight every week, built specifically for technical founders who are learning to sell.</p>
+        <div class="nl-perks">
+          <div class="nl-perk"><span class="nl-perk-dot" aria-hidden="true"></span> Real teardowns of builder landing pages</div>
+          <div class="nl-perk"><span class="nl-perk-dot" aria-hidden="true"></span> Distribution strategies that actually work</div>
+          <div class="nl-perk"><span class="nl-perk-dot" aria-hidden="true"></span> AI tools for faster GTM execution</div>
+          <div class="nl-perk"><span class="nl-perk-dot" aria-hidden="true"></span> Free GTM checklist when you sign up</div>
+        </div>
+      </div>
+      <div class="nl-form-wrap">
+        <div class="nl-form">
+          <div class="nl-form-title">Join 2,400+ builders</div>
+          <div class="nl-form-sub">Get the free GTM checklist when you subscribe.</div>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScIV2kDJk2f9lWDCMihqymmkrzW4_afrQpxaZTytexwn_lmfg/viewform?embedded=true"
+            width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"
+            title="Newsletter signup form" style="border-radius:8px;margin-top:12px;">
+            Loading…
+          </iframe>
+          <p class="form-note" style="margin-top:10px;">No spam. Unsubscribe anytime. Sent every Tuesday.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonials-section" id="results">
+  <div class="section-wrap">
+    <div class="t-head reveal">
+      <div class="section-kicker">Results</div>
+      <h2 class="section-title">What builders <em>are saying</em></h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"We had 400 signups and zero paying users. After the Revenue Sprint, we closed $18k in the first 3 weeks. They didn't just give us tactics — they rebuilt how we think about selling."</p>
+        <div class="t-author">
+          <div class="t-avatar" role="img" aria-label="Siddharth Hegde, Founder of FormFlow AI">SH</div>
+          <div><div class="t-name">Siddharth Hegde</div><div class="t-role">Founder, FormFlow AI</div></div>
+        </div>
+      </div>
+      <div class="t-card reveal">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"I've worked with 3 marketing agencies before. None of them understood what I was building. Saasible spoke my language from day one. 6 weeks in, organic traffic is up 300%."</p>
+        <div class="t-author">
+          <div class="t-avatar" role="img" aria-label="Maya Krishnan, Solo Founder of Patchwork">MK</div>
+          <div><div class="t-name">Maya Krishnan</div><div class="t-role">Solo Founder, Patchwork</div></div>
+        </div>
+      </div>
+      <div class="t-card reveal">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"The GTM checklist alone saved me 3 months of wasted effort. Then we signed up for the retainer and got our first enterprise customer in month one. Worth every rupee."</p>
+        <div class="t-author">
+          <div class="t-avatar" role="img" aria-label="Rohan Agarwal, CTO turned CEO of Stackmind">RA</div>
+          <div><div class="t-name">Rohan Agarwal</div><div class="t-role">CTO → CEO, Stackmind</div></div>
+        </div>
+      </div>
+      <div class="t-card reveal">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"Our landing page looked like it was written by an engineer. (It was.) After the audit, trial conversion went from 2% to 11%. The clarity was like turning on a light."</p>
+        <div class="t-author">
+          <div class="t-avatar" role="img" aria-label="Priya Venkat, Founder of DocuAI">PV</div>
+          <div><div class="t-name">Priya Venkat</div><div class="t-role">Founder, DocuAI</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq-section" id="faq">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+      <div class="section-kicker" style="justify-content:center;">FAQ</div>
+      <h2 class="section-title">Common <em>questions</em></h2>
+    </div>
+    <div class="faq-inner">
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          What does "results guaranteed" actually mean?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">For the Revenue Sprint, if you don't see measurable improvement in either organic traffic or landing page conversion within 30 days, we keep working for free until you do — or we refund 50% of the fee, no questions asked. We define "measurable improvement" as at least a 20% increase in traffic or a statistically significant lift in conversion rate vs. your baseline.</div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          Is the 3-month minimum on the Growth Retainer flexible?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The 3-month minimum exists because compounding growth takes time — most of our biggest wins happen in months 2 and 3. After the initial 3 months, you can pause or cancel anytime with 30 days notice. If you need a shorter engagement first, the Revenue Sprint (flat fee, 30 days) may be a better starting point.</div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          What stage of startup is Saasible best for?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We work best with early-stage SaaS founders who have a working product and at least some early users or signups, but haven't cracked distribution yet. Typically pre-Series A, $0–$50k MRR. If you're pre-product, the Launch Audit can still help with positioning and messaging for when you're ready to launch.</div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          Do you work with non-technical founders?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Saasible is designed for technical founders (engineers, CTOs, developers who turned CEO), but the strategies work for any B2B SaaS founder with a complex or niche product. If you have a product that's hard to explain, reach out and we'll tell you honestly if we're a good fit.</div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          How quickly do we get started after payment?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We onboard new clients every Monday. Once payment is confirmed, you'll receive an onboarding form and we'll schedule your first positioning session within 2–3 business days. The Launch Audit is typically delivered within 5 business days of your onboarding call.</div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          Do you run paid ads?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No. We focus entirely on organic, owned, and earned channels — SEO, content, email, and founder-led distribution. We believe paid ads are a multiplier, not a foundation. If you need paid media management, we can refer you to trusted partners after your positioning and organic baseline is solid.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOK A CALL ─── -->
+<section class="cta-section" id="book">
+  <div class="section-wrap">
+    <div class="cta-box reveal">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="section-kicker">Free Strategy Call</div>
+      <h2 class="section-title">Ready to start <em>selling</em>?</h2>
+      <p>Book a free 30-minute strategy call with Vinod. We'll review your product, identify your biggest growth lever, and tell you exactly what we'd do if we were in your position.</p>
+      <div class="cta-btns">
+        <a href="/cdn-cgi/l/email-protection#5e363b3232311e2d3f3f2d373c323b703730612d2b3c343b3d2a63182c3b3b7b6c6e0d2a2c3f2a3b39277b6c6e1d3f32327b6c6e7b1b6c7b666e7b676a7b6c6e0d3f3f2d373c323b" class="btn-blue">Book a Free Call →</a>
+        <a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener" class="btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+      <p class="cta-note">No pitch. No pressure. Just honest advice on what would actually move the needle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div style="width:140px;height:35px;overflow:hidden;border-radius:6px;margin-bottom:14px;background:#192231;">
+          <img src="a-minimal-professional-wordmark-logo-fea_he66d6WzRw-UzYL_bitMrg_gnsPMMkLTy24Is3naZ5u_A.jpeg" alt="Saasible" style="width:100%;margin-top:-57%;"/>
+        </div>
+        <p class="footer-about">The AI-native growth agency for technical founders who are done just shipping and ready to start selling. Founded by Vinod Yadav.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener" aria-label="Vinod Yadav on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#cda5a8a1a1a28dbeacacbea4afa1a8e3a4a3" aria-label="Email Saasible">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Launch Audit — $499</a></li>
+          <li><a href="#services">Growth Retainer — $2,400/mo</a></li>
+          <li><a href="#services">Revenue Sprint — $6,500</a></li>
+          <li><a href="#book">Book a Strategy Call</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://blog.saasible.in" target="_blank" rel="noopener">Articles</a></li>
+          <li><a href="https://blog.saasible.in" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="https://blog.saasible.in/the-channel-selection-framework-every-technical-founder-needs" target="_blank" rel="noopener">GTM Checklist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Vinod</a></li>
+          <li><a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://blog.saasible.in" target="_blank" rel="noopener">Case Studies</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#a2cac7cececde2d1c3c3d1cbc0cec78ccbcc">Contact</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Saasible Agency. Built by Vinod Yadav for builders.</div>
+      <div class="footer-tag">Stop building. Start selling.</div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// CURSOR
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function tick(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(tick); })();
+document.querySelectorAll('a,button,input').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ cursor.style.transform='translate(-50%,-50%) scale(2.2)'; ring.style.width='56px'; ring.style.height='56px'; });
+  el.addEventListener('mouseleave',()=>{ cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.width='34px'; ring.style.height='34px'; });
+});
+
+// SCROLL REVEAL
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+},{ threshold:0.08, rootMargin:'0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// FAQ ACCORDION
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-btn').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+</script>
+
+<!-- PayPal Buttons — unchanged from original -->
+<script>
+function initPayPal() {
+  paypal.HostedButtons({ hostedButtonId: "KQUSB3BGFLR98" }).render("#paypal-container-KQUSB3BGFLR98");
+  paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3
