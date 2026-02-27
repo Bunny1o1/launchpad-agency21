@@ -1300,8 +1300,15 @@ function toggleFaq(btn) {
 }
 </script>
 
-<!-- PayPal Buttons — unchanged from original -->
+<!-- PayPal Buttons -->
 <script>
 function initPayPal() {
   paypal.HostedButtons({ hostedButtonId: "KQUSB3BGFLR98" }).render("#paypal-container-KQUSB3BGFLR98");
-  paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-c
+  paypal.HostedButtons({ hostedButtonId: "VF5ZQPNT3P69N" }).render("#paypal-container-VF5ZQPNT3P69N");
+  paypal.HostedButtons({ hostedButtonId: "6ZX5T6SU8SD9S" }).render("#paypal-container-6ZX5T6SU8SD9S");
+}
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAABMlwrq21-t4s558PCetmDyxCpuLqKbmPcjlfMSWGF_L_vu4-0LvQvgX8lR46bGnuHdasbPfyUBd7-xo&components=hosted-buttons&disable-funding=venmo&currency=USD" onload="initPayPal()"></script>
+
+</body>
+</html>
