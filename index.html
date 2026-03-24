@@ -1,1659 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saasible — Fractional Customer Success for Growth-Stage SaaS</title>
-    <meta name="description" content="Enterprise-grade Customer Success for SaaS founders who can't afford to lose another customer. Built by a CS leader who managed Netflix, Google, and Bosch.">
-    <meta name="keywords" content="fractional customer success, SaaS retention, customer onboarding, churn reduction, B2B SaaS, conversational AI">
-    <link rel="canonical" href="https://saasible.in">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Saasible — Fractional Customer Success for Growth-Stage SaaS">
-    <meta property="og:description" content="Stop losing customers. Enterprise-grade CS playbooks, onboarding systems, and retention strategy — from someone who's done it for Netflix, Google, and Bosch.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saasible.in">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --ink: #1a1a1a;
-            --ink-light: #4a4a4a;
-            --ink-muted: #7a7a7a;
-            --cream: #faf8f5;
-            --cream-dark: #f0ece6;
-            --warm: #c8553d;
-            --warm-light: #e8745d;
-            --warm-glow: rgba(200, 85, 61, 0.08);
-            --teal: #2a7a6e;
-            --teal-light: #3a9a8e;
-            --teal-glow: rgba(42, 122, 110, 0.08);
-            --gold: #b8860b;
-            --border: rgba(26, 26, 26, 0.08);
-            --border-strong: rgba(26, 26, 26, 0.15);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
-            --radius: 12px;
-            --radius-lg: 20px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--cream);
-            color: var(--ink);
-            line-height: 1.65;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .serif { font-family: 'DM Serif Display', serif; }
-
-        /* ── LAYOUT ── */
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        /* ── NAV ── */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: rgba(250, 248, 245, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        nav .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-        }
-
-        .nav-logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.4rem;
-            color: var(--ink);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--ink-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-            letter-spacing: 0.01em;
-        }
-
-        .nav-links a:hover { color: var(--ink); }
-
-        .nav-cta {
-            background: var(--ink) !important;
-            color: var(--cream) !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 500 !important;
-            transition: all 0.2s !important;
-        }
-
-        .nav-cta:hover {
-            background: var(--warm) !important;
-            transform: translateY(-1px);
-        }
-
-        /* Mobile nav */
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-        }
-
-        .nav-toggle span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--ink);
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        /* ── HERO ── */
-        .hero {
-            padding-top: 160px;
-            padding-bottom: 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--warm-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -150px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, var(--teal-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: var(--cream-dark);
-            border: 1px solid var(--border-strong);
-            border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: var(--ink-light);
-            margin-bottom: 32px;
-            animation: fadeUp 0.6s ease both;
-        }
-
-        .hero-badge .dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--teal);
-            animation: pulse-dot 2s ease infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
-        .hero h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-            line-height: 1.12;
-            letter-spacing: -0.03em;
-            color: var(--ink);
-            max-width: 780px;
-            margin-bottom: 28px;
-            animation: fadeUp 0.6s ease 0.1s both;
-        }
-
-        .hero h1 em {
-            color: var(--warm);
-            font-style: italic;
-        }
-
-        .hero-sub {
-            font-size: 1.15rem;
-            color: var(--ink-light);
-            max-width: 560px;
-            line-height: 1.7;
-            margin-bottom: 44px;
-            font-weight: 300;
-            animation: fadeUp 0.6s ease 0.2s both;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            animation: fadeUp 0.6s ease 0.3s both;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 16px 32px;
-            background: var(--ink);
-            color: var(--cream);
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background: var(--warm);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(200, 85, 61, 0.2);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 16px 32px;
-            background: transparent;
-            color: var(--ink);
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            border: 1.5px solid var(--border-strong);
-            transition: all 0.25s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--ink);
-            transform: translateY(-1px);
-        }
-
-        /* Trust strip */
-        .trust-strip {
-            margin-top: 80px;
-            padding-top: 48px;
-            border-top: 1px solid var(--border);
-            animation: fadeUp 0.6s ease 0.4s both;
-        }
-
-        .trust-label {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--ink-muted);
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .trust-logos {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            flex-wrap: wrap;
-        }
-
-        .trust-logo {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--ink);
-            letter-spacing: 0.06em;
-            opacity: 0.7;
-            transition: opacity 0.3s;
-        }
-
-        .trust-logo:hover { opacity: 1; }
-
-        /* ── STATS STRIP ── */
-        .stats {
-            padding: 60px 0;
-            background: var(--ink);
-            color: var(--cream);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.4rem;
-            color: var(--warm-light);
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: rgba(250, 248, 245, 0.6);
-            font-weight: 400;
-            line-height: 1.5;
-        }
-
-        /* ── PROBLEM ── */
-        .problem {
-            background: var(--cream);
-        }
-
-        .section-label {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--warm);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2rem, 3.5vw, 2.8rem);
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-        }
-
-        .section-title em {
-            color: var(--warm);
-            font-style: italic;
-        }
-
-        .section-sub {
-            font-size: 1.05rem;
-            color: var(--ink-light);
-            max-width: 600px;
-            line-height: 1.7;
-            font-weight: 300;
-            margin-bottom: 60px;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .problem-card {
-            background: white;
-            border-radius: var(--radius);
-            padding: 36px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--warm);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .problem-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .problem-card:hover::before { opacity: 1; }
-
-        .problem-num {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--warm);
-            letter-spacing: 0.06em;
-            margin-bottom: 14px;
-        }
-
-        .problem-card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            line-height: 1.35;
-        }
-
-        .problem-card p {
-            font-size: 0.92rem;
-            color: var(--ink-light);
-            line-height: 1.65;
-        }
-
-        /* ── SERVICES ── */
-        .services {
-            background: white;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .service-card {
-            background: var(--cream);
-            border-radius: var(--radius-lg);
-            padding: 40px 32px;
-            border: 1px solid var(--border);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-card.featured {
-            background: var(--ink);
-            color: var(--cream);
-            border-color: transparent;
-        }
-
-        .service-card.featured .service-label,
-        .service-card.featured .service-features li {
-            color: rgba(250, 248, 245, 0.7);
-        }
-
-        .service-card.featured .service-price {
-            color: var(--warm-light);
-        }
-
-        .service-badge {
-            display: inline-block;
-            padding: 5px 14px;
-            background: var(--warm);
-            color: white;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            border-radius: 100px;
-            margin-bottom: 20px;
-        }
-
-        .service-label {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--ink-muted);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .service-card h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-
-        .service-desc {
-            font-size: 0.92rem;
-            color: var(--ink-light);
-            line-height: 1.65;
-            margin-bottom: 28px;
-        }
-
-        .service-card.featured .service-desc {
-            color: rgba(250, 248, 245, 0.7);
-        }
-
-        .service-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .service-features li {
-            font-size: 0.88rem;
-            color: var(--ink-light);
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .service-card.featured .service-features li {
-            border-color: rgba(250, 248, 245, 0.1);
-        }
-
-        .service-features li:last-child { border: none; }
-
-        .service-features .check {
-            color: var(--teal);
-            font-weight: 700;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .service-card.featured .service-features .check {
-            color: var(--warm-light);
-        }
-
-        .service-price {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            color: var(--ink);
-            margin-bottom: 4px;
-        }
-
-        .service-term {
-            font-size: 0.82rem;
-            color: var(--ink-muted);
-            margin-bottom: 28px;
-        }
-
-        .service-card.featured .service-term {
-            color: rgba(250, 248, 245, 0.5);
-        }
-
-        .btn-service {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 14px 24px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-service-outline {
-            background: transparent;
-            border: 1.5px solid var(--border-strong);
-            color: var(--ink);
-        }
-
-        .btn-service-outline:hover {
-            background: var(--ink);
-            color: var(--cream);
-            border-color: var(--ink);
-        }
-
-        .btn-service-warm {
-            background: var(--warm);
-            color: white;
-        }
-
-        .btn-service-warm:hover {
-            background: var(--warm-light);
-            transform: translateY(-1px);
-        }
-
-        /* ── CASE STUDIES ── */
-        .cases {
-            background: var(--cream);
-        }
-
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .case-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .case-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .case-industry {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--teal-glow);
-            color: var(--teal);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .case-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 14px;
-            line-height: 1.4;
-        }
-
-        .case-card p {
-            font-size: 0.9rem;
-            color: var(--ink-light);
-            line-height: 1.65;
-            margin-bottom: 24px;
-        }
-
-        .case-result {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .case-metric {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
-            color: var(--warm);
-        }
-
-        .case-metric-label {
-            font-size: 0.82rem;
-            color: var(--ink-muted);
-        }
-
-        /* ── HOW IT WORKS ── */
-        .process {
-            background: white;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            margin-top: 60px;
-        }
-
-        .step {
-            position: relative;
-        }
-
-        .step-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3rem;
-            color: var(--cream-dark);
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-
-        .step h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            font-size: 0.88rem;
-            color: var(--ink-light);
-            line-height: 1.65;
-        }
-
-        .step-time {
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--teal);
-            letter-spacing: 0.04em;
-        }
-
-        /* ── ABOUT ── */
-        .about {
-            background: var(--cream);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-photo {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: var(--cream-dark);
-            border: 4px solid white;
-            box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
-            overflow: hidden;
-        }
-
-        .about-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .about-content h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.2rem;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .about-content h2 em {
-            color: var(--warm);
-            font-style: italic;
-        }
-
-        .about-text {
-            font-size: 1.02rem;
-            color: var(--ink-light);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .about-text strong {
-            color: var(--ink);
-            font-weight: 600;
-        }
-
-        .about-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 32px;
-        }
-
-        .about-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .about-linkedin {
-            background: #0a66c2;
-            color: white;
-        }
-
-        .about-linkedin:hover { background: #004182; }
-
-        .about-email {
-            background: var(--cream-dark);
-            color: var(--ink);
-            border: 1px solid var(--border-strong);
-        }
-
-        .about-email:hover {
-            background: var(--ink);
-            color: var(--cream);
-        }
-
-        /* ── COMPARISON ── */
-        .comparison {
-            background: white;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 48px;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 16px 20px;
-            text-align: left;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .comparison-table th {
-            font-weight: 600;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--ink-muted);
-            padding-bottom: 20px;
-        }
-
-        .comparison-table th:nth-child(2) {
-            color: var(--warm);
-        }
-
-        .comparison-table td:nth-child(2) {
-            font-weight: 600;
-            color: var(--ink);
-        }
-
-        .comparison-table td {
-            color: var(--ink-light);
-        }
-
-        .check-yes { color: var(--teal); font-weight: 700; }
-        .check-no { color: var(--ink-muted); opacity: 0.4; }
-
-        /* ── FAQ ── */
-        .faq {
-            background: var(--cream);
-        }
-
-        .faq-list {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-        }
-
-        .faq-question {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 24px 0;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.02rem;
-            font-weight: 500;
-            color: var(--ink);
-            text-align: left;
-            font-family: 'Outfit', sans-serif;
-            line-height: 1.4;
-        }
-
-        .faq-question:hover { color: var(--warm); }
-
-        .faq-icon {
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: var(--ink-muted);
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 16px;
-        }
-
-        .faq-item.open .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease, padding 0.35s ease;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 300px;
-            padding-bottom: 24px;
-        }
-
-        .faq-answer p {
-            font-size: 0.92rem;
-            color: var(--ink-light);
-            line-height: 1.7;
-        }
-
-        /* ── CTA ── */
-        .final-cta {
-            background: var(--ink);
-            color: var(--cream);
-            text-align: center;
-            padding: 100px 24px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(200, 85, 61, 0.15) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .final-cta h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 20px;
-            position: relative;
-            letter-spacing: -0.02em;
-        }
-
-        .final-cta p {
-            font-size: 1.05rem;
-            color: rgba(250, 248, 245, 0.65);
-            max-width: 520px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-
-        .btn-cta-warm {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 18px 40px;
-            background: var(--warm);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-
-        .btn-cta-warm:hover {
-            background: var(--warm-light);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(200, 85, 61, 0.3);
-        }
-
-        .btn-cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 18px 32px;
-            background: transparent;
-            color: rgba(250, 248, 245, 0.8);
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            border: 1.5px solid rgba(250, 248, 245, 0.25);
-            transition: all 0.25s ease;
-        }
-
-        .btn-cta-secondary:hover {
-            border-color: rgba(250, 248, 245, 0.6);
-            color: white;
-            transform: translateY(-1px);
-        }
-
-        .cta-subtext {
-            margin-top: 20px;
-            font-size: 0.82rem;
-            color: rgba(250, 248, 245, 0.4);
-        }
-
-        /* ── FOOTER ── */
-        footer {
-            background: var(--ink);
-            color: rgba(250, 248, 245, 0.5);
-            padding: 48px 0;
-            border-top: 1px solid rgba(250, 248, 245, 0.06);
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-left {
-            font-size: 0.85rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: rgba(250, 248, 245, 0.5);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover { color: var(--cream); }
-
-        /* ── ANIMATIONS ── */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 1024px) {
-            .services-grid,
-            .cases-grid {
-                grid-template-columns: 1fr;
-                max-width: 480px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                max-width: 600px;
-            }
-
-            .about-photo {
-                max-width: 240px;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 72px 0; }
-
-            .nav-links { display: none; }
-            .nav-toggle { display: block; }
-
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 72px;
-                left: 0;
-                right: 0;
-                background: var(--cream);
-                padding: 24px;
-                border-bottom: 1px solid var(--border);
-                gap: 16px;
-            }
-
-            .hero { padding-top: 130px; padding-bottom: 72px; }
-            .hero-actions { flex-direction: column; align-items: flex-start; }
-
-            .trust-logos { gap: 28px; }
-
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-
-            .process-steps { grid-template-columns: 1fr; }
-
-            .comparison-table { font-size: 0.82rem; }
-            .comparison-table th,
-            .comparison-table td { padding: 12px 10px; }
-
-            .about-grid { grid-template-columns: 1fr; gap: 36px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saasible — Fractional Customer Success for Growth-Stage SaaS</title>
+  <meta name="description" content="Enterprise-grade Customer Success for growth-stage SaaS founders. Onboarding systems, health scoring, and retention playbooks — built by someone who managed CS for Netflix, Google, and Bosch." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --gray-50: #f9f9f7;
+      --gray-100: #f0ede8;
+      --gray-200: #e2ddd6;
+      --gray-400: #a09890;
+      --gray-600: #6b6560;
+      --gray-800: #2a2520;
+      --accent: #1a1a2e;
+      --accent-mid: #16213e;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --radius: 8px;
+      --radius-lg: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em; color: var(--accent); text-decoration: none; font-family: 'Georgia', serif; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; color: var(--gray-600); text-decoration: none; font-family: system-ui, sans-serif; font-weight: 500; transition: color .15s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-cta { font-size: 0.82rem; background: var(--accent); color: var(--white); padding: 7px 16px; border-radius: var(--radius); text-decoration: none; font-family: system-ui, sans-serif; font-weight: 500; transition: background .15s; }
+    .nav-cta:hover { background: var(--accent-mid); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: flex; flex-direction: column; justify-content: center;
+      max-width: 760px; margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+    }
+    .hero-eyebrow {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.18; font-weight: 400; letter-spacing: -.03em;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--gray-600); }
+    .hero-sub {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem; color: var(--gray-600); line-height: 1.6;
+      max-width: 520px; margin-bottom: 2.5rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: var(--white);
+      padding: 12px 24px; border-radius: var(--radius);
+      text-decoration: none; font-family: system-ui, sans-serif;
+      font-size: 0.9rem; font-weight: 500; transition: background .15s;
+    }
+    .btn-primary:hover { background: var(--accent-mid); }
+    .btn-ghost {
+      color: var(--gray-600); padding: 12px 24px; border-radius: var(--radius);
+      text-decoration: none; font-family: system-ui, sans-serif;
+      font-size: 0.9rem; font-weight: 500;
+      border: 1px solid var(--gray-200); transition: border-color .15s;
+    }
+    .btn-ghost:hover { border-color: var(--gray-400); color: var(--black); }
+
+    /* ── LOGOS ── */
+    .logos {
+      border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);
+      padding: 1.5rem 2rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .logos-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--gray-400); margin-right: 1rem;
+    }
+    .logos span {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      color: var(--gray-400); padding: 0 0.75rem;
+      border-right: 1px solid var(--gray-200);
+    }
+    .logos span:last-child { border-right: none; }
+
+    /* ── STATS ── */
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      max-width: 900px; margin: 4rem auto; padding: 0 2rem; gap: 2rem;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 2.4rem; font-weight: 400; letter-spacing: -.04em;
+      color: var(--accent); display: block; margin-bottom: 0.25rem;
+    }
+    .stat-desc {
+      font-family: system-ui, sans-serif;
+      font-size: 0.78rem; color: var(--gray-600); line-height: 1.4;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .section-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; display: block;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400; letter-spacing: -.03em; line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+    h2 em { font-style: italic; color: var(--gray-600); }
+
+    /* ── PROBLEM ── */
+    .problem { background: var(--gray-50); }
+    .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .problem-card {
+      background: var(--white); padding: 2rem;
+    }
+    .problem-num {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem; font-weight: 600; color: var(--gray-400);
+      letter-spacing: .08em; margin-bottom: 1rem; display: block;
+    }
+    .problem-card h3 {
+      font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem;
+      font-family: system-ui, sans-serif; letter-spacing: -.01em;
+    }
+    .problem-card p { font-family: system-ui, sans-serif; font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
+
+    /* ── SERVICES ── */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card {
+      border: 1px solid var(--gray-200); border-radius: var(--radius-lg);
+      padding: 2rem; position: relative;
+    }
+    .service-card.featured { border-color: var(--accent); }
+    .badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: var(--white);
+      font-family: system-ui, sans-serif; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .service-type {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--gray-400); margin-bottom: 0.5rem; display: block;
+    }
+    .service-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.75rem; font-family: system-ui, sans-serif; }
+    .service-card > p { font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.6; }
+    .service-list { list-style: none; margin-bottom: 1.5rem; }
+    .service-list li {
+      font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--gray-600);
+      padding: 5px 0; border-bottom: 1px solid var(--gray-100);
+      display: flex; align-items: flex-start; gap: 6px;
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .price { font-size: 1.6rem; font-weight: 400; letter-spacing: -.03em; margin-bottom: 0.25rem; }
+    .price-note { font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--gray-400); margin-bottom: 1.5rem; }
+    .service-cta {
+      display: block; text-align: center;
+      background: var(--accent); color: var(--white);
+      padding: 10px 20px; border-radius: var(--radius);
+      text-decoration: none; font-family: system-ui, sans-serif;
+      font-size: 0.85rem; font-weight: 500; transition: background .15s;
+    }
+    .service-cta:hover { background: var(--accent-mid); }
+
+    /* ── RESULTS ── */
+    .results { background: var(--gray-50); }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .result-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; }
+    .result-tag {
+      font-family: system-ui, sans-serif; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--gray-400);
+      margin-bottom: 1rem; display: block;
+    }
+    .result-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem; font-family: system-ui, sans-serif; line-height: 1.4; }
+    .result-card p { font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1.5rem; }
+    .result-metric { font-size: 2rem; font-weight: 400; letter-spacing: -.04em; color: var(--accent); display: block; }
+    .result-metric-label { font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--gray-600); }
+
+    /* ── PROCESS ── */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .process-step { }
+    .process-num {
+      font-size: 2.5rem; font-weight: 400; color: var(--gray-200);
+      letter-spacing: -.04em; display: block; margin-bottom: 0.5rem;
+    }
+    .process-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; font-family: system-ui, sans-serif; }
+    .process-step p { font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6; }
+    .process-timeline {
+      font-family: system-ui, sans-serif; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: .06em; color: var(--gold); text-transform: uppercase;
+      margin-top: 0.75rem; display: block;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--accent); color: var(--white); }
+    .about .section-label { color: var(--gold-light); }
+    .about h2 { color: var(--white); }
+    .about h2 em { color: var(--gold-light); }
+    .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; align-items: start; }
+    .about-img {
+      width: 200px; height: 240px; object-fit: cover;
+      border-radius: var(--radius-lg); display: block;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .about-text p { font-family: system-ui, sans-serif; font-size: 0.92rem; color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 1rem; }
+    .about-text strong { color: var(--white); }
+    .about-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .about-link {
+      font-family: system-ui, sans-serif; font-size: 0.82rem; font-weight: 500;
+      color: var(--gold-light); text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,.4); padding-bottom: 2px;
+      transition: border-color .15s;
+    }
+    .about-link:hover { border-color: var(--gold-light); }
+
+    /* ── COMPARE ── */
+    .compare-table { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: 0.85rem; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--gray-100); }
+    .compare-table th { font-size: 0.75rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--gray-400); background: var(--gray-50); }
+    .compare-table td:first-child { color: var(--gray-800); font-weight: 500; }
+    .compare-table td.yes { color: #1a7a4a; font-weight: 600; }
+    .compare-table td.no { color: var(--gray-400); }
+    .compare-table td.highlight { background: #fafaf7; }
+    .compare-table strong { color: var(--accent); }
+
+    /* ── FAQ ── */
+    .faq { background: var(--gray-50); }
+    .faq-list { max-width: 680px; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 0; cursor: pointer;
+      font-family: system-ui, sans-serif; font-size: 0.92rem; font-weight: 500;
+      gap: 1rem;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-icon { flex-shrink: 0; font-size: 1.2rem; color: var(--gray-400); transition: transform .2s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      font-family: system-ui, sans-serif; font-size: 0.88rem; color: var(--gray-600);
+      line-height: 1.7; padding-bottom: 1.25rem; display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--black); color: var(--white);
+      text-align: center; padding: 6rem 2rem;
+    }
+    .cta-section h2 { color: var(--white); margin-bottom: 1rem; }
+    .cta-section h2 em { color: var(--gold-light); }
+    .cta-section p { font-family: system-ui, sans-serif; font-size: 0.95rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-btn-primary {
+      background: var(--white); color: var(--black);
+      padding: 14px 28px; border-radius: var(--radius);
+      text-decoration: none; font-family: system-ui, sans-serif;
+      font-size: 0.92rem; font-weight: 600; transition: opacity .15s;
+    }
+    .cta-btn-primary:hover { opacity: .9; }
+    .cta-btn-ghost {
+      border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.8);
+      padding: 14px 28px; border-radius: var(--radius);
+      text-decoration: none; font-family: system-ui, sans-serif;
+      font-size: 0.92rem; font-weight: 500; transition: border-color .15s;
+    }
+    .cta-btn-ghost:hover { border-color: rgba(255,255,255,.6); }
+    .cta-note { font-family: system-ui, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,.4); margin-top: 1.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black); border-top: 1px solid rgba(255,255,255,.08);
+      padding: 2rem; text-align: center;
+    }
+    .footer-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    footer p { font-family: system-ui, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,.35); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-family: system-ui, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,.4); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .problems-grid, .services-grid, .results-grid, .process-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img { width: 120px; height: 144px; }
+      h2 { margin-bottom: 2rem; }
+    }
+
+    /* ── WHATSAPP CHAT WIDGET ── */
+    #saasible-chat {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex; flex-direction: column; align-items: flex-end;
+    }
+    #sc-popup {
+      display: none;
+      width: 300px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,.22), 0 2px 8px rgba(0,0,0,.1);
+      margin-bottom: 12px;
+      animation: scSlideUp .2s ease;
+    }
+    @keyframes scSlideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    #sc-header {
+      background: #1a1a2e;
+      padding: 16px;
+      display: flex; align-items: center; gap: 12px;
+      position: relative;
+    }
+    #sc-close {
+      position: absolute; right: 12px; top: 12px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(255,255,255,.18);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 12px; line-height: 1;
+    }
+    #sc-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #fff; flex-shrink: 0;
+    }
+    #sc-name { color: #fff; font-weight: 600; font-size: 14px; }
+    #sc-status { color: rgba(255,255,255,.75); font-size: 12px; margin-top: 2px; }
+    #sc-body {
+      background: #f0f2f5;
+      padding: 16px;
+    }
+    #sc-bubble {
+      background: #fff;
+      border-radius: 10px 10px 10px 2px;
+      padding: 10px 14px;
+      font-size: 13px; color: #222;
+      display: inline-block;
+      max-width: 85%;
+      box-shadow: 0 1px 2px rgba(0,0,0,.08);
+      line-height: 1.5;
+    }
+    #sc-footer { background: #fff; padding: 12px 14px; }
+    #sc-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #25D366; color: #fff;
+      padding: 12px 16px; border-radius: 24px;
+      text-decoration: none; font-weight: 600; font-size: 14px;
+      transition: background .15s;
+    }
+    #sc-cta:hover { background: #20b558; }
+    #sc-cta svg { flex-shrink: 0; }
+    #sc-float {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: #25D366; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,.4);
+      transition: transform .15s, box-shadow .15s;
+    }
+    #sc-float:hover { transform: scale(1.06); box-shadow: 0 6px 22px rgba(37,211,102,.5); }
+    #sc-tooltip {
+      position: absolute; bottom: 64px; right: 0;
+      background: #fff; color: #222;
+      font-size: 12px; font-weight: 500;
+      padding: 6px 12px; border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.12);
+      white-space: nowrap;
+      animation: scFadeIn 3s ease forwards;
+      pointer-events: none;
+    }
+    @keyframes scFadeIn {
+      0%   { opacity: 0; }
+      15%  { opacity: 1; }
+      75%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav>
-    <div class="container">
-        <a href="/" class="nav-logo">Saasible</a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#problem">Why CS</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#cases">Results</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#book" class="nav-cta">Book a Call →</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
-        </button>
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">Saasible</a>
+    <ul class="nav-links">
+      <li><a href="#problem">Why CS</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#cases">Results</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-cta" href="#book">Book a Call →</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Fractional Customer Success for SaaS</div>
+    <h1>Your customers are leaving.<br><em>You just don't see it yet.</em></h1>
+    <p class="hero-sub">Enterprise-grade Customer Success for growth-stage SaaS founders. Onboarding systems, health scoring, and retention playbooks — built by someone who managed CS for Netflix, Google, and Bosch.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#book">Book a Free CS Audit Call →</a>
+      <a class="btn-ghost" href="#cases">See the results</a>
     </div>
-</nav>
+  </div>
 
-<!-- ═══ HERO ═══ -->
-<section class="hero" id="hero">
-    <div class="container">
-        <div class="hero-badge">
-            <span class="dot"></span>
-            Fractional Customer Success for SaaS
-        </div>
+  <!-- LOGOS -->
+  <div class="logos">
+    <span class="logos-label">CS experience with</span>
+    <span>Netflix</span><span>Google</span><span>YouTube</span>
+    <span>Bosch</span><span>Carl Zeiss</span><span>HSBC</span><span>Nestlé</span>
+  </div>
 
-        <h1>Your customers are leaving.<br><em>You just don't see it yet.</em></h1>
-
-        <p class="hero-sub">
-            Enterprise-grade Customer Success for growth-stage SaaS founders.
-            Onboarding systems, health scoring, and retention playbooks — built by
-            someone who managed CS for Netflix, Google, and Bosch.
-        </p>
-
-        <div class="hero-actions">
-            <a href="#book" class="btn-primary">Book a Free CS Audit Call →</a>
-            <a href="#cases" class="btn-secondary">See the results</a>
-        </div>
-
-        <div class="trust-strip">
-            <div class="trust-label">CS experience with</div>
-            <div class="trust-logos">
-                <span class="trust-logo">NETFLIX</span>
-                <span class="trust-logo">GOOGLE</span>
-                <span class="trust-logo">YOUTUBE</span>
-                <span class="trust-logo">BOSCH</span>
-                <span class="trust-logo">CARL ZEISS</span>
-                <span class="trust-logo">HSBC</span>
-                <span class="trust-logo">NESTLÉ</span>
-            </div>
-        </div>
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num">8+</span>
+      <span class="stat-desc">Years managing enterprise SaaS accounts</span>
     </div>
-</section>
-
-<!-- ═══ STATS ═══ -->
-<section class="stats">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="reveal">
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Years managing enterprise<br>SaaS accounts</div>
-            </div>
-            <div class="reveal">
-                <div class="stat-number">₹10Cr</div>
-                <div class="stat-label">Pipeline generated through<br>strategic account reviews</div>
-            </div>
-            <div class="reveal">
-                <div class="stat-number">30%</div>
-                <div class="stat-label">Average engagement lift<br>from CS interventions</div>
-            </div>
-            <div class="reveal">
-                <div class="stat-number">60+</div>
-                <div class="stat-label">Customer discovery workshops<br>influencing product roadmaps</div>
-            </div>
-        </div>
+    <div class="stat">
+      <span class="stat-num">₹10Cr</span>
+      <span class="stat-desc">Pipeline generated through strategic account reviews</span>
     </div>
-</section>
-
-<!-- ═══ PROBLEM ═══ -->
-<section class="problem" id="problem">
-    <div class="container">
-        <div class="section-label reveal">The Problem</div>
-        <h2 class="section-title reveal">Your product is good.<br>Your <em>retention</em> is killing you.</h2>
-        <p class="section-sub reveal">
-            Most SaaS founders obsess over acquisition. But the real money — and the real danger — lives in what happens after the sale.
-        </p>
-
-        <div class="problem-grid">
-            <div class="problem-card reveal">
-                <div class="problem-num">01</div>
-                <h3>No onboarding system</h3>
-                <p>Your new customers get a welcome email and then silence. By week 3, half of them have stopped logging in. By month 2, they're gone — and you never saw it coming.</p>
-            </div>
-            <div class="problem-card reveal">
-                <div class="problem-num">02</div>
-                <h3>The founder is the CSM</h3>
-                <p>You're personally managing every customer relationship in WhatsApp groups and email threads. It worked at 5 customers. At 20, it's unsustainable. At 50, it's a liability.</p>
-            </div>
-            <div class="problem-card reveal">
-                <div class="problem-num">03</div>
-                <h3>No health visibility</h3>
-                <p>You find out a customer is unhappy when they cancel. There's no health score, no usage tracking, no early warning system. Every churn event is a surprise.</p>
-            </div>
-            <div class="problem-card reveal">
-                <div class="problem-num">04</div>
-                <h3>Revenue leaking silently</h3>
-                <p>You're spending thousands to acquire each customer, then losing them in 90 days. Your LTV can't justify your CAC, and your unit economics are quietly underwater.</p>
-            </div>
-        </div>
+    <div class="stat">
+      <span class="stat-num">30%</span>
+      <span class="stat-desc">Average engagement lift from CS interventions</span>
     </div>
-</section>
-
-<!-- ═══ SERVICES ═══ -->
-<section class="services" id="services">
-    <div class="container">
-        <div class="section-label reveal">Services</div>
-        <h2 class="section-title reveal">From leaking bucket to <em>retention machine</em></h2>
-        <p class="section-sub reveal">
-            Three engagement models. Start with the audit to see what's broken. Scale with the retainer to fix it permanently.
-        </p>
-
-        <div class="services-grid">
-            <!-- CS Audit -->
-            <div class="service-card reveal">
-                <div class="service-label">One-Time</div>
-                <h3>CS Health Audit</h3>
-                <p class="service-desc">A forensic review of your customer journey — from first signup to month 6. You get a clear diagnosis of where customers drop off and a prioritised action plan to stop the bleeding.</p>
-                <ul class="service-features">
-                    <li><span class="check">✓</span> Full customer journey mapping</li>
-                    <li><span class="check">✓</span> Onboarding flow teardown</li>
-                    <li><span class="check">✓</span> Churn risk identification</li>
-                    <li><span class="check">✓</span> Health scoring framework draft</li>
-                    <li><span class="check">✓</span> 30/60/90-day retention action plan</li>
-                    <li><span class="check">✓</span> Recorded Loom walkthrough</li>
-                </ul>
-                <div class="service-price">$499</div>
-                <div class="service-term">Delivered in 5 business days</div>
-                <a href="#book" class="btn-service btn-service-outline">Book the Audit →</a>
-            </div>
-
-            <!-- Fractional CS Retainer — FEATURED -->
-            <div class="service-card featured reveal">
-                <div class="service-badge">Most Popular</div>
-                <div class="service-label">Monthly</div>
-                <h3>Fractional CS Retainer</h3>
-                <p class="service-desc">Your embedded Customer Success partner. I work inside your company 8-10 hours per month — building the systems that make customers stay, expand, and advocate.</p>
-                <ul class="service-features">
-                    <li><span class="check">✓</span> Custom onboarding playbook</li>
-                    <li><span class="check">✓</span> Customer health scoring system</li>
-                    <li><span class="check">✓</span> Churn early-warning alerts</li>
-                    <li><span class="check">✓</span> QBR structure and templates</li>
-                    <li><span class="check">✓</span> Expansion revenue identification</li>
-                    <li><span class="check">✓</span> Bi-weekly strategy calls</li>
-                    <li><span class="check">✓</span> Dedicated Slack access</li>
-                    <li><span class="check">✓</span> Monthly CS metrics report</li>
-                </ul>
-                <div class="service-price">$2,000/mo</div>
-                <div class="service-term">3-month minimum · cancel anytime after</div>
-                <a href="#book" class="btn-service btn-service-warm">Start the Retainer →</a>
-            </div>
-
-            <!-- CS Foundation Sprint -->
-            <div class="service-card reveal">
-                <div class="service-label">Done-For-You</div>
-                <h3>CS Foundation Sprint</h3>
-                <p class="service-desc">A 30-day intensive. I come in, audit everything, and build your entire CS infrastructure from scratch — onboarding sequences, health scoring, playbooks, and handover docs.</p>
-                <ul class="service-features">
-                    <li><span class="check">✓</span> Full CS function audit</li>
-                    <li><span class="check">✓</span> End-to-end onboarding rebuild</li>
-                    <li><span class="check">✓</span> Health score framework (live)</li>
-                    <li><span class="check">✓</span> Churn recovery playbook</li>
-                    <li><span class="check">✓</span> Expansion/upsell playbook</li>
-                    <li><span class="check">✓</span> 90-day CS ops roadmap</li>
-                    <li><span class="check">✓</span> 2 weeks post-sprint support</li>
-                </ul>
-                <div class="service-price">$4,500</div>
-                <div class="service-term">Flat fee · 30 days</div>
-                <a href="#book" class="btn-service btn-service-outline">Book the Sprint →</a>
-            </div>
-        </div>
+    <div class="stat">
+      <span class="stat-num">60+</span>
+      <span class="stat-desc">Customer discovery workshops influencing product roadmaps</span>
     </div>
-</section>
+  </div>
 
-<!-- ═══ CASE STUDIES ═══ -->
-<section class="cases" id="cases">
-    <div class="container">
-        <div class="section-label reveal">Results</div>
-        <h2 class="section-title reveal">What happens when CS <em>actually works</em></h2>
-        <p class="section-sub reveal">
-            Real outcomes from enterprise and growth-stage SaaS accounts. Names anonymised, numbers real.
-        </p>
-
-        <div class="cases-grid">
-            <div class="case-card reveal">
-                <div class="case-industry">BFSI · WhatsApp Automation</div>
-                <h3>Enterprise bank with low WhatsApp adoption 60 days post-launch</h3>
-                <p>Implemented a structured 3-touchpoint success plan at weeks 2, 5, and 9. Redesigned the onboarding communication sequence and added proactive check-ins tied to usage milestones.</p>
-                <div class="case-result">
-                    <div class="case-metric">34% → 71%</div>
-                    <div class="case-metric-label">Activation rate in one quarter</div>
-                </div>
-            </div>
-
-            <div class="case-card reveal">
-                <div class="case-industry">Consumer Electronics · RCS</div>
-                <h3>Global electronics brand seeing high churn on messaging campaigns</h3>
-                <p>Built a customer health dashboard tracking delivery rates, engagement scores, and response patterns. Introduced automated churn-risk flags two weeks before renewal conversations.</p>
-                <div class="case-result">
-                    <div class="case-metric">+15pt</div>
-                    <div class="case-metric-label">NPS improvement in 6 months</div>
-                </div>
-            </div>
-
-            <div class="case-card reveal">
-                <div class="case-industry">Streaming · Conversational AI</div>
-                <h3>Streaming giant struggling with campaign adoption across regions</h3>
-                <p>Ran 12 discovery workshops to map adoption blockers by region. Created localised onboarding playbooks and trained internal teams on a repeatable QBR framework.</p>
-                <div class="case-result">
-                    <div class="case-metric">326%</div>
-                    <div class="case-metric-label">ROI on campaign engagement</div>
-                </div>
-            </div>
+  <!-- PROBLEM -->
+  <section id="problem" class="problem">
+    <div class="section-inner">
+      <span class="section-label">The Problem</span>
+      <h2>Your product is good. Your <em>retention</em> is killing you.</h2>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <span class="problem-num">01</span>
+          <h3>No onboarding system</h3>
+          <p>Your new customers get a welcome email and then silence. By week 3, half of them have stopped logging in. By month 2, they're gone — and you never saw it coming.</p>
         </div>
-    </div>
-</section>
-
-<!-- ═══ PROCESS ═══ -->
-<section class="process" id="process">
-    <div class="container">
-        <div class="section-label reveal">How It Works</div>
-        <h2 class="section-title reveal">From firefighting to <em>predictable retention</em></h2>
-
-        <div class="process-steps">
-            <div class="step reveal">
-                <div class="step-number">01</div>
-                <h3>CS Diagnostic</h3>
-                <p>We map your entire customer journey, identify where drop-offs happen, and score the health of every active account. You see the full picture for the first time.</p>
-                <span class="step-time">Days 1–5</span>
-            </div>
-            <div class="step reveal">
-                <div class="step-number">02</div>
-                <h3>Onboarding Rebuild</h3>
-                <p>We design a structured onboarding sequence with defined touchpoints, success milestones, and automated check-ins. No customer falls through the cracks again.</p>
-                <span class="step-time">Days 5–14</span>
-            </div>
-            <div class="step reveal">
-                <div class="step-number">03</div>
-                <h3>Health System</h3>
-                <p>We build your customer health scoring framework — usage-based, engagement-based, or hybrid. You get early warnings weeks before a customer is at risk.</p>
-                <span class="step-time">Days 14–21</span>
-            </div>
-            <div class="step reveal">
-                <div class="step-number">04</div>
-                <h3>Retention Loop</h3>
-                <p>We create the playbooks for QBRs, expansion conversations, and churn recovery. Your CS function runs on systems, not heroics. We optimise monthly with real data.</p>
-                <span class="step-time">Ongoing</span>
-            </div>
+        <div class="problem-card">
+          <span class="problem-num">02</span>
+          <h3>The founder is the CSM</h3>
+          <p>You're personally managing every customer relationship in WhatsApp groups and email threads. It worked at 5 customers. At 20, it's unsustainable. At 50, it's a liability.</p>
         </div>
-    </div>
-</section>
-
-<!-- ═══ ABOUT ═══ -->
-<section class="about" id="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-photo">
-                <img src="./vinod.png" alt="Vinod Yadav, Founder of Saasible" loading="lazy">
-            </div>
-            <div class="about-content">
-                <div class="section-label">About</div>
-                <h2>I've kept <em>millions</em> in revenue from walking out the door.</h2>
-
-                <p class="about-text">
-                    I'm <strong>Vinod Yadav</strong>. Over the past 8 years, I've managed Customer Success for some of the most demanding enterprise accounts in the world — <strong>Netflix, Google, YouTube, Bosch, HSBC, Carl Zeiss, and Nestlé</strong> — across WhatsApp Business, RCS, SMS, and conversational AI platforms.
-                </p>
-
-                <p class="about-text">
-                    I've personally contributed to a <strong>₹10 Crore pipeline</strong> through strategic account reviews, run <strong>60+ customer discovery workshops</strong> that shaped product roadmaps, and built the CS playbooks that improved enterprise engagement by <strong>30%</strong> and NPS by <strong>15 points</strong>.
-                </p>
-
-                <p class="about-text">
-                    I started Saasible because I watched the same pattern at every SaaS company: founders spend everything on acquisition and nothing on keeping the customers they already have. The ones who survive are the ones who fix retention first. That's what I do.
-                </p>
-
-                <div class="about-links">
-                    <a href="https://www.linkedin.com/in/yuvinod/" class="about-linkedin" target="_blank" rel="noopener">
-                        LinkedIn →
-                    </a>
-                    <a href="mailto:hello@saasible.in?subject=CS Conversation" class="about-email">
-                        hello@saasible.in
-                    </a>
-                </div>
-            </div>
+        <div class="problem-card">
+          <span class="problem-num">03</span>
+          <h3>No health visibility</h3>
+          <p>You find out a customer is unhappy when they cancel. There's no health score, no usage tracking, no early warning system. Every churn event is a surprise.</p>
         </div>
-    </div>
-</section>
-
-<!-- ═══ COMPARISON ═══ -->
-<section class="comparison" id="comparison">
-    <div class="container">
-        <div class="section-label reveal">Why Saasible</div>
-        <h2 class="section-title reveal">How we compare — <em>honestly</em></h2>
-
-        <table class="comparison-table reveal">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Saasible</th>
-                    <th>Full-time CSM Hire</th>
-                    <th>CS Consulting Firm</th>
-                    <th>DIY</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Enterprise CS experience (Netflix, Google-level)</td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">Rarely</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">✗</span></td>
-                </tr>
-                <tr>
-                    <td>Understands conversational AI / CPaaS</td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">Unlikely</span></td>
-                    <td><span class="check-no">✗</span></td>
-                    <td><span class="check-no">✗</span></td>
-                </tr>
-                <tr>
-                    <td>Ready-to-deploy CS playbooks</td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">3-6 months</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">✗</span></td>
-                </tr>
-                <tr>
-                    <td>Startup-speed execution</td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">Slow</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                </tr>
-                <tr>
-                    <td>No ₹20-30 LPA salary commitment</td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-no">✗</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                    <td><span class="check-yes">✓</span></td>
-                </tr>
-                <tr>
-                    <td>Typical monthly cost</td>
-                    <td><strong>$499 – $2,000</strong></td>
-                    <td>₹1.5L – ₹2.5L</td>
-                    <td>$5K – $15K</td>
-                    <td>Your time</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<!-- ═══ FAQ ═══ -->
-<section class="faq" id="faq">
-    <div class="container">
-        <div style="text-align: center;">
-            <div class="section-label reveal">FAQ</div>
-            <h2 class="section-title reveal">Common <em>questions</em></h2>
+        <div class="problem-card">
+          <span class="problem-num">04</span>
+          <h3>Revenue leaking silently</h3>
+          <p>You're spending thousands to acquire each customer, then losing them in 90 days. Your LTV can't justify your CAC, and your unit economics are quietly underwater.</p>
         </div>
-
-        <div class="faq-list" style="margin-top: 48px;">
-            <div class="faq-item">
-                <button class="faq-question">
-                    What stage of startup is this best for?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Saasible works best with B2B SaaS founders who have a working product and 10-100 customers, but no structured Customer Success function. Typically pre-Series B, ₹10L to ₹5Cr ARR. If your founder is still the de-facto CSM, you're in the right place.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    How is this different from hiring a full-time CSM?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A full-time CSM costs ₹15-25 LPA and takes 3-6 months to build your CS infrastructure. With Saasible, you get enterprise-grade CS playbooks on day one — built by someone who's managed Netflix and Google accounts — at a fraction of the cost. You get the systems first, and hire the team to run them later.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Do you only work with conversational AI companies?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>No. My deepest expertise is in CPaaS and conversational AI from my years at Gupshup, but the CS frameworks I build are universal to any B2B SaaS product. I work with companies across fintech, healthtech, developer tools, and more. The onboarding and retention principles are the same.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    What does the 3-month minimum on the retainer cover?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>CS is a compounding game — the biggest retention improvements show up in months 2 and 3 as the systems take hold. The minimum ensures we have enough time to build, implement, and measure real outcomes. After 3 months, you can continue month-to-month or pause anytime with 30 days notice.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    How many hours per month do you dedicate to each client?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>On the Fractional CS Retainer, I dedicate 8-10 focused hours per month per client. This includes bi-weekly strategy calls, playbook building, health score monitoring, and async Slack support. It's structured to deliver maximum impact without requiring full-time overhead.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Can you help with GTM and acquisition too?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes. CS and GTM are deeply connected — how you onboard determines whether a customer becomes a case study or a churn statistic. While my primary focus is retention and CS, I bring GTM thinking into every engagement. For founders who need acquisition help alongside retention, we can build a combined plan.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ═══ FINAL CTA ═══ -->
-<section class="final-cta" id="book">
-    <div class="container">
-        <h2 class="reveal">Stop losing customers.<br>Start keeping them.</h2>
-        <p class="reveal">Book a free 30-minute CS audit call. We'll map your customer journey, identify where the leaks are, and tell you exactly what we'd fix first.</p>
-        
-        <div class="cta-buttons reveal">
-            <a href="mailto:Yuvinod@gmail.com?subject=Saasible%20CS%20Audit%20Call&body=Hi%20Vinod%2C%0A%0AI'd%20like%20to%20book%20a%20free%20CS%20audit%20call.%0A%0ACompany%3A%20%0AProduct%3A%20%0ACurrent%20customers%3A%20%0ABiggest%20CS%20challenge%3A%20%0A%0AThanks!" class="btn-cta-warm">
-                Email Me to Book a Call →
-            </a>
-            <a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener" class="btn-cta-secondary">
-                Or DM me on LinkedIn →
-            </a>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <span class="section-label">Services</span>
+      <h2>From leaking bucket to <em>retention machine</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-type">One-Time</span>
+          <h3>CS Health Audit</h3>
+          <p>A forensic review of your customer journey — from first signup to month 6. You get a clear diagnosis of where customers drop off and a prioritised action plan to stop the bleeding.</p>
+          <ul class="service-list">
+            <li>✓ Full customer journey mapping</li>
+            <li>✓ Onboarding flow teardown</li>
+            <li>✓ Churn risk identification</li>
+            <li>✓ Health scoring framework draft</li>
+            <li>✓ 30/60/90-day retention action plan</li>
+            <li>✓ Recorded Loom walkthrough</li>
+          </ul>
+          <div class="price">$499</div>
+          <div class="price-note">Delivered in 5 business days</div>
+          <a class="service-cta" href="#book">Book the Audit →</a>
         </div>
-        
-        <div class="cta-subtext reveal">No pitch. No pressure. Just an honest look at your retention.</div>
-
-        <!-- 
-            TODO: Replace the buttons above with Calendly embed once you set up an account:
-            <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_USERNAME/cs-audit" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        -->
-    </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-    <div class="container">
-        <div class="footer-inner">
-            <div class="footer-left">
-                © 2026 Saasible. Built by Vinod Yadav.
-            </div>
-            <ul class="footer-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#cases">Results</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="mailto:hello@saasible.in">Contact</a></li>
-            </ul>
+        <div class="service-card featured">
+          <div class="badge">Most Popular</div>
+          <span class="service-type">Monthly</span>
+          <h3>Fractional CS Retainer</h3>
+          <p>Your embedded Customer Success partner. I work inside your company 8–10 hours per month — building the systems that make customers stay, expand, and advocate.</p>
+          <ul class="service-list">
+            <li>✓ Custom onboarding playbook</li>
+            <li>✓ Customer health scoring system</li>
+            <li>✓ Churn early-warning alerts</li>
+            <li>✓ QBR structure and templates</li>
+            <li>✓ Expansion revenue identification</li>
+            <li>✓ Bi-weekly strategy calls</li>
+            <li>✓ Dedicated Slack access</li>
+            <li>✓ Monthly CS metrics report</li>
+          </ul>
+          <div class="price">$2,000/mo</div>
+          <div class="price-note">3-month minimum · cancel anytime after</div>
+          <a class="service-cta" href="#book">Start the Retainer →</a>
         </div>
+        <div class="service-card">
+          <span class="service-type">Done-For-You</span>
+          <h3>CS Foundation Sprint</h3>
+          <p>A 30-day intensive. I come in, audit everything, and build your entire CS infrastructure from scratch — onboarding sequences, health scoring, playbooks, and handover docs.</p>
+          <ul class="service-list">
+            <li>✓ Full CS function audit</li>
+            <li>✓ End-to-end onboarding rebuild</li>
+            <li>✓ Health score framework (live)</li>
+            <li>✓ Churn recovery playbook</li>
+            <li>✓ Expansion/upsell playbook</li>
+            <li>✓ 90-day CS ops roadmap</li>
+            <li>✓ 2 weeks post-sprint support</li>
+          </ul>
+          <div class="price">$4,500</div>
+          <div class="price-note">Flat fee · 30 days</div>
+          <a class="service-cta" href="#book">Book the Sprint →</a>
+        </div>
+      </div>
     </div>
-</footer>
+  </section>
 
-<!-- ═══ SCRIPTS ═══ -->
-<script>
-    // Mobile nav toggle
-    document.getElementById('navToggle').addEventListener('click', function() {
-        document.getElementById('navLinks').classList.toggle('open');
-    });
+  <!-- RESULTS -->
+  <section id="cases" class="results">
+    <div class="section-inner">
+      <span class="section-label">Results</span>
+      <h2>What happens when CS <em>actually works</em></h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-tag">BFSI · WhatsApp Automation</span>
+          <h3>Enterprise bank with low WhatsApp adoption 60 days post-launch</h3>
+          <p>Implemented a structured 3-touchpoint success plan at weeks 2, 5, and 9. Redesigned the onboarding communication sequence and added proactive check-ins tied to usage milestones.</p>
+          <span class="result-metric">34% → 71%</span>
+          <span class="result-metric-label">Activation rate in one quarter</span>
+        </div>
+        <div class="result-card">
+          <span class="result-tag">Consumer Electronics · RCS</span>
+          <h3>Global electronics brand seeing high churn on messaging campaigns</h3>
+          <p>Built a customer health dashboard tracking delivery rates, engagement scores, and response patterns. Introduced automated churn-risk flags two weeks before renewal conversations.</p>
+          <span class="result-metric">+15pt</span>
+          <span class="result-metric-label">NPS improvement in 6 months</span>
+        </div>
+        <div class="result-card">
+          <span class="result-tag">Streaming · Conversational AI</span>
+          <h3>Streaming giant struggling with campaign adoption across regions</h3>
+          <p>Ran 12 discovery workshops to map adoption blockers by region. Created localised onboarding playbooks and trained internal teams on a repeatable QBR framework.</p>
+          <span class="result-metric">326%</span>
+          <span class="result-metric-label">ROI on campaign engagement</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Close nav on link click (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.remove('open');
-        });
-    });
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-inner">
+      <span class="section-label">How It Works</span>
+      <h2>From firefighting to <em>predictable retention</em></h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-num">01</span>
+          <h3>CS Diagnostic</h3>
+          <p>We map your entire customer journey, identify where drop-offs happen, and score the health of every active account. You see the full picture for the first time.</p>
+          <span class="process-timeline">Days 1–5</span>
+        </div>
+        <div class="process-step">
+          <span class="process-num">02</span>
+          <h3>Onboarding Rebuild</h3>
+          <p>We design a structured onboarding sequence with defined touchpoints, success milestones, and automated check-ins. No customer falls through the cracks again.</p>
+          <span class="process-timeline">Days 5–14</span>
+        </div>
+        <div class="process-step">
+          <span class="process-num">03</span>
+          <h3>Health System</h3>
+          <p>We build your customer health scoring framework — usage-based, engagement-based, or hybrid. You get early warnings weeks before a customer is at risk.</p>
+          <span class="process-timeline">Days 14–21</span>
+        </div>
+        <div class="process-step">
+          <span class="process-num">04</span>
+          <h3>Retention Loop</h3>
+          <p>We create the playbooks for QBRs, expansion conversations, and churn recovery. Your CS function runs on systems, not heroics.</p>
+          <span class="process-timeline">Ongoing</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="section-inner">
+      <span class="section-label">About</span>
+      <h2>I've kept <em>millions</em> in revenue from walking out the door.</h2>
+      <div class="about-grid">
+        <img class="about-img" src="vinod.png" alt="Vinod Yadav, Founder of Saasible" />
+        <div class="about-text">
+          <p>I'm <strong>Vinod Yadav</strong>. Over the past 8 years, I've managed Customer Success for some of the most demanding enterprise accounts in the world — <strong>Netflix, Google, YouTube, Bosch, HSBC, Carl Zeiss, and Nestlé</strong> — across WhatsApp Business, RCS, SMS, and conversational AI platforms.</p>
+          <p>I've personally contributed to a <strong>₹10 Crore pipeline</strong> through strategic account reviews, run <strong>60+ customer discovery workshops</strong> that shaped product roadmaps, and built the CS playbooks that improved enterprise engagement by <strong>30%</strong> and NPS by <strong>15 points</strong>.</p>
+          <p>I started Saasible because I watched the same pattern at every SaaS company: founders spend everything on acquisition and nothing on keeping the customers they already have. The ones who survive are the ones who fix retention first. That's what I do.</p>
+          <div class="about-links">
+            <a class="about-link" href="https://www.linkedin.com/in/yuvinod/" target="_blank">LinkedIn →</a>
+            <a class="about-link" href="mailto:hello@saasible.in">hello@saasible.in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  <!-- COMPARE -->
+  <section>
+    <div class="section-inner">
+      <span class="section-label">Why Saasible</span>
+      <h2>How we compare — <em>honestly</em></h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Saasible</th>
+            <th>Full-time CSM Hire</th>
+            <th>CS Consulting Firm</th>
+            <th>DIY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enterprise CS experience (Netflix, Google-level)</td>
+            <td class="yes highlight">✓</td><td class="no">Rarely</td><td class="yes">✓</td><td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Understands conversational AI / CPaaS</td>
+            <td class="yes highlight">✓</td><td class="no">Unlikely</td><td class="no">✗</td><td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Ready-to-deploy CS playbooks</td>
+            <td class="yes highlight">✓</td><td class="no">3-6 months</td><td class="yes">✓</td><td class="no">✗</td>
+          </tr>
+          <tr>
+            <td>Startup-speed execution</td>
+            <td class="yes highlight">✓</td><td class="yes">✓</td><td class="no">Slow</td><td class="yes">✓</td>
+          </tr>
+          <tr>
+            <td>No ₹20-30 LPA salary commitment</td>
+            <td class="yes highlight">✓</td><td class="no">✗</td><td class="yes">✓</td><td class="yes">✓</td>
+          </tr>
+          <tr>
+            <td>Typical monthly cost</td>
+            <td class="highlight"><strong>$499 – $2,000</strong></td><td>₹1.5L – ₹2.5L</td><td>$5K – $15K</td><td>Your time</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const item = btn.parentElement;
-            const isOpen = item.classList.contains('open');
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="section-inner">
+      <span class="section-label">FAQ</span>
+      <h2>Common <em>questions</em></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What stage of startup is this best for?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">Saasible works best with B2B SaaS founders who have a working product and 10–100 customers, but no structured Customer Success function. Typically pre-Series B, ₹10L to ₹5Cr ARR. If your founder is still the de-facto CSM, you're in the right place.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How is this different from hiring a full-time CSM?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">A full-time CSM costs ₹15–25 LPA and takes 3–6 months to build your CS infrastructure. With Saasible, you get enterprise-grade CS playbooks on day one — built by someone who's managed Netflix and Google accounts — at a fraction of the cost. You get the systems first, and hire the team to run them later.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you only work with conversational AI companies?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">No. My deepest expertise is in CPaaS and conversational AI from my years at Gupshup, but the CS frameworks I build are universal to any B2B SaaS product. I work with companies across fintech, healthtech, developer tools, and more. The onboarding and retention principles are the same.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What does the 3-month minimum on the retainer cover?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">CS is a compounding game — the biggest retention improvements show up in months 2 and 3 as the systems take hold. The minimum ensures we have enough time to build, implement, and measure real outcomes. After 3 months, you can continue month-to-month or pause anytime with 30 days notice.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How many hours per month do you dedicate to each client?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">On the Fractional CS Retainer, I dedicate 8–10 focused hours per month per client. This includes bi-weekly strategy calls, playbook building, health score monitoring, and async Slack support. It's structured to deliver maximum impact without requiring full-time overhead.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Can you help with GTM and acquisition too?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">Yes. CS and GTM are deeply connected — how you onboard determines whether a customer becomes a case study or a churn statistic. While my primary focus is retention and CS, I bring GTM thinking into every engagement. For founders who need acquisition help alongside retention, we can build a combined plan.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Close all
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  <!-- CTA -->
+  <section id="book" class="cta-section">
+    <h2>Stop losing customers.<br>Start <em>keeping</em> them.</h2>
+    <p>Book a free 30-minute CS audit call. We'll map your customer journey, identify where the leaks are, and tell you exactly what we'd fix first.</p>
+    <div class="cta-buttons">
+      <a class="cta-btn-primary" href="mailto:Yuvinod@gmail.com?subject=Saasible%20CS%20Audit%20Call&body=Hi%20Vinod%2C%0A%0AI'd%20like%20to%20book%20a%20free%20CS%20audit%20call.%0A%0ACompany%3A%20%0AProduct%3A%20%0ACurrent%20customers%3A%20%0ABiggest%20CS%20challenge%3A%20%0A%0AThanks!">Email Me to Book a Call →</a>
+      <a class="cta-btn-ghost" href="https://www.linkedin.com/in/yuvinod/" target="_blank">Or DM me on LinkedIn →</a>
+    </div>
+    <p class="cta-note">No pitch. No pressure. Just an honest look at your retention.</p>
+  </section>
 
-            // Open clicked (if it wasn't already open)
-            if (!isOpen) item.classList.add('open');
-        });
-    });
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 Saasible. Built by Vinod Yadav.</p>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#cases">Results</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/yuvinod/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:hello@saasible.in">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
 
-    // Nav shrink on scroll
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 60) {
-            nav.style.background = 'rgba(250, 248, 245, 0.95)';
-        } else {
-            nav.style.background = 'rgba(250, 248, 245, 0.85)';
-        }
-    });
-</script>
+  <!-- ── WHATSAPP CHAT WIDGET ── -->
+  <div id="saasible-chat">
+    <div id="sc-popup">
+      <div id="sc-header">
+        <div id="sc-avatar">V</div>
+        <div>
+          <div id="sc-name">Vinod Yadav</div>
+          <div id="sc-status">Typically replies within an hour</div>
+        </div>
+        <button id="sc-close" onclick="toggleWidget(false)" aria-label="Close chat">✕</button>
+      </div>
+      <div id="sc-body">
+        <div id="sc-bubble">Hi there! 👋 Thinking about CS for your SaaS? Let's talk.</div>
+      </div>
+      <div id="sc-footer">
+        <a id="sc-cta" href="https://wa.me/919340486096?text=Hi%20Vinod%2C%20I%20saw%20Saasible%20and%20I%27d%20like%20to%20talk%20about%20CS%20for%20my%20SaaS." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div id="sc-tooltip">Chat with Vinod 👋</div>
+    <button id="sc-float" onclick="toggleWidget()" aria-label="Open WhatsApp chat">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // FAQ toggle
+    function toggleFaq(el) {
+      el.parentElement.classList.toggle('open');
+    }
+
+    // WhatsApp widget toggle
+    function toggleWidget(forceState) {
+      const popup = document.getElementById('sc-popup');
+      const tooltip = document.getElementById('sc-tooltip');
+      const isOpen = popup.style.display === 'block';
+      const shouldOpen = forceState !== undefined ? forceState : !isOpen;
+      popup.style.display = shouldOpen ? 'block' : 'none';
+      if (tooltip) tooltip.style.display = shouldOpen ? 'none' : '';
+    }
+
+    // Hide tooltip after animation completes
+    setTimeout(() => {
+      const t = document.getElementById('sc-tooltip');
+      if (t) t.style.display = 'none';
+    }, 3200);
+  </script>
 
 </body>
 </html>
