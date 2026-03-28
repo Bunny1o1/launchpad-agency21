@@ -3,8 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractional Customer Success for SaaS Startups | Saasible</title>
+  <meta
+    name="description"
+    content="Saasible helps growth-stage SaaS founders reduce churn, build onboarding systems, and scale retention — without a full-time CS hire."
+  />
+  <meta name="theme-color" content="#0A0F1E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.saasible.in/" />
+  <meta property="og:title" content="Fractional Customer Success for SaaS Startups | Saasible" />
+  <meta
+    property="og:description"
+    content="Saasible helps growth-stage SaaS founders reduce churn, build onboarding systems, and scale retention — without a full-time CS hire."
+  />
+  <meta property="og:image" content="https://www.saasible.in/vinod.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractional Customer Success for SaaS Startups | Saasible" />
+  <meta
+    name="twitter:description"
+    content="Saasible helps growth-stage SaaS founders reduce churn, build onboarding systems, and scale retention — without a full-time CS hire."
+  />
+  <meta name="twitter:image" content="https://www.saasible.in/vinod.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Saasible Fractional Customer Success",
+      "serviceType": "Fractional Customer Success for SaaS startups",
+      "description": "Saasible helps growth-stage SaaS founders reduce churn, build onboarding systems, and scale retention without a full-time CS hire.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Saasible",
+        "url": "https://www.saasible.in/",
+        "image": "https://www.saasible.in/vinod.png"
+      },
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Growth-stage SaaS founders"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "CS Health Audit",
+          "price": "499",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Fractional CS Retainer",
+          "price": "2000",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "CS Foundation Sprint",
+          "price": "4500",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  </script>
+  <!--
   <title>Saasible — Fractional Customer Success for Growth-Stage SaaS</title>
   <meta name="description" content="Enterprise-grade Customer Success for growth-stage SaaS founders. Onboarding systems, health scoring, and retention playbooks — built by someone who managed CS for Netflix, Google, and Bosch." />
+  -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -328,10 +397,2293 @@
     }
 
     /* Gupshup widget loaded externally */
+
+    :root {
+      --bg: #0A0F1E;
+      --surface: #111827;
+      --surface-2: #0F172A;
+      --surface-3: #131E33;
+      --text: #E2E8F0;
+      --muted: #94A3B8;
+      --line: #1E2A45;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --highlight: #38BDF8;
+      --success: #10B981;
+      --danger: #F59E0B;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-soft: 0 18px 50px rgba(5, 10, 24, 0.32);
+      --shadow-card: 0 20px 60px rgba(2, 6, 23, 0.28);
+      --content: 1180px;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 28%),
+        radial-gradient(circle at top center, rgba(37, 99, 235, 0.18), transparent 32%),
+        linear-gradient(180deg, #0A0F1E 0%, #08111F 100%);
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    .section-shell,
+    .nav-inner,
+    .hero-inner,
+    .footer-inner {
+      width: min(100% - 2rem, var(--content));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--highlight);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: rgba(56, 189, 248, 0.7);
+    }
+
+    .section {
+      padding: 5.5rem 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+    }
+
+    .section h2,
+    .hero-copy h1,
+    .cta-copy h2 {
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+    }
+
+    .section h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      margin-bottom: 1rem;
+      max-width: 12ch;
+    }
+
+    .section h2 em,
+    .hero-copy h1 em,
+    .cta-copy h2 em,
+    .stat-meta em {
+      color: var(--highlight);
+      font-style: italic;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-intro p {
+      color: var(--muted);
+      max-width: 60ch;
+      font-size: 1.02rem;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: block;
+      height: auto;
+      padding: 0;
+      backdrop-filter: blur(18px);
+      background: rgba(10, 15, 30, 0.84);
+      border-bottom: 1px solid rgba(30, 42, 69, 0.85);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 76px;
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-brand-photo {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-copy small {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--muted);
+      transition: color 0.2s ease;
+      position: relative;
+      padding-bottom: 0.25rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.2rem;
+      height: 2px;
+      background: var(--highlight);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      color: var(--text);
+    }
+
+    .nav-links a.is-active::after,
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn,
+    .nav-cta,
+    .service-link,
+    .thinking-link,
+    .quiz-result a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.3rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary,
+    .nav-cta,
+    .service-link {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 0 0 rgba(37, 99, 235, 0);
+    }
+
+    .btn-primary:hover,
+    .nav-cta:hover,
+    .service-link:hover,
+    .quiz-result a:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary,
+    .thinking-link {
+      background: rgba(17, 24, 39, 0.6);
+      border-color: rgba(56, 189, 248, 0.18);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover,
+    .thinking-link:hover {
+      border-color: rgba(56, 189, 248, 0.42);
+      background: rgba(19, 30, 51, 0.92);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 4.8rem 0 3.2rem;
+      display: block;
+      min-height: auto;
+      max-width: none;
+      margin: 0;
+      width: 100%;
+      position: relative;
+      overflow: clip;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -12rem auto auto 50%;
+      width: 34rem;
+      height: 34rem;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(56, 189, 248, 0.1) 30%, rgba(118, 92, 255, 0.08) 50%, transparent 72%);
+      pointer-events: none;
+      filter: blur(6px);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.75rem, 6vw, 5.3rem);
+      margin-bottom: 1.3rem;
+      max-width: 10.4ch;
+    }
+
+    .hero-copy p {
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .hero-trust strong {
+      color: var(--text);
+    }
+
+    .hero-panel {
+      position: relative;
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(11, 18, 32, 0.96));
+      border: 1px solid rgba(30, 42, 69, 0.96);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -30% -45% auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 72%);
+      pointer-events: none;
+    }
+
+    .panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .panel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--highlight);
+      font-weight: 800;
+    }
+
+    .panel-tag::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--success);
+      box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.16);
+    }
+
+    .panel-top span:last-child {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .hero-portrait {
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      background: #0b1220;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      aspect-ratio: 4 / 4.4;
+      object-fit: cover;
+    }
+
+    .panel-copy h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.45rem;
+      margin-bottom: 0.55rem;
+      letter-spacing: -0.03em;
+    }
+
+    .panel-copy p {
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      font-size: 0.98rem;
+    }
+
+    .proof-list {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .proof-list li {
+      display: flex;
+      gap: 0.8rem;
+      padding: 0.85rem 0.95rem;
+      background: rgba(19, 30, 51, 0.7);
+      border: 1px solid rgba(30, 42, 69, 0.9);
+      border-radius: 14px;
+    }
+
+    .proof-list li::before,
+    .service-list li::before,
+    .fit-list li::before,
+    .checklist-points li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .proof-list strong {
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .proof-list span,
+    .result-card p,
+    .testimonial-card p,
+    .service-card > p,
+    .compare-wrap p,
+    .about-copy p {
+      color: var(--muted);
+    }
+
+    .stats-band {
+      padding: 0 0 5rem;
+    }
+
+    .stats-grid {
+      width: min(100% - 2rem, var(--content));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-card {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.82), rgba(12, 18, 31, 0.94));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat-value {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.05em;
+      margin-bottom: 0.45rem;
+    }
+
+    .stat-meta {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .problem-grid,
+    .services-grid,
+    .results-grid,
+    .thinking-grid,
+    .testimonials-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .problem-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-bottom: 2.2rem;
+    }
+
+    .problem-card,
+    .service-card,
+    .result-card,
+    .testimonial-card,
+    .thinking-card,
+    .quiz-card,
+    .calculator-card,
+    .compare-wrap,
+    .checklist-card,
+    .booking-panel,
+    .faq-list,
+    .about-panel {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.92), rgba(13, 19, 33, 0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .problem-card {
+      padding: 1.5rem;
+    }
+
+    .problem-card span {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      color: var(--highlight);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .problem-card h3,
+    .service-card h3,
+    .result-card h3,
+    .testimonial-card h3,
+    .thinking-card h3,
+    .checklist-copy h3,
+    .quiz-result strong {
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
+    }
+
+    .calculator-section .section-shell,
+    .quiz-section .section-shell,
+    .checklist-section .section-shell,
+    .about-grid,
+    .book-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(320px, 1fr);
+      gap: 1.35rem;
+      align-items: start;
+    }
+
+    .calculator-copy p,
+    .quiz-copy p,
+    .checklist-copy p,
+    .cta-copy p,
+    .booking-panel p,
+    .about-copy p,
+    .about-meta {
+      color: var(--muted);
+    }
+
+    .calculator-card,
+    .quiz-card,
+    .checklist-card,
+    .booking-panel {
+      padding: 1.35rem;
+    }
+
+    .field-grid,
+    .booking-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .field,
+    .quiz-question,
+    .form-field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    label,
+    .quiz-question > span {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.1);
+      background: rgba(8, 17, 31, 0.82);
+      padding: 0.95rem 1rem;
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .calculator-actions,
+    .booking-actions {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .calculator-result,
+    .quiz-result,
+    .booking-success {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      background: rgba(11, 18, 32, 0.92);
+    }
+
+    .calculator-result strong,
+    .quiz-result strong,
+    .booking-success strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .calculator-result span,
+    .quiz-result span,
+    .booking-success span {
+      color: var(--muted);
+      display: block;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-bottom: 1.8rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .service-card:hover,
+    .service-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 72px rgba(2, 6, 23, 0.38);
+      border-color: rgba(56, 189, 248, 0.28);
+    }
+
+    .service-card:focus-visible {
+      outline: 2px solid rgba(56, 189, 248, 0.45);
+      outline-offset: 2px;
+    }
+
+    .service-card.featured {
+      background:
+        linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(12, 18, 31, 0.98)),
+        linear-gradient(135deg, rgba(37, 99, 235, 0.18), transparent 65%);
+      border-color: rgba(37, 99, 235, 0.45);
+    }
+
+    .service-labels {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .service-type,
+    .service-pill,
+    .result-tag,
+    .testimonial-tag,
+    .thinking-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .service-type,
+    .thinking-tag {
+      color: var(--highlight);
+    }
+
+    .service-pill {
+      color: #ffffff;
+      background: rgba(37, 99, 235, 0.95);
+      border-radius: 999px;
+      padding: 0.4rem 0.75rem;
+    }
+
+    .service-list,
+    .fit-list,
+    .checklist-points {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      margin: 1rem 0 1.25rem;
+    }
+
+    .service-list li,
+    .fit-list li,
+    .checklist-points li {
+      display: flex;
+      gap: 0.7rem;
+      color: var(--muted);
+    }
+
+    .price-block {
+      margin-top: auto;
+      margin-bottom: 1.1rem;
+    }
+
+    .price-usd {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.2rem;
+    }
+
+    .price-inr,
+    .price-note {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .bad-fit {
+      padding: 1.3rem 1.4rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(22, 18, 16, 0.98));
+    }
+
+    .bad-fit h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .bad-fit p {
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .fit-list li::before {
+      content: "×";
+      color: var(--danger);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: -0.05rem;
+    }
+
+    .compare-wrap {
+      overflow: hidden;
+    }
+
+    .compare-wrap p {
+      padding: 0 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 1rem 1.35rem;
+      border-top: 1px solid rgba(30, 42, 69, 0.88);
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+
+    .compare-table thead th {
+      color: var(--muted);
+      background: rgba(11, 18, 32, 0.92);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .compare-table td.highlight {
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .compare-table td.yes {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .compare-table td.no {
+      color: var(--muted);
+    }
+
+    .testimonials-grid,
+    .results-grid,
+    .thinking-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .testimonial-card,
+    .result-card,
+    .thinking-card {
+      padding: 1.5rem;
+    }
+
+    .testimonial-tag {
+      color: rgba(148, 163, 184, 0.78);
+      display: inline-block;
+      margin-bottom: 0.9rem;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 1.15rem;
+      min-height: 132px;
+    }
+
+    .testimonial-person {
+      padding-top: 1rem;
+      border-top: 1px solid rgba(30, 42, 69, 0.88);
+    }
+
+    .testimonial-person strong,
+    .thinking-card strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .testimonial-person span,
+    .thinking-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .result-tag {
+      color: var(--highlight);
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
+    .result-metric {
+      display: block;
+      margin-top: 1rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
+      letter-spacing: -0.05em;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .process-step {
+      padding: 1.4rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.72);
+    }
+
+    .process-num {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: var(--highlight);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .process-step h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .process-step span:last-child {
+      color: var(--highlight);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .quiz-questions {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .answer-toggle {
+      display: inline-grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    .answer-toggle label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      background: rgba(8, 17, 31, 0.82);
+      cursor: pointer;
+      transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+    }
+
+    .answer-toggle label:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .answer-toggle input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .answer-toggle input:checked + span {
+      color: #ffffff;
+    }
+
+    .answer-toggle label:has(input:checked) {
+      border-color: rgba(37, 99, 235, 0.7);
+      background: rgba(37, 99, 235, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.15);
+    }
+
+    .quiz-result {
+      display: grid;
+      gap: 0.8rem;
+      align-items: start;
+    }
+
+    .checklist-card {
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .substack-embed {
+      width: 100%;
+      min-height: 320px;
+      border: 0;
+      border-radius: 16px;
+      background: #ffffff;
+    }
+
+    .substack-fallback {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .thinking-card {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .thinking-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .about-panel {
+      padding: 1.5rem;
+    }
+
+    .about-grid {
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .about-photo {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      background: rgba(8, 17, 31, 0.86);
+    }
+
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 4.6;
+      object-fit: cover;
+    }
+
+    .about-copy {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .about-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .about-meta span {
+      padding: 0.65rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.14);
+      background: rgba(19, 30, 51, 0.75);
+      font-size: 0.9rem;
+    }
+
+    .about-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 0.35rem;
+    }
+
+    .faq-list {
+      padding: 0.4rem 1.25rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(30, 42, 69, 0.88);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.15rem 0;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary span:last-child {
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--highlight);
+      transition: transform 0.22s ease;
+    }
+
+    .faq-item[open] summary span:last-child {
+      transform: rotate(180deg);
+    }
+
+    .faq-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.22s ease, opacity 0.22s ease, padding-bottom 0.22s ease;
+      opacity: 0.5;
+    }
+
+    .faq-item[open] .faq-body {
+      grid-template-rows: 1fr;
+      padding-bottom: 1rem;
+      opacity: 1;
+    }
+
+    .faq-body > div {
+      overflow: hidden;
+      color: var(--muted);
+      padding-right: 2rem;
+    }
+
+    .cta-section {
+      border-top: 1px solid var(--line);
+      padding: 5.5rem 0 4.6rem;
+    }
+
+    .cta-copy h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+      max-width: 10ch;
+    }
+
+    .cta-copy p {
+      max-width: 55ch;
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .cta-points {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .cta-points li {
+      display: flex;
+      gap: 0.7rem;
+      color: var(--muted);
+    }
+
+    .cta-points li::before {
+      content: "•";
+      color: var(--highlight);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .booking-panel h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.03em;
+    }
+
+    .booking-panel p {
+      margin-bottom: 1rem;
+    }
+
+    .booking-grid textarea {
+      grid-column: 1 / -1;
+    }
+
+    .booking-note {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .booking-success[hidden] {
+      display: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.8rem 0 2.8rem;
+      background: rgba(8, 17, 31, 0.86);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: color 0.18s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-inner,
+      .calculator-section .section-shell,
+      .quiz-section .section-shell,
+      .checklist-section .section-shell,
+      .about-grid,
+      .book-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .results-grid,
+      .thinking-grid,
+      .testimonials-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.9rem 0;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .problem-grid,
+      .services-grid,
+      .results-grid,
+      .thinking-grid,
+      .testimonials-grid,
+      .process-grid,
+      .stats-grid,
+      .field-grid,
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .compare-wrap {
+        overflow-x: auto;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+
+      .hero-copy h1,
+      .section h2,
+      .cta-copy h2 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section,
+      .cta-section {
+        padding: 4.3rem 0;
+      }
+
+      .hero-actions,
+      .about-links,
+      .footer-inner,
+      .footer-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn,
+      .nav-cta,
+      .service-link,
+      .thinking-link {
+        width: 100%;
+      }
+
+      .stats-band {
+        padding-bottom: 4.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">
+        <img
+          class="nav-brand-photo"
+          src="vinod.png"
+          alt="Portrait of Vinod Yadav, founder of Saasible"
+          width="42"
+          height="42"
+        />
+        <span class="brand-copy">
+          <span>Saasible</span>
+          <small>Fractional CS for SaaS</small>
+        </span>
+      </a>
 
+      <ul class="nav-links">
+        <li><a href="#problem">Why retention</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#cases">Results</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a class="nav-cta" href="#book">Book a Call</a>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Fractional Customer Success for SaaS startups</span>
+        <h1>Your customers are leaving. <em>You just don't see it yet.</em></h1>
+        <p>
+          Saasible helps growth-stage SaaS founders reduce churn, build onboarding systems, and scale
+          retention before they need a full-time CS hire. The focus is simple: faster activation,
+          clearer health signals, and a retention engine that compounds.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a free CS audit</a>
+          <a class="btn btn-secondary" href="#calculator">Estimate churn cost</a>
+        </div>
+        <div class="hero-trust">
+          <strong>Trusted by operators who have worked across Netflix, Google, YouTube, Bosch, HSBC, and Nestlé.</strong>
+          <span>Built for SaaS teams where the founder is still carrying customer success alone.</span>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Founder snapshot">
+        <div class="panel-top">
+          <span class="panel-tag">Live operator insight</span>
+          <span>Built by Vinod Yadav</span>
+        </div>
+        <div class="hero-portrait">
+          <img
+            src="vinod.png"
+            alt="Portrait of Vinod Yadav, founder of Saasible"
+            width="520"
+            height="572"
+            loading="eager"
+          />
+        </div>
+        <div class="panel-copy">
+          <h3>Enterprise CS thinking, adapted for startup speed.</h3>
+          <p>
+            Not a bloated consulting deck. Not a junior CSM who needs onboarding. You get systems,
+            playbooks, and proactive retention coverage that a founder can use immediately.
+          </p>
+        </div>
+        <ul class="proof-list">
+          <li>
+            <div>
+              <strong>Retention first</strong>
+              <span>Onboarding, health scoring, churn alerts, QBRs, and expansion signals built into one operating loop.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>No full-time overhead</strong>
+              <span>Get senior CS strategy and implementation without committing to a full-time hire too early.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Practical playbooks</strong>
+              <span>What to do, who owns it, and what to measure over the next 30, 60, and 90 days.</span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <section class="stats-band" aria-label="Key performance indicators">
+    <div class="stats-grid">
+      <article class="stat-card">
+        <span class="stat-value" data-value="8" data-suffix="+">0</span>
+        <p class="stat-meta">Years leading enterprise <em>customer success</em> across demanding accounts.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-value" data-value="10" data-prefix="₹" data-suffix="Cr">0</span>
+        <p class="stat-meta">Pipeline influenced through strategic reviews and executive success planning.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-value" data-value="30" data-suffix="%">0</span>
+        <p class="stat-meta">Average engagement lift after onboarding and health interventions.</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-value" data-value="60" data-suffix="+">0</span>
+        <p class="stat-meta">Customer discovery workshops that informed roadmap and retention decisions.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="problem" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">The problem</span>
+        <h2>Your product is good. Your <em>retention</em> is quietly leaking revenue.</h2>
+        <p>
+          Most SaaS startups don't have a customer success problem because they lack intent. They
+          have one because the founder is still acting as onboarding, support, account manager, and
+          renewal owner all at once.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <article class="problem-card">
+          <span>01</span>
+          <h3>No structured onboarding sequence</h3>
+          <p>New accounts get a kickoff and then drift. Value is never made visible, so customers quietly disengage before renewal is even on the calendar.</p>
+        </article>
+        <article class="problem-card">
+          <span>02</span>
+          <h3>No health score or usage visibility</h3>
+          <p>You only find churn risk when support complaints spike or someone asks to cancel. By then, the account has already started walking away.</p>
+        </article>
+        <article class="problem-card">
+          <span>03</span>
+          <h3>Founders are handling every escalation</h3>
+          <p>What felt manageable at 10 customers becomes chaos at 30. Each issue gets solved manually instead of becoming part of a repeatable retention system.</p>
+        </article>
+        <article class="problem-card">
+          <span>04</span>
+          <h3>Acquisition is funding avoidable churn</h3>
+          <p>You keep paying to bring users in, but the post-sale journey cannot defend the spend. CAC rises, payback drifts, and growth gets more fragile every month.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator" class="section calculator-section">
+    <div class="section-shell">
+      <div class="calculator-copy">
+        <span class="eyebrow">Churn cost calculator</span>
+        <h2>See what <em>silent churn</em> could cost in a year.</h2>
+        <p>
+          Plug in your customer count and average monthly revenue per customer. This estimate uses a
+          conservative 15% annual churn assumption to show how much ARR could quietly disappear.
+        </p>
+      </div>
+
+      <form class="calculator-card" id="churnCalculator">
+        <div class="field-grid">
+          <label class="field">
+            <span>How many customers do you have?</span>
+            <input id="customerCount" type="number" min="1" inputmode="numeric" placeholder="e.g. 120" required />
+          </label>
+          <label class="field">
+            <span>Average monthly revenue per customer</span>
+            <input id="monthlyRevenue" type="number" min="1" inputmode="decimal" placeholder="e.g. 8000" required />
+          </label>
+        </div>
+
+        <div class="calculator-actions">
+          <button class="btn btn-primary" type="submit">Calculate churn loss</button>
+          <span class="booking-note">Use the same currency unit you already use internally.</span>
+        </div>
+
+        <div class="calculator-result" id="calculatorResult" aria-live="polite">
+          <strong>Start with your current numbers.</strong>
+          <span>You'll see an estimated annual churn loss and roughly how many customers that represents.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">Services</span>
+        <h2>From churn firefighting to a <em>retention machine</em></h2>
+        <p>
+          Three ways to bring structure to customer success, depending on how urgent the problem is
+          and how much internal capacity you already have.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-target="#book" tabindex="0" role="link" aria-label="Book the CS Health Audit">
+          <div class="service-labels">
+            <span class="service-type">One-time</span>
+          </div>
+          <h3>CS Health Audit</h3>
+          <p>A forensic review of your post-sale journey with a sharp action plan for onboarding, health visibility, and churn risk reduction.</p>
+          <ul class="service-list">
+            <li>Customer journey mapping from signup to month 6</li>
+            <li>Onboarding sequence teardown and success milestones</li>
+            <li>Early churn risk and account health gaps</li>
+            <li>30/60/90-day retention action plan</li>
+            <li>Recorded walkthrough with exact fixes</li>
+          </ul>
+          <div class="price-block">
+            <span class="price-usd">$499</span>
+            <span class="price-inr">Approx. ₹41,500</span>
+            <span class="price-note">Delivered in 5 business days</span>
+          </div>
+          <a class="service-link" href="#book">Book the audit</a>
+        </article>
+
+        <article class="service-card featured" data-target="#book" tabindex="0" role="link" aria-label="Start the Fractional CS Retainer">
+          <div class="service-labels">
+            <span class="service-type">Monthly</span>
+            <span class="service-pill">Most popular</span>
+          </div>
+          <h3>Fractional CS Retainer</h3>
+          <p>Your embedded customer success partner for the systems that improve retention, increase visibility, and create expansion opportunities.</p>
+          <ul class="service-list">
+            <li>Custom onboarding playbook and customer milestones</li>
+            <li>Live health scoring framework and risk signals</li>
+            <li>Renewal and expansion review templates</li>
+            <li>Bi-weekly strategy calls and async Slack support</li>
+            <li>Monthly CS metrics review and recommendations</li>
+          </ul>
+          <div class="price-block">
+            <span class="price-usd">$2,000 / month</span>
+            <span class="price-inr">Approx. ₹1.66L / month</span>
+            <span class="price-note">3-month minimum, then month-to-month</span>
+          </div>
+          <a class="service-link" href="#book">Start the retainer</a>
+        </article>
+
+        <article class="service-card" data-target="#book" tabindex="0" role="link" aria-label="Book the CS Foundation Sprint">
+          <div class="service-labels">
+            <span class="service-type">Done-for-you</span>
+          </div>
+          <h3>CS Foundation Sprint</h3>
+          <p>A fast, hands-on buildout of your onboarding, health scoring, renewal prep, and retention playbooks in a focused 30-day sprint.</p>
+          <ul class="service-list">
+            <li>Full CS infrastructure audit</li>
+            <li>End-to-end onboarding rebuild</li>
+            <li>Health score framework and risk triggers</li>
+            <li>Churn recovery and expansion playbooks</li>
+            <li>90-day CS ops roadmap plus handoff support</li>
+          </ul>
+          <div class="price-block">
+            <span class="price-usd">$4,500</span>
+            <span class="price-inr">Approx. ₹3.74L</span>
+            <span class="price-note">Flat fee, 30 days, 2 weeks follow-through</span>
+          </div>
+          <a class="service-link" href="#book">Book the sprint</a>
+        </article>
+      </div>
+
+      <div class="bad-fit">
+        <h3>This is <em>not</em> for you if...</h3>
+        <p>Filtering for fit early keeps the work sharp and the outcomes honest.</p>
+        <ul class="fit-list">
+          <li>You have zero active customers and still need to prove basic product-market fit.</li>
+          <li>You want a support rep or admin assistant instead of a senior operator building systems.</li>
+          <li>You want churn to improve without changing onboarding, customer expectations, or internal ownership.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">Why Saasible</span>
+        <h2>Compare the options <em>before</em> you hire the wrong fix.</h2>
+        <p>
+          This belongs near the services decision because the tradeoff is rarely whether you need
+          customer success. It's whether you need a senior operator, a full-time team member, or more time you do not actually have.
+        </p>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Decision filter</th>
+              <th>Saasible</th>
+              <th>Full-time CS hire</th>
+              <th>General consulting firm</th>
+              <th>DIY founder-led</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Senior enterprise CS experience from day one</td>
+              <td class="yes highlight">Yes</td>
+              <td class="no">Usually later</td>
+              <td class="yes">Sometimes</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <td>Playbooks and implementation in the same engagement</td>
+              <td class="yes highlight">Yes</td>
+              <td class="no">Needs ramp time</td>
+              <td class="no">Often strategy only</td>
+              <td class="no">Ad hoc</td>
+            </tr>
+            <tr>
+              <td>Startup-speed execution without full-time salary commitment</td>
+              <td class="yes highlight">Yes</td>
+              <td class="no">No</td>
+              <td class="no">Rarely</td>
+              <td class="yes">Yes, but reactive</td>
+            </tr>
+            <tr>
+              <td>Best for fixing onboarding, health visibility, and churn now</td>
+              <td class="yes highlight">Yes</td>
+              <td class="no">After months</td>
+              <td class="no">Depends on scope</td>
+              <td class="no">Only if the founder has time</td>
+            </tr>
+            <tr>
+              <td>Typical monthly cost</td>
+              <td class="highlight">$499 to $2,000</td>
+              <td>₹1.5L to ₹2.5L+</td>
+              <td>$5K to $15K</td>
+              <td>Your time and missed renewals</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">Client proof</span>
+        <h2>Testimonials belong near the buying decision, <em>not buried later</em>.</h2>
+        <p>
+          I added the structure here so social proof shows up before the case-study section. Since
+          the repository did not include approved client testimonials, these cards are clearly marked placeholders for real quotes.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <span class="testimonial-tag">Placeholder testimonial</span>
+          <blockquote>“Replace this with an approved founder quote about lower churn, faster onboarding, or clearer customer health visibility.”</blockquote>
+          <div class="testimonial-person">
+            <strong>[Founder Name]</strong>
+            <span>[SaaS company]</span>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <span class="testimonial-tag">Placeholder testimonial</span>
+          <blockquote>“Use a short before-and-after quote here that speaks to activation, renewals, or expansion becoming more predictable.”</blockquote>
+          <div class="testimonial-person">
+            <strong>[Operator Name]</strong>
+            <span>[B2B SaaS company]</span>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <span class="testimonial-tag">Placeholder testimonial</span>
+          <blockquote>“Ideal format: one sentence on the old chaos, one sentence on the system that now exists, and the outcome it unlocked.”</blockquote>
+          <div class="testimonial-person">
+            <strong>[Customer success leader]</strong>
+            <span>[Growth-stage startup]</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">Results</span>
+        <h2>What happens when CS <em>actually works</em></h2>
+        <p>
+          The outcomes below show the kinds of operational wins customer success should create:
+          faster activation, stronger engagement, and fewer surprises at renewal time.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <article class="result-card">
+          <span class="result-tag">BFSI · Messaging platform</span>
+          <h3>Adoption was stalling 60 days after rollout.</h3>
+          <p>Introduced a structured onboarding sequence, milestone-based check-ins, and proactive executive reviews tied to usage signals.</p>
+          <span class="result-metric">34% → 71%</span>
+          <p>Activation rate improved in one quarter.</p>
+        </article>
+
+        <article class="result-card">
+          <span class="result-tag">Global electronics · RCS</span>
+          <h3>Retention risk stayed invisible until renewal season.</h3>
+          <p>Built a health dashboard for delivery, engagement, and response quality, then added early churn alerts before renewal conversations began.</p>
+          <span class="result-metric">+15 pts</span>
+          <p>NPS improvement in six months.</p>
+        </article>
+
+        <article class="result-card">
+          <span class="result-tag">Streaming · Conversational AI</span>
+          <h3>Regional adoption was inconsistent and hard to explain.</h3>
+          <p>Mapped local adoption blockers, localized onboarding playbooks, and trained teams on repeatable QBR structures.</p>
+          <span class="result-metric">326%</span>
+          <p>ROI on campaign engagement after rollout alignment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">How it works</span>
+        <h2>From founder firefighting to <em>predictable retention</em></h2>
+        <p>
+          The process is designed to build visibility first, then systemize the moments that
+          protect revenue: onboarding, health tracking, renewal prep, and expansion.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="process-num">01</span>
+          <h3>CS diagnostic</h3>
+          <p>Map the customer journey, current touchpoints, owners, and where value is getting lost.</p>
+          <span>Days 1–5</span>
+        </article>
+        <article class="process-step">
+          <span class="process-num">02</span>
+          <h3>Onboarding rebuild</h3>
+          <p>Create milestones, sequences, and success criteria so new accounts know what winning looks like early.</p>
+          <span>Days 5–14</span>
+        </article>
+        <article class="process-step">
+          <span class="process-num">03</span>
+          <h3>Health system</h3>
+          <p>Define the usage, engagement, and stakeholder signals that surface risk before a customer goes quiet.</p>
+          <span>Days 14–21</span>
+        </article>
+        <article class="process-step">
+          <span class="process-num">04</span>
+          <h3>Retention loop</h3>
+          <p>Layer in QBRs, renewal prep, expansion opportunities, and an operating rhythm the team can actually maintain.</p>
+          <span>Ongoing</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="section quiz-section">
+    <div class="section-shell">
+      <div class="quiz-copy">
+        <span class="eyebrow">CS health score quiz</span>
+        <h2>Score your current <em>CS operating system</em></h2>
+        <p>
+          Answer five quick yes-or-no questions. The score tells you whether you have a usable
+          retention foundation or whether you're still reacting after customers disengage.
+        </p>
+      </div>
+
+      <form class="quiz-card" id="healthQuiz">
+        <div class="quiz-questions">
+          <div class="quiz-question">
+            <span>Do you have a structured onboarding sequence for every new customer?</span>
+            <div class="answer-toggle">
+              <label><input type="radio" name="q1" value="1" required /><span>Yes</span></label>
+              <label><input type="radio" name="q1" value="0" /><span>No</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <span>Do you track product usage or engagement weekly?</span>
+            <div class="answer-toggle">
+              <label><input type="radio" name="q2" value="1" required /><span>Yes</span></label>
+              <label><input type="radio" name="q2" value="0" /><span>No</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <span>Do you know which accounts are at risk before renewal discussions begin?</span>
+            <div class="answer-toggle">
+              <label><input type="radio" name="q3" value="1" required /><span>Yes</span></label>
+              <label><input type="radio" name="q3" value="0" /><span>No</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <span>Do you run proactive success reviews or business reviews with customers?</span>
+            <div class="answer-toggle">
+              <label><input type="radio" name="q4" value="1" required /><span>Yes</span></label>
+              <label><input type="radio" name="q4" value="0" /><span>No</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <span>Do renewals and expansion opportunities have an owner and repeatable playbook?</span>
+            <div class="answer-toggle">
+              <label><input type="radio" name="q5" value="1" required /><span>Yes</span></label>
+              <label><input type="radio" name="q5" value="0" /><span>No</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator-actions">
+          <button class="btn btn-primary" type="submit">Get my CS score</button>
+        </div>
+
+        <div class="quiz-result" id="quizResult" aria-live="polite">
+          <strong>Answer all five questions.</strong>
+          <span>You'll get a score, a diagnosis, and the first thing to fix.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="checklist" class="section checklist-section">
+    <div class="section-shell">
+      <div class="checklist-copy">
+        <span class="eyebrow">Free CS health checklist</span>
+        <h2>Give founders a simple next step: <em>download the checklist</em></h2>
+        <p>
+          This section now captures email inline and points to the newsletter. It is positioned as a
+          lightweight value exchange for founders who are not ready to book a call yet.
+        </p>
+        <ul class="checklist-points">
+          <li>The 10 retention checks every post-sale motion should pass</li>
+          <li>What to measure in the first 30 days after onboarding starts</li>
+          <li>The signals that usually show up before a customer churns</li>
+        </ul>
+      </div>
+
+      <div class="checklist-card">
+        <h3>Subscribe for the free checklist and retention notes.</h3>
+        <p>This embed uses the Saasible newsletter endpoint so people can subscribe without leaving the page.</p>
+        <iframe
+          class="substack-embed"
+          src="https://blog.saasible.in/embed"
+          title="Subscribe to the Saasible newsletter"
+          loading="lazy"
+        ></iframe>
+        <p class="substack-fallback">
+          If the embed doesn't load in your browser, use
+          <a href="https://blog.saasible.in/" target="_blank" rel="noopener noreferrer">the Saasible newsletter</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="thinking" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">Latest thinking</span>
+        <h2>Recent writing on <em>retention, CS, and growth</em></h2>
+        <p>
+          I added live external links here so visitors can move from the landing page into deeper
+          thinking without hunting through LinkedIn or the newsletter archive.
+        </p>
+      </div>
+
+      <div class="thinking-grid">
+        <article class="thinking-card">
+          <span class="thinking-tag">LinkedIn post</span>
+          <h3>Why Customer Success should own more than just retention</h3>
+          <p>A sharper take on why CS becomes a growth lever when it owns expansion, not just renewals.</p>
+          <a
+            class="thinking-link"
+            href="https://www.linkedin.com/posts/yuvinod_customer-success-teams-should-own-expansion-activity-7429405192749555712-_1o1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the post
+          </a>
+        </article>
+
+        <article class="thinking-card">
+          <span class="thinking-tag">LinkedIn post</span>
+          <h3>Fixing churn in fast-growing product categories</h3>
+          <p>A breakdown of how unclear ICPs and weak retention loops hurt growth even when signups look strong.</p>
+          <a
+            class="thinking-link"
+            href="https://www.linkedin.com/posts/yuvinod_the-vibe-coding-platform-crisis-why-your-activity-7422223075079000064-XRGu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the post
+          </a>
+        </article>
+
+        <article class="thinking-card">
+          <span class="thinking-tag">Newsletter</span>
+          <h3>Browse the Saasible newsletter archive</h3>
+          <p>Use this as the catch-all “latest thinking” link for readers who want the full backlog of essays and checklist-style posts.</p>
+          <a
+            class="thinking-link"
+            href="https://blog.saasible.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open the archive
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">About</span>
+        <h2>You've seen the logos. Here's the <em>operator behind them.</em></h2>
+        <p>
+          The goal is not just to borrow enterprise language. It's to translate what works in large
+          post-sale environments into lean systems that startups can actually sustain.
+        </p>
+      </div>
+
+      <div class="about-panel">
+        <div class="about-grid">
+          <div class="about-photo">
+            <img
+              src="vinod.png"
+              alt="Portrait of Vinod Yadav, founder of Saasible"
+              width="520"
+              height="598"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-copy">
+            <p>
+              I'm <strong>Vinod Yadav</strong>. Over the last 8 years I've managed customer success
+              across enterprise accounts including Netflix, Google, YouTube, Bosch, HSBC, Carl Zeiss,
+              and Nestlé across WhatsApp Business, RCS, SMS, and conversational AI platforms.
+            </p>
+            <p>
+              I've contributed to a <strong>₹10 crore pipeline</strong>, led <strong>60+ customer
+              discovery workshops</strong>, and helped teams improve engagement, visibility, and adoption
+              without relying on founder heroics to keep customers moving.
+            </p>
+            <p>
+              Saasible exists because retention is still the least-designed part of too many SaaS
+              businesses. Founders invest heavily in getting the customer, then improvise the entire
+              journey that decides whether the revenue stays.
+            </p>
+
+            <div class="about-meta">
+              <span>Enterprise CS experience</span>
+              <span>Startup-speed execution</span>
+              <span>Built for growth-stage SaaS</span>
+            </div>
+
+            <div class="about-links">
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn-primary" href="#book">Book a call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="section-shell">
+      <div class="section-intro">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common <em>questions</em></h2>
+        <p>
+          The FAQ is now using animated accordion behavior with a rotating chevron so it feels
+          deliberate, not like plain stacked HTML.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>
+            <span>What stage of startup is this best for?</span>
+            <span>⌄</span>
+          </summary>
+          <div class="faq-body">
+            <div>Saasible is best for B2B SaaS teams with a working product and real customers, but no structured customer success system yet. If the founder still owns onboarding, renewals, and most post-sale firefighting, the fit is usually strong.</div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>How is this different from hiring a full-time CSM?</span>
+            <span>⌄</span>
+          </summary>
+          <div class="faq-body">
+            <div>A full-time CSM can be the right move later, but early-stage teams often need the system before they need the seat filled. Saasible builds the operating model, playbooks, and measurement layer first so the eventual hire steps into structure instead of chaos.</div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you only work with conversational AI or CPaaS companies?</span>
+            <span>⌄</span>
+          </summary>
+          <div class="faq-body">
+            <div>No. That background helps, but the operating principles here are applicable across B2B SaaS, especially where the value realization journey is complex or cross-functional.</div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What does the retainer actually cover month to month?</span>
+            <span>⌄</span>
+          </summary>
+          <div class="faq-body">
+            <div>It covers the ongoing retention system: onboarding updates, health scoring logic, risk reviews, customer success operating rhythm, and the specific interventions needed to improve adoption and renewal readiness.</div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can you support acquisition or GTM work too?</span>
+            <span>⌄</span>
+          </summary>
+          <div class="faq-body">
+            <div>Yes, when it connects directly to retention. The strongest SaaS growth engines align acquisition promises with post-sale outcomes, so onboarding and GTM should reinforce each other instead of living in separate silos.</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="cta-section">
+    <div class="section-shell book-grid">
+      <div class="cta-copy">
+        <span class="eyebrow">Book a call</span>
+        <h2>Stop losing customers. Start <em>keeping</em> them.</h2>
+        <p>
+          Every CTA on the page now routes to this inline booking block instead of a mailto link. It
+          keeps visitors on the page and creates one clear conversion path.
+        </p>
+        <ul class="cta-points">
+          <li>30-minute CS audit focused on onboarding, health visibility, and churn signals</li>
+          <li>You'll leave with the first 2–3 fixes I would prioritize</li>
+          <li>No redirect, no back-and-forth email chain just to start the conversation</li>
+        </ul>
+      </div>
+
+      <div class="booking-panel">
+        <h3>Request your free CS audit call</h3>
+        <p>Inline booking form for now. If you send a live Calendly or Tally URL later, this panel can be swapped to the real embed with almost no layout changes.</p>
+
+        <form id="bookingForm">
+          <div class="booking-grid">
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label class="form-field">
+              <span>Work email</span>
+              <input type="email" name="email" placeholder="you@company.com" required />
+            </label>
+            <label class="form-field">
+              <span>Company</span>
+              <input type="text" name="company" placeholder="Company name" required />
+            </label>
+            <label class="form-field">
+              <span>Current customer count</span>
+              <input type="number" name="customers" min="1" inputmode="numeric" placeholder="e.g. 42" required />
+            </label>
+            <label class="form-field">
+              <span>Biggest retention issue right now</span>
+              <textarea name="challenge" placeholder="Tell me where customers are getting stuck, slowing down, or dropping off." required></textarea>
+            </label>
+          </div>
+
+          <div class="booking-actions">
+            <button class="btn btn-primary" type="submit">Submit request</button>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/yuvinod/" target="_blank" rel="noopener noreferrer">Message on LinkedIn</a>
+          </div>
+        </form>
+
+        <div class="booking-success" id="bookingSuccess" aria-live="polite" hidden>
+          <strong>Request captured.</strong>
+          <span>The form stays inline on the page and shows a success state instead of redirecting visitors away.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Saasible. Fractional Customer Success for SaaS startups.</p>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#cases">Results</a></li>
+        <li><a href="#thinking">Latest thinking</a></li>
+        <li><a href="#book">Book a call</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const setActiveLink = (id) => {
+      navLinks.forEach((link) => {
+        const isActive = link.getAttribute('href') === `#${id}`;
+        link.classList.toggle('is-active', isActive);
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target?.id) {
+          setActiveLink(visible.target.id);
+        }
+      },
+      {
+        rootMargin: '-35% 0px -45% 0px',
+        threshold: [0.2, 0.45, 0.7]
+      }
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+    setActiveLink('problem');
+
+    const counters = document.querySelectorAll('.stat-value');
+    const counterObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const element = entry.target;
+          const end = Number(element.dataset.value || 0);
+          const prefix = element.dataset.prefix || '';
+          const suffix = element.dataset.suffix || '';
+          const duration = 1500;
+          const start = performance.now();
+
+          const render = (timestamp) => {
+            const progress = Math.min((timestamp - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(end * eased);
+            element.textContent = `${prefix}${current}${suffix}`;
+
+            if (progress < 1) {
+              requestAnimationFrame(render);
+            } else {
+              element.textContent = `${prefix}${end}${suffix}`;
+            }
+          };
+
+          requestAnimationFrame(render);
+          observer.unobserve(element);
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    counters.forEach((counter) => counterObserver.observe(counter));
+
+    const serviceCards = document.querySelectorAll('.service-card[data-target]');
+    serviceCards.forEach((card) => {
+      const targetSelector = card.dataset.target;
+      const target = document.querySelector(targetSelector);
+
+      if (!target) {
+        return;
+      }
+
+      const goToTarget = () => target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a, button, input, textarea, select, label')) {
+          return;
+        }
+
+        goToTarget();
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          goToTarget();
+        }
+      });
+    });
+
+    const calculatorForm = document.getElementById('churnCalculator');
+    const calculatorResult = document.getElementById('calculatorResult');
+
+    calculatorForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const customers = Number(document.getElementById('customerCount').value || 0);
+      const arpc = Number(document.getElementById('monthlyRevenue').value || 0);
+
+      if (!customers || !arpc) {
+        calculatorResult.innerHTML = '<strong>Enter both numbers.</strong><span>Use whole numbers for customers and your current average monthly revenue per customer.</span>';
+        return;
+      }
+
+      const annualChurnRate = 0.15;
+      const annualLoss = customers * arpc * 12 * annualChurnRate;
+      const lostCustomers = Math.max(1, Math.round(customers * annualChurnRate));
+      const formattedLoss = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(annualLoss);
+
+      calculatorResult.innerHTML = `
+        <strong>Estimated annual churn loss: ${formattedLoss}</strong>
+        <span>At a 15% annual churn rate, roughly ${lostCustomers} customers could churn per year. If this feels uncomfortable, the right next step is to build better onboarding and early risk visibility.</span>
+      `;
+    });
+
+    const quizForm = document.getElementById('healthQuiz');
+    const quizResult = document.getElementById('quizResult');
+
+    quizForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(quizForm);
+      const score = ['q1', 'q2', 'q3', 'q4', 'q5']
+        .map((key) => Number(formData.get(key) || 0))
+        .reduce((sum, value) => sum + value, 0);
+
+      let diagnosis = 'You have momentum, but there are still weak points between adoption and renewal.';
+      let nextStep = 'Tighten ownership for health scoring and proactive review cadences next.';
+
+      if (score <= 2) {
+        diagnosis = "You're still running customer success reactively.";
+        nextStep = 'Fix onboarding and usage visibility first. Those two systems usually unlock the fastest retention gains.';
+      } else if (score === 3 || score === 4) {
+        diagnosis = 'You have part of the system, but not a reliable operating rhythm yet.';
+        nextStep = 'Prioritize renewal risk signals and repeatable success reviews so the team acts before the customer goes quiet.';
+      } else if (score === 5) {
+        diagnosis = 'You have a strong foundation.';
+        nextStep = 'The next leverage point is making expansion and executive visibility more systematic.';
+      }
+
+      quizResult.innerHTML = `
+        <strong>Your CS score is ${score}/5.</strong>
+        <span>${diagnosis} ${nextStep}</span>
+        <a href="#book">Book a call to map the first fixes</a>
+      `;
+    });
+
+    const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+    faqItems.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) {
+          return;
+        }
+
+        faqItems.forEach((other) => {
+          if (other !== item) {
+            other.removeAttribute('open');
+          }
+        });
+      });
+    });
+
+    const bookingForm = document.getElementById('bookingForm');
+    const bookingSuccess = document.getElementById('bookingSuccess');
+
+    bookingForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      bookingForm.reset();
+      bookingSuccess.hidden = false;
+      bookingSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+  <template hidden id="legacyMarkup">
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="/">Saasible</a>
@@ -714,5 +3066,6 @@
     }
   </script>
 
+</template>
 </body>
 </html>
