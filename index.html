@@ -1190,9 +1190,11 @@
       color: var(--text);
     }
 
-    .compare-table tbody td:first-child {
-      color: var(--text);
+    .compare-table tbody td:first-child,
+    .compare-table tbody td:first-child * {
+      color: var(--text) !important;
       font-weight: 700;
+      opacity: 1;
     }
 
     .compare-table thead th {
