@@ -18,7 +18,7 @@ const services = [
     id: "audit",
     title: "Conversational AI Audit",
     tagline: "See what's broken before you spend more",
-    price: "Starting ₹75,000",
+    price: "Starting at $1,500",
     duration: "2-week engagement",
     description:
       "A forensic review of your WhatsApp Business, RCS, or messaging platform strategy. You get a clear diagnosis of where engagement drops, what templates aren't working, and a prioritized 30/60/90-day action plan.",
@@ -37,7 +37,7 @@ const services = [
     id: "retainer",
     title: "Messaging Growth Retainer",
     tagline: "Your embedded conversational AI strategist",
-    price: "Starting ₹1,50,000/month",
+    price: "Starting at $2,500/month",
     duration: "Ongoing partnership",
     description:
       "I work inside your team 10-15 hours per month as your conversational AI growth partner — optimizing journeys, improving adoption, building playbooks, and identifying expansion opportunities.",
@@ -58,7 +58,7 @@ const services = [
     id: "sprint",
     title: "Enterprise Messaging Sprint",
     tagline: "Build your entire messaging infrastructure in 30 days",
-    price: "Starting ₹3,00,000",
+    price: "Starting at $5,000",
     duration: "30-day intensive",
     description:
       "A hands-on, intensive buildout of your conversational AI infrastructure — from journey design to template libraries, analytics dashboards, automation flows, and team training.",
@@ -78,7 +78,7 @@ const services = [
     id: "workshop",
     title: "Workshops & Training",
     tagline: "Upskill your team on conversational AI",
-    price: "Starting ₹50,000/session",
+    price: "Starting at $800/session",
     duration: "Half-day or full-day",
     description:
       "Interactive workshops for marketing, CX, and product teams on conversational AI best practices — from WhatsApp Business API fundamentals to advanced journey optimization.",
