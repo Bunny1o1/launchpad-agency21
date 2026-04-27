@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -119,6 +120,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
+
+      {/* Google Ads Conversion Tag */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17421464447"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17421464447');
+        `}
+      </Script>
+
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
       >
