@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Light mode */
+  --background: #FAFAF8;
+  --foreground: #141414;
+  --surface: #FFFFFF;
+  --accent: #2D5BE3;
+  --secondary: #141414;
+  --muted: #F5F5F3;
+  --muted-foreground: #6B6B6B;
+  --border: #E5E5E0;
+  --ring: #2D5BE3;
+  --card: #FFFFFF;
+  --card-foreground: #141414;
+  --input: #E5E5E0;
+}
+
+.dark {
+  --background: #120F0C;        /* warm near-black — slightly lighter than before */
+  --foreground: #F5F0E8;
+  --surface: #1E1A15;           /* clearly distinct card surface */
+  --accent: #E8A838;
+  --secondary: #C4622D;
+  --muted: #252017;             /* muted bg — visible step above surface */
+  --muted-foreground: #9A9080;  /* brighter muted text for readability */
+  --border: #352D22;            /* warm brown border — visible but not harsh */
+  --border-subtle: #2A2318;     /* ultra-subtle dividers */
+  --ring: #E8A838;
+  --card: #1E1A15;
+  --card-foreground: #F5F0E8;
+  --input: #2C2620;
+  /* Glow layers */
+  --glow-accent: rgba(232, 168, 56, 0.06);
+  --glow-secondary: rgba(196, 98, 45, 0.04);
+}
+
+/* ===== BASE ===== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Subtle warm ambient radial glow in the top-center */
+    background-image:
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(232, 168, 56, 0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(196, 98, 45, 0.05) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* ===== UTILITIES ===== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--accent), var(--secondary));
+  }
+
+  .dark .gradient-text {
+    background-image: linear-gradient(135deg, #E8A838, #C4622D);
+  }
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
