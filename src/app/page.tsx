@@ -2,7 +2,17 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, MessageSquare, TrendingUp, Users, ArrowDown, Zap, BarChart2, RefreshCw } from "lucide-react";
+import {
+  WhatsAppIcon,
+  TelegramIcon,
+  InstagramIcon,
+  MessengerIcon,
+  RCSIcon,
+  SMSIcon,
+  LineIcon,
+  GoogleBizIcon,
+} from "@/components/channel-icons";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -13,21 +23,27 @@ const fade = {
   }),
 };
 
-const logos = [
-  "Netflix",
-  "Google",
-  "YouTube",
-  "Bosch",
-  "HSBC",
-  "Carl Zeiss",
-  "Nestlé",
-];
+const logos = ["Netflix", "Google", "YouTube", "Bosch", "HSBC", "Carl Zeiss", "Nestlé"];
 
 const stats = [
-  { value: "₹10Cr+", label: "Pipeline Contributed" },
-  { value: "30%", label: "Engagement Improvement" },
+  { value: "$10M+", label: "Pipeline Contributed" },
+  { value: "30%", label: "Engagement Uplift" },
   { value: "60+", label: "Enterprise Workshops" },
 ];
+
+const channels = [
+  { name: "WhatsApp", Icon: WhatsAppIcon, color: "#25D366", bg: "rgba(37,211,102,0.08)" },
+  { name: "RCS", Icon: RCSIcon, color: "#1A73E8", bg: "rgba(26,115,232,0.08)" },
+  { name: "Instagram", Icon: InstagramIcon, color: "#E1306C", bg: "rgba(225,48,108,0.08)" },
+  { name: "Messenger", Icon: MessengerIcon, color: "#0078FF", bg: "rgba(0,120,255,0.08)" },
+  { name: "Telegram", Icon: TelegramIcon, color: "#229ED9", bg: "rgba(34,158,217,0.08)" },
+  { name: "SMS", Icon: SMSIcon, color: "#9A9080", bg: "rgba(154,144,128,0.08)" },
+  { name: "Google Biz", Icon: GoogleBizIcon, color: "#4285F4", bg: "rgba(66,133,244,0.08)" },
+  { name: "LINE", Icon: LineIcon, color: "#06C755", bg: "rgba(6,199,85,0.08)" },
+];
+
+// Duplicate for seamless loop
+const channelsLoop = [...channels, ...channels];
 
 const clientTypes = [
   {
@@ -47,6 +63,41 @@ const clientTypes = [
     title: "Enterprise CX teams",
     description:
       "Your team needs a conversational AI strategy that goes beyond broadcast — personalized, measurable, scalable.",
+  },
+];
+
+const aiSteps = [
+  {
+    icon: MessageSquare,
+    step: "01",
+    title: "User Sends Message",
+    desc: "A customer reaches out on WhatsApp, RCS, Instagram, or any channel you operate.",
+    color: "text-[#25D366]",
+    bg: "bg-[#25D366]/10 border-[#25D366]/20",
+  },
+  {
+    icon: Zap,
+    step: "02",
+    title: "AI Understands Intent",
+    desc: "NLP classifies the intent — support, purchase, onboarding, complaint — and routes intelligently.",
+    color: "text-[#E8A838]",
+    bg: "bg-[#E8A838]/10 border-[#E8A838]/20",
+  },
+  {
+    icon: RefreshCw,
+    step: "03",
+    title: "Journey Executes",
+    desc: "A pre-built conversational journey triggers — personalized, context-aware, and on-brand.",
+    color: "text-[#C4622D]",
+    bg: "bg-[#C4622D]/10 border-[#C4622D]/20",
+  },
+  {
+    icon: BarChart2,
+    step: "04",
+    title: "Outcome Tracked",
+    desc: "Conversion, resolution, or escalation is logged. Health scores update. You prove ROI.",
+    color: "text-[#1A73E8]",
+    bg: "bg-[#1A73E8]/10 border-[#1A73E8]/20",
   },
 ];
 
@@ -132,8 +183,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== CHANNEL MARQUEE ===== */}
+      <section className="border-y border-border bg-surface py-8 overflow-hidden">
+        <div className="mb-3 text-center">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+            Channels I work with
+          </span>
+        </div>
+        <div className="relative flex">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-surface to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-surface to-transparent pointer-events-none" />
+
+          <motion.div
+            className="flex gap-4 shrink-0"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          >
+            {channelsLoop.map((ch, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 px-5 py-3 rounded-xl border shrink-0 transition-all"
+                style={{
+                  background: ch.bg,
+                  borderColor: `${ch.color}30`,
+                }}
+              >
+                <ch.Icon size={22} />
+                <span className="text-sm font-semibold whitespace-nowrap" style={{ color: ch.color }}>
+                  {ch.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* ===== 3 PROOF NUMBERS ===== */}
-      <section className="border-y border-border" style={{ background: 'linear-gradient(to right, var(--surface), color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), var(--surface))' }}>
+      <section className="border-b border-border" style={{ background: 'linear-gradient(to right, var(--surface), color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), var(--surface))' }}>
         <div className="max-w-6xl mx-auto px-6 py-16">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -156,8 +243,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== WHO THIS IS FOR ===== */}
+      {/* ===== CONVERSATIONAL AI FLOW ===== */}
       <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            className="text-center mb-16"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-3 block">
+              How it works
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              The conversational AI journey — from message to measurable outcome
+            </h2>
+          </motion.div>
+
+          {/* Flow diagram */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+            {/* Connector line (desktop) */}
+            <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-[#25D366]/30 via-accent/30 to-[#1A73E8]/30 z-0" />
+
+            {aiSteps.map((step, i) => (
+              <motion.div
+                key={step.step}
+                className="relative z-10 flex flex-col items-center text-center"
+                variants={fade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+              >
+                {/* Icon circle */}
+                <div className={`w-24 h-24 rounded-2xl border-2 ${step.bg} flex items-center justify-center mb-6 shadow-lg`}>
+                  <step.icon size={36} className={step.color} />
+                </div>
+
+                {/* Step number */}
+                <span className={`text-xs font-black uppercase tracking-widest mb-2 ${step.color}`}>
+                  Step {step.step}
+                </span>
+                <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.desc}
+                </p>
+
+                {/* Arrow between steps (mobile) */}
+                {i < aiSteps.length - 1 && (
+                  <ArrowDown size={20} className="text-muted-foreground/30 my-4 md:hidden" />
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Channel pills below flow */}
+          <motion.div
+            className="mt-16 p-8 rounded-2xl border border-border bg-card"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center mb-6">
+              Works across every major channel
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {channels.map((ch) => (
+                <div
+                  key={ch.name}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all hover:scale-105 cursor-default"
+                  style={{ background: ch.bg, borderColor: `${ch.color}25`, color: ch.color }}
+                >
+                  <ch.Icon size={18} />
+                  {ch.name}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ===== WHO THIS IS FOR ===== */}
+      <section className="py-24 bg-surface border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             className="mb-16"
@@ -200,7 +369,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== TEASER CASE STUDY ===== */}
-      <section className="py-24 bg-surface border-y border-border">
+      <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
@@ -210,14 +379,17 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                Case Study
-              </p>
+              <div className="flex items-center gap-3 mb-3">
+                <WhatsAppIcon size={20} />
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  Case Study — Banking
+                </p>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Enterprise bank with 18% WhatsApp adoption
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                A major Indian bank launched WhatsApp Business for customer
+                A major bank launched WhatsApp Business for customer
                 service but couldn't move the needle past 18% adoption. Generic
                 templates, no journey design, no engagement visibility. We
                 rebuilt the entire conversational strategy.
@@ -239,7 +411,7 @@ export default function HomePage() {
               ].map((r) => (
                 <div
                   key={r.label}
-                  className="p-6 rounded-xl border border-border bg-background text-center"
+                  className="p-6 rounded-xl border border-border bg-card text-center hover:border-accent/30 transition-all"
                 >
                   <div className="text-2xl md:text-3xl font-bold text-accent mb-1">
                     {r.metric}
@@ -255,7 +427,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-24">
+      <section className="py-24 bg-surface border-t border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div
             variants={fade}
