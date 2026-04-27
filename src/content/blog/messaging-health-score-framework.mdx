@@ -1,0 +1,88 @@
+---
+title: "The Enterprise Messaging Health Score: A Framework"
+date: "2026-01-15"
+excerpt: "How to build a customer health score for your messaging channels — tracking delivery, engagement, response patterns, and early churn signals. A practical framework you can implement this week."
+category: "Frameworks"
+tags: ["health score", "customer success", "WhatsApp analytics", "messaging KPIs", "churn prevention"]
+---
+
+Every enterprise CS team I've worked with tracks customer health in some way. But almost none of them apply health scoring to their *messaging channels*.
+
+That's a mistake. Your messaging channel has health signals just like any SaaS product — and if you're not reading them, churn is happening before you even know it.
+
+## What is a Messaging Health Score?
+
+A messaging health score is a composite metric that tells you how engaged a customer or user base is with your conversational channels — and how likely they are to continue engaging (or disengage).
+
+It answers the question: **"Is this messaging relationship getting stronger or weaker?"**
+
+## The 5 signals that matter
+
+After building health scoring frameworks for global enterprise accounts, these are the five signals I weight most heavily:
+
+### 1. Delivery Rate (weight: 15%)
+Are your messages actually reaching users? A dropping delivery rate is the first indicator something is wrong — either list quality is degrading or there's a platform configuration issue.
+
+**Healthy threshold:** > 95%
+**Danger zone:** < 90%
+
+### 2. Read Rate (weight: 25%)
+The most important engagement signal. If messages are delivered but not read, the relationship is deteriorating. Users are soft-opting out before they actually opt out.
+
+**Healthy threshold:** > 60% (WhatsApp), > 30% (SMS/RCS)
+**Danger zone:** < 40% (WhatsApp), < 15% (SMS/RCS)
+
+### 3. Click-Through Rate (weight: 25%)
+Did they take action? CTR measures intent, not just passive receipt. A high read rate with low CTR means your content is relevant but your CTAs aren't compelling.
+
+**Healthy threshold:** > 8%
+**Danger zone:** < 3%
+
+### 4. Response Rate (weight: 20%)
+For two-way conversational flows: are users replying? A healthy two-way channel has active participants. Silence means the conversation is broken.
+
+**Healthy threshold:** > 15% response on conversational templates
+**Danger zone:** < 5%
+
+### 5. Opt-Out Rate (weight: 15%)
+The ultimate signal of a broken relationship. Measure this per template and per campaign — a spike on a specific template tells you exactly what went wrong.
+
+**Healthy threshold:** < 0.5% per send
+**Danger zone:** > 2% per send
+
+## Calculating the composite score
+
+Weight each signal, normalize to 100, and you get your Messaging Health Score:
+
+```
+Score = (Delivery × 0.15) + (Read × 0.25) + (CTR × 0.25) + (Response × 0.20) + (1 - OptOut) × 0.15
+```
+
+A score above 70 = healthy relationship
+50-70 = needs attention
+Below 50 = at-risk
+
+## Trigger-based interventions
+
+The power of health scoring is in automated interventions:
+
+| Score range | Trigger |
+|---|---|
+| Drop below 65 | Flag account for proactive CS outreach |
+| Drop below 50 | Pause campaign sends, review template library |
+| Opt-out spike > 1.5% | Immediate template review |
+| Read rate < 40% for 3 consecutive sends | Journey redesign audit |
+
+## How to implement this week
+
+1. Pull last 90 days of messaging data from your platform
+2. Calculate each signal per account or per campaign
+3. Build the composite score in a spreadsheet first
+4. Identify your bottom 20% — these are your at-risk relationships
+5. Create a playbook for each risk tier
+
+You don't need a fancy tool to start. A Google Sheet with this framework will surface more insight than most enterprise analytics dashboards.
+
+---
+
+**Want me to review your current messaging health metrics? The [free Readiness Score](/readiness-score) is a good starting point — or [book a call](/book) for a deeper audit.**
