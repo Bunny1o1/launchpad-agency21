@@ -19,9 +19,9 @@ export function AuroraBackground() {
         its position using framer motion.
       */}
       <motion.div
-        className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[100px] opacity-30"
+        className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[100px] opacity-15"
         style={{
-          background: "radial-gradient(circle, rgba(232,168,56,0.8) 0%, rgba(196,98,45,0) 70%)",
+          background: "radial-gradient(circle, rgba(0,245,160,1) 0%, rgba(0,217,245,0) 70%)",
         }}
         animate={{
           x: ["0%", "20%", "0%", "-20%", "0%"],
@@ -36,9 +36,9 @@ export function AuroraBackground() {
       />
       
       <motion.div
-        className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full mix-blend-screen filter blur-[120px] opacity-20"
+        className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full mix-blend-screen filter blur-[120px] opacity-15"
         style={{
-          background: "radial-gradient(circle, rgba(196,98,45,0.8) 0%, rgba(45,91,227,0) 70%)",
+          background: "radial-gradient(circle, rgba(138,43,226,1) 0%, rgba(65,105,225,0) 70%)",
         }}
         animate={{
           x: ["0%", "-20%", "0%", "20%", "0%"],

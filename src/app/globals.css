@@ -20,22 +20,22 @@
 }
 
 .dark {
-  --background: #120F0C;        /* warm near-black — slightly lighter than before */
-  --foreground: #F5F0E8;
-  --surface: #1E1A15;           /* clearly distinct card surface */
-  --accent: #E8A838;
-  --secondary: #C4622D;
-  --muted: #252017;             /* muted bg — visible step above surface */
-  --muted-foreground: #9A9080;  /* brighter muted text for readability */
-  --border: #352D22;            /* warm brown border — visible but not harsh */
-  --border-subtle: #2A2318;     /* ultra-subtle dividers */
-  --ring: #E8A838;
-  --card: #1E1A15;
-  --card-foreground: #F5F0E8;
-  --input: #2C2620;
+  --background: #0A0A0A;        /* cold near-black */
+  --foreground: #F5F5F5;
+  --surface: #111111;           /* clearly distinct card surface */
+  --accent: #00F5A0;            /* Cyber Emerald */
+  --secondary: #8A2BE2;         /* Deep Violet */
+  --muted: #1A1A1A;             /* muted bg */
+  --muted-foreground: #A0A0A0;  /* brighter muted text for readability */
+  --border: #2A2A2A;            /* crisp border */
+  --border-subtle: #1F1F1F;     /* ultra-subtle dividers */
+  --ring: #00F5A0;
+  --card: #111111;
+  --card-foreground: #F5F5F5;
+  --input: #1A1A1A;
   /* Glow layers */
-  --glow-accent: rgba(232, 168, 56, 0.06);
-  --glow-secondary: rgba(196, 98, 45, 0.04);
+  --glow-accent: rgba(0, 245, 160, 0.06);
+  --glow-secondary: rgba(138, 43, 226, 0.04);
 }
 
 /* ===== BASE ===== */
@@ -46,10 +46,10 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    /* Subtle warm ambient radial glow in the top-center */
+    /* Subtle cold ambient radial glow in the top-center */
     background-image:
-      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(232, 168, 56, 0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(196, 98, 45, 0.05) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(0, 245, 160, 0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(138, 43, 226, 0.05) 0%, transparent 60%);
     background-attachment: fixed;
   }
 
@@ -70,7 +70,7 @@
   }
 
   .dark .gradient-text {
-    background-image: linear-gradient(135deg, #E8A838, #C4622D);
+    background-image: linear-gradient(135deg, #00F5A0, #00D9F5);
   }
 }
 
