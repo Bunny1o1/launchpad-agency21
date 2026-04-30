@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
+import { SmoothScroll } from "@/components/smooth-scroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -147,7 +148,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <SmoothScroll>
+          <main className="min-h-screen">{children}</main>
+        </SmoothScroll>
         <Footer />
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
