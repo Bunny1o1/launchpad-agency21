@@ -1,0 +1,3 @@
+## 2024-05-24 - [Intl.NumberFormat inside RequestAnimationFrame]
+**Learning:** `Intl.NumberFormat` instantiation is surprisingly expensive in JavaScript (taking around 100x more time compared to just using a pre-instantiated formatter). Doing this inside a framer-motion `springValue.on("change")` callback or any `requestAnimationFrame` loop creates a major performance bottleneck, as it runs ~60 times a second.
+**Action:** Always instantiate `Intl.NumberFormat` (and similar `Intl` formatters) once outside the component or loop, and reuse the instance for formatting to ensure high-performance animations and rendering.
