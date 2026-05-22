@@ -1,0 +1,3 @@
+## 2024-05-22 - Framer Motion on("change") with Intl API
+**Learning:** Found `Intl.NumberFormat` being instantiated inside a Framer Motion `springValue.on("change")` callback. This callback runs at 60fps during animation, and since `Intl` instantiation is notoriously expensive, it causes unnecessary CPU load and Garbage Collection pressure. Additionally, the Framer Motion subscription wasn't being cleaned up on unmount, causing a memory leak.
+**Action:** Always initialize expensive objects like `Intl` formatters outside of high-frequency animation loops and ensure `on("change")` subscriptions are cleaned up via their returned unsubscribe function.
