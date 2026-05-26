@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { cache } from "react";
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content/blog");
 
@@ -17,7 +18,12 @@ export type Post = {
   tags?: string[];
 };
 
-export function getAllPosts(): Post[] {
+// ⚡ Bolt Performance Optimization:
+// Cache parsed markdown files per request using React's `cache()`.
+// This prevents identical file reads + gray-matter parsing
+// multiple times during SSG/build or a single request (e.g. metadata & content),
+// without breaking hot-reloading or ISR updates like a global Map would.
+export const getAllPosts = cache((): Post[] => {
   if (!fs.existsSync(CONTENT_DIR)) return [];
 
   const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
@@ -42,9 +48,9 @@ export function getAllPosts(): Post[] {
       } as Post;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1)); // newest first
-}
+});
 
-export function getPostBySlug(slug: string): Post | null {
+export const getPostBySlug = cache((slug: string): Post | null => {
   const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
 
@@ -63,4 +69,4 @@ export function getPostBySlug(slug: string): Post | null {
     author: data.author ?? "Vinod Yadav",
     tags: data.tags ?? [],
   };
-}
+});
