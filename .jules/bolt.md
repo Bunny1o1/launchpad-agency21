@@ -1,0 +1,3 @@
+## 2026-05-28 - [Intl.NumberFormat Instantiation in Animation Loop]
+**Learning:** Instantiating `Intl.NumberFormat` inside a Framer Motion `springValue.on('change')` callback runs it on every frame update (approx. 60 times a second). This is highly inefficient and creates significant garbage collection pressure and main thread blocking, specifically during scroll animations with components like `AnimatedCounter`.
+**Action:** Always extract and cache expensive JavaScript objects like `Intl.NumberFormat` outside of hot paths (e.g., render loops, animation frame callbacks). Additionally, remember to clean up event listeners returned by Framer Motion's `on` method inside a `useEffect`.
