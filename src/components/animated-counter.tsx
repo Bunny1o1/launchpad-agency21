@@ -29,14 +29,22 @@ export function AnimatedCounter({
   }, [isInView, value, motionValue]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    // ⚡ Bolt Optimization: Instantiate Intl.NumberFormat once outside the animation loop
+    // instead of creating it 60 times a second on every frame update.
+    // Impact: Reduces garbage collection pressure and main thread blocking during scroll animations.
+    const formatter = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    });
+
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${formatter.format(latest)}${suffix}`;
       }
     });
+
+    // Cleanup subscription to prevent memory leaks if dependencies change
+    return () => unsubscribe();
   }, [springValue, prefix, suffix]);
 
   return <motion.span ref={ref} className="tabular-nums" />;
