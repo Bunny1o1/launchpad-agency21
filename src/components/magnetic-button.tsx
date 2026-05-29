@@ -1,8 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useRef } from "react";
 
+// Optimization: Replaced useState with useMotionValue/useSpring to prevent
+// React re-renders on every mousemove event. This bypasses the React render cycle
+// and updates the DOM directly, saving 60+ re-renders per second while hovered.
 export function MagneticButton({
   children,
   className = "",
@@ -11,18 +14,30 @@ export function MagneticButton({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  // Use Framer Motion values instead of React state
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  // Apply spring physics
+  const springX = useSpring(x, { stiffness: 150, damping: 15, mass: 0.1 });
+  const springY = useSpring(y, { stiffness: 150, damping: 15, mass: 0.1 });
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return;
+
     const { clientX, clientY } = e;
-    const { height, width, left, top } = ref.current!.getBoundingClientRect();
+    const { height, width, left, top } = ref.current.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
     const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
+
+    x.set(middleX * 0.2);
+    y.set(middleY * 0.2);
   };
 
   const reset = () => {
-    setPosition({ x: 0, y: 0 });
+    x.set(0);
+    y.set(0);
   };
 
   return (
@@ -31,8 +46,7 @@ export function MagneticButton({
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
-      animate={{ x: position.x, y: position.y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+      style={{ x: springX, y: springY }}
     >
       {children}
     </motion.div>
