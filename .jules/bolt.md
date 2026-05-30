@@ -1,0 +1,3 @@
+## 2024-05-24 - High-Frequency Intl.NumberFormat Instantiation
+**Learning:** Instantiating `Intl.NumberFormat` inside a high-frequency animation loop (like `framer-motion`'s `springValue.on("change")` or `requestAnimationFrame`) is extremely expensive. In this Next.js app, doing so blocked the main thread 60+ times per second, leading to noticeable UI stuttering during scroll-triggered counter animations.
+**Action:** Always extract and memoize `Intl.NumberFormat` instantiations (e.g., using `useMemo` in React components) outside of any high-frequency loops or event listeners to ensure smooth 60fps animations and prevent main thread blocking.
