@@ -3,6 +3,16 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
+// ⚡ Bolt Performance Optimization:
+// Cached Intl.NumberFormat instance. Creating a new Intl.NumberFormat instance is expensive.
+// Since we format numbers inside an animation loop (up to 60+ times per second),
+// we cache the formatter outside the component to prevent recreating it on every frame,
+// saving CPU cycles, preventing jank, and reducing garbage collection pressure.
+const compactFormatter = new Intl.NumberFormat("en-US", {
+  notation: "compact",
+  maximumFractionDigits: 1,
+});
+
 export function AnimatedCounter({
   value,
   prefix = "",
@@ -31,10 +41,7 @@ export function AnimatedCounter({
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${compactFormatter.format(latest)}${suffix}`;
       }
     });
   }, [springValue, prefix, suffix]);
