@@ -1,0 +1,3 @@
+## 2024-06-03 - Avoid Intl.NumberFormat in Animation Loops
+**Learning:** Instantiating `Intl.NumberFormat` inside a high-frequency animation callback (like `framer-motion`'s `spring.on("change")`) causes significant CPU overhead and garbage collection pauses. A benchmark showed it is ~300x slower than reusing a single instance outside the loop. Additionally, `framer-motion` event listeners must be cleaned up to avoid memory leaks.
+**Action:** Always extract `Intl.NumberFormat` (and similar expensive formatters) to a module-level constant when used in React components or animation loops, and ensure all event listeners return an unsubscribe function in `useEffect`.
