@@ -1,0 +1,3 @@
+## 2024-05-24 - Intl.NumberFormat Instantiation Bottleneck in Animation Loops
+**Learning:** `Intl.NumberFormat` instantiation is notoriously slow in JavaScript (taking around 0.6ms per instantiation based on simple tests). When placed inside a high-frequency execution context like a Framer Motion `springValue.on("change")` callback which runs 60 times a second, this creates a measurable CPU overhead that can cause stutter in animations.
+**Action:** Always hoist `Intl.NumberFormat` (and other `Intl.*` formatting objects) out of loops, render cycles, and especially high-frequency animation callbacks. If the configuration options are static, place the instance at the module scope so it's created only once for the application lifecycle.
