@@ -3,6 +3,14 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
+// ⚡ Bolt Performance Optimization:
+// Intl.NumberFormat instantiation is notoriously slow. Moving it to module scope
+// prevents it from being recreated 60 times a second during the framer-motion spring animation.
+const numberFormatter = new Intl.NumberFormat("en-US", {
+  notation: "compact",
+  maximumFractionDigits: 1,
+});
+
 export function AnimatedCounter({
   value,
   prefix = "",
@@ -31,10 +39,7 @@ export function AnimatedCounter({
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${numberFormatter.format(latest)}${suffix}`;
       }
     });
   }, [springValue, prefix, suffix]);
