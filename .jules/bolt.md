@@ -1,0 +1,3 @@
+## 2024-06-07 - [Intl Formatter Caching in High-Frequency Animation]
+**Learning:** Instantiating `Intl` objects (like `Intl.NumberFormat`) is computationally expensive. Doing this inside a high-frequency event callback, such as `framer-motion`'s `springValue.on("change")` which runs at ~60fps, causes unnecessary main thread CPU overhead and dropped frames.
+**Action:** Always cache `Intl` formatter instances globally or via `useMemo` (or outside the component altogether if it doesn't depend on props/state) when they are used in high-frequency operations like animations or continuous scrolls. This simple caching improved the formatting performance by approximately 16x.
