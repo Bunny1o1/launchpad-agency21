@@ -19,24 +19,21 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vinod Yadav — Conversational AI Growth Expert",
-    template: "%s | Vinod Yadav",
+    default: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
+    template: "%s | Saasible",
   },
   description:
-    "8+ years managing WhatsApp Business and conversational AI for Netflix, Google, Bosch, and HSBC at Gupshup. Consulting enterprises on messaging strategy, customer adoption, and revenue growth.",
+    "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
   keywords: [
-    "conversational AI consultant India",
-    "WhatsApp Business strategy",
-    "WhatsApp Business expert",
-    "RCS messaging consultant",
-    "enterprise messaging strategy",
-    "CPaaS growth consultant",
-    "customer success consultant",
-    "WhatsApp marketing",
-    "Gupshup",
-    "messaging channel adoption",
+    "GTM agency India",
+    "WhatsApp outbound B2B",
+    "Voice AI GTM",
+    "SaaS go-to-market India",
+    "outbound system builder India",
+    "B2B SaaS founder GTM",
+    "conversational GTM",
     "WhatsApp Business API",
-    "AEO consultant",
+    "India B2B SaaS",
   ],
   authors: [{ name: "Vinod Yadav", url: "https://saasible.in" }],
   metadataBase: new URL("https://saasible.in"),
@@ -45,16 +42,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://saasible.in",
-    title: "Vinod Yadav — Conversational AI Growth Expert",
+    title: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
     description:
-      "Helping enterprises drive adoption and revenue through WhatsApp Business, RCS, and conversational AI. 8+ years at Gupshup managing Netflix, Google, Bosch.",
-    siteName: "Vinod Yadav",
+      "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
+    siteName: "Saasible",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vinod Yadav — Conversational AI Growth Expert",
+    title: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
     description:
-      "Helping enterprises drive adoption and revenue through WhatsApp Business, RCS, and conversational AI.",
+      "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
   },
   robots: {
     index: true,

@@ -2,21 +2,10 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, MessageSquare, Mic, Code2 } from "lucide-react";
 import { AuroraBackground } from "@/components/aurora-background";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedCounter } from "@/components/animated-counter";
-import { TimelineProcess } from "@/components/timeline-process";
-import {
-  WhatsAppIcon,
-  TelegramIcon,
-  InstagramIcon,
-  MessengerIcon,
-  RCSIcon,
-  SMSIcon,
-  LineIcon,
-  GoogleBizIcon,
-} from "@/components/channel-icons";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -27,50 +16,33 @@ const fade = {
   }),
 };
 
-const logos = ["Netflix", "Google", "YouTube", "Bosch", "HSBC", "Carl Zeiss", "Nestlé"];
-
 const stats = [
-  { value: 10, prefix: "$", suffix: "M+", label: "Pipeline Contributed" },
-  { value: 30, prefix: "", suffix: "%", label: "Engagement Uplift" },
-  { value: 60, prefix: "", suffix: "+", label: "Enterprise Workshops" },
+  { value: 10, prefix: "₹", suffix: "Cr+", label: "Pipeline Generated" },
+  { value: 326, prefix: "", suffix: "%", label: "Campaign ROI Delivered" },
+  { value: 3, prefix: "", suffix: "x", label: "Average Activation Improvement" },
+  { value: 8, prefix: "", suffix: " Yrs", label: "Enterprise GTM Experience" },
 ];
 
-const channels = [
-  { name: "WhatsApp", Icon: WhatsAppIcon, color: "#25D366", bg: "rgba(37,211,102,0.08)" },
-  { name: "RCS", Icon: RCSIcon, color: "#1A73E8", bg: "rgba(26,115,232,0.08)" },
-  { name: "Instagram", Icon: InstagramIcon, color: "#E1306C", bg: "rgba(225,48,108,0.08)" },
-  { name: "Messenger", Icon: MessengerIcon, color: "#0078FF", bg: "rgba(0,120,255,0.08)" },
-  { name: "Telegram", Icon: TelegramIcon, color: "#229ED9", bg: "rgba(34,158,217,0.08)" },
-  { name: "SMS", Icon: SMSIcon, color: "#9A9080", bg: "rgba(154,144,128,0.08)" },
-  { name: "Google Biz", Icon: GoogleBizIcon, color: "#4285F4", bg: "rgba(66,133,244,0.08)" },
-  { name: "LINE", Icon: LineIcon, color: "#06C755", bg: "rgba(6,199,85,0.08)" },
-];
-
-// Duplicate for seamless loop
-const channelsLoop = [...channels, ...channels];
-
-const clientTypes = [
+const icpCards = [
+  {
+    icon: Code2,
+    title: "The AI SaaS Founder",
+    description:
+      "You shipped your product in 3 weeks. You've had 10 demos. Zero conversions. Your GTM motion is broken — and cold email isn't fixing it.",
+  },
   {
     icon: MessageSquare,
-    title: "Brands on WhatsApp Business",
+    title: "The WhatsApp-First Builder",
     description:
-      "You've launched WhatsApp campaigns but adoption is flat. Templates get ignored. You can't prove ROI.",
+      "You know your buyers are on WhatsApp. You just don't have the system, the sequences, or the strategy to turn it into pipeline.",
   },
   {
-    icon: TrendingUp,
-    title: "CPaaS & SaaS platforms",
+    icon: Mic,
+    title: "The Technical Co-founder",
     description:
-      "Your enterprise customers aren't activating. Onboarding stalls. Churn happens silently before renewal.",
-  },
-  {
-    icon: Users,
-    title: "Enterprise CX teams",
-    description:
-      "Your team needs a conversational AI strategy that goes beyond broadcast — personalized, measurable, scalable.",
+      "You can build anything. But you've never run outbound, never written a sales sequence, never closed a deal. You need a GTM partner, not a consultant.",
   },
 ];
-
-
 
 export default function HomePage() {
   return (
@@ -80,28 +52,22 @@ export default function HomePage() {
         <AuroraBackground />
 
         <div className="max-w-6xl mx-auto px-6 relative">
-          {/* Social proof logos — UP FRONT */}
+          {/* Credential bar */}
           <motion.div
-            className="flex flex-wrap items-center gap-6 md:gap-10 mb-16"
+            className="flex flex-wrap items-center gap-2 mb-16"
             variants={fade}
             initial="hidden"
             animate="visible"
             custom={0}
           >
-            <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Trusted by teams at
+            <span className="text-xs font-medium text-muted-foreground">
+              Built by someone who drove GTM at
             </span>
-            {logos.map((logo) => (
-              <span
-                key={logo}
-                className="text-sm font-semibold text-muted-foreground/60 hover:text-foreground transition-colors cursor-default"
-              >
-                {logo}
-              </span>
-            ))}
+            <span className="text-xs font-semibold text-foreground">
+              Netflix India · Google · HSBC · Bosch
+            </span>
           </motion.div>
 
-          {/* Name + Positioning */}
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-6 max-w-4xl"
             variants={fade}
@@ -109,9 +75,9 @@ export default function HomePage() {
             animate="visible"
             custom={1}
           >
-            I help enterprises turn{" "}
-            <span className="text-accent">messaging channels</span> into growth
-            engines
+            Your buyers are on{" "}
+            <span className="text-accent">WhatsApp.</span>{" "}
+            Your GTM system isn&apos;t.
           </motion.h1>
 
           <motion.p
@@ -121,12 +87,10 @@ export default function HomePage() {
             animate="visible"
             custom={2}
           >
-            8 years managing WhatsApp Business, RCS, and conversational AI for
-            Netflix, Google, Bosch, and HSBC at Gupshup. Now available for
-            consulting.
+            Saasible builds outbound and messaging systems for AI-era B2B SaaS
+            founders in India — using WhatsApp and Voice AI as the growth channel.
           </motion.p>
 
-          {/* CTA */}
           <motion.div
             className="flex flex-wrap gap-4"
             variants={fade}
@@ -139,62 +103,26 @@ export default function HomePage() {
                 href="/book"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_0_40px_rgba(232,168,56,0.3)]"
               >
-                Book a Strategy Call <ArrowRight size={16} />
+                Book a Free GTM Call <ArrowRight size={16} />
               </Link>
             </MagneticButton>
             <MagneticButton>
               <Link
-                href="/readiness-score"
+                href="/services"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all bg-card/50 backdrop-blur-sm"
               >
-                Take the Readiness Score
+                See How It Works
               </Link>
             </MagneticButton>
           </motion.div>
         </div>
       </section>
 
-      {/* ===== CHANNEL MARQUEE ===== */}
-      <section className="border-y border-border bg-surface py-8 overflow-hidden">
-        <div className="mb-3 text-center">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-            Channels I work with
-          </span>
-        </div>
-        <div className="relative flex">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-surface to-transparent pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-surface to-transparent pointer-events-none" />
-
-          <motion.div
-            className="flex gap-4 shrink-0"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-          >
-            {channelsLoop.map((ch, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 px-5 py-3 rounded-xl border shrink-0 transition-all"
-                style={{
-                  background: ch.bg,
-                  borderColor: `${ch.color}30`,
-                }}
-              >
-                <ch.Icon size={22} />
-                <span className="text-sm font-semibold whitespace-nowrap" style={{ color: ch.color }}>
-                  {ch.name}
-                </span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ===== 3 PROOF NUMBERS ===== */}
+      {/* ===== STATS ===== */}
       <section className="border-b border-border" style={{ background: 'linear-gradient(to right, var(--surface), color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), var(--surface))' }}>
         <div className="max-w-6xl mx-auto px-6 py-16">
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={fade}
             initial="hidden"
             whileInView="visible"
@@ -203,61 +131,13 @@ export default function HomePage() {
             {stats.map((stat, i) => (
               <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-accent/10 bg-accent/[0.03]">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2 tabular-nums">
-                  <AnimatedCounter value={stat.value as number} prefix={stat.prefix} suffix={stat.suffix} />
+                  <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">
                   {stat.label}
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ===== CONVERSATIONAL AI FLOW ===== */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            variants={fade}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-3 block">
-              How it works
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-              The conversational AI journey — from message to measurable outcome
-            </h2>
-          </motion.div>
-
-          {/* Flow diagram */}
-          <TimelineProcess />
-
-          {/* Channel pills below flow */}
-          <motion.div
-            className="mt-16 p-8 rounded-2xl border border-border bg-card"
-            variants={fade}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center mb-6">
-              Works across every major channel
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {channels.map((ch) => (
-                <div
-                  key={ch.name}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all hover:scale-105 cursor-default"
-                  style={{ background: ch.bg, borderColor: `${ch.color}25`, color: ch.color }}
-                >
-                  <ch.Icon size={18} />
-                  {ch.name}
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
@@ -273,16 +153,15 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-              Who this is for
+              Who This Is For
             </p>
             <h2 className="text-3xl md:text-4xl font-bold max-w-lg">
-              I work with companies where messaging is the channel — not an
-              afterthought
+              Built for founders who can build, but can&apos;t sell yet
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {clientTypes.map((item, i) => (
+            {icpCards.map((item, i) => (
               <motion.div
                 key={item.title}
                 className="p-8 rounded-xl border border-border bg-card hover:border-accent/40 hover:bg-accent/[0.02] transition-all duration-300 group"
@@ -305,8 +184,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== TEASER CASE STUDY ===== */}
+      {/* ===== HOW IT WORKS ===== */}
       <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            className="text-center mb-16"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-3 block">
+              How It Works
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              From zero GTM to first revenue — in 30 days
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { num: "01", title: "ICP Workshop", days: "Day 1–2", desc: "We define exactly who you're selling to, what pain you solve, and why they should respond to you — not your competitor." },
+              { num: "02", title: "Channel Strategy", days: "Day 3–4", desc: "WhatsApp, Voice AI, or both? We pick the right outbound channel for your ICP and build the messaging framework." },
+              { num: "03", title: "System Build", days: "Day 5–25", desc: "We build the actual outbound system — WhatsApp automation flows, voice agent scripts, sequences, and integrations." },
+              { num: "04", title: "Launch + Optimize", days: "Day 26–30", desc: "We launch, track responses, iterate messaging, and hand off the full system with SOPs so you can run it independently." },
+            ].map((step, i) => (
+              <motion.div
+                key={step.num}
+                className="p-6 rounded-xl border border-border bg-card hover:border-accent/30 transition-all"
+                variants={fade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+              >
+                <span className="text-4xl font-bold text-accent/20 block mb-3">{step.num}</span>
+                <h3 className="text-base font-bold mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
+                <span className="text-xs font-bold uppercase tracking-widest text-accent">{step.days}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PROOF NUMBERS ===== */}
+      <section className="py-24 bg-surface border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
@@ -316,41 +239,38 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <div>
-              <div className="flex items-center gap-3 mb-3">
-                <WhatsAppIcon size={20} />
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-                  Case Study — Banking
-                </p>
-              </div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+                Results
+              </p>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Enterprise bank with 18% WhatsApp adoption
+                What the systems actually produce
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                A major bank launched WhatsApp Business for customer
-                service but couldn't move the needle past 18% adoption. Generic
-                templates, no journey design, no engagement visibility. We
-                rebuilt the entire conversational strategy.
+                These aren&apos;t projections. Every number below came from a real
+                outbound or messaging system built for enterprise clients across
+                India — using the same WhatsApp and Voice AI approach we bring to
+                founder GTM.
               </p>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
               >
-                Read the full case study <ArrowRight size={14} />
+                See the full case studies <ArrowRight size={14} />
               </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { metric: "2.3×", label: "Adoption increase" },
-                { metric: "45%", label: "Template CTR lift" },
-                { metric: "60%", label: "Fewer support tickets" },
-                { metric: "90 days", label: "Time to results" },
+                { metric: "34% → 71%", label: "Activation rate — BFSI WhatsApp outbound" },
+                { metric: "326%", label: "Campaign ROI — Streaming giant" },
+                { metric: "+15pt", label: "NPS lift — Consumer electronics" },
+                { metric: "30 days", label: "Time to first results" },
               ].map((r) => (
                 <div
                   key={r.label}
                   className="p-6 rounded-xl border border-border bg-card text-center hover:border-accent/30 transition-all"
                 >
-                  <div className="text-2xl md:text-3xl font-bold text-accent mb-1">
+                  <div className="text-xl md:text-2xl font-bold text-accent mb-1">
                     {r.metric}
                   </div>
                   <div className="text-xs text-muted-foreground font-medium">
@@ -364,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-24 bg-surface border-t border-border">
+      <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div
             variants={fade}
@@ -373,19 +293,19 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-5">
-              Ready to make messaging{" "}
-              <span className="text-accent">actually work</span>?
+              Stop building features.{" "}
+              <span className="text-accent">Start getting customers.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Book a free 30-minute strategy call. We'll review your current
-              messaging setup and identify the top 3 quick wins.
+              Book a free 30-minute GTM call. We&apos;ll look at your product, your ICP,
+              and tell you exactly what outbound system we&apos;d build first.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/book"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                Book a Free Call <ArrowRight size={16} />
+                Book a Free GTM Call <ArrowRight size={16} />
               </Link>
               <Link
                 href="/services"
@@ -394,6 +314,7 @@ export default function HomePage() {
                 View Services
               </Link>
             </div>
+            <p className="text-xs text-muted-foreground mt-5">No pitch. No pressure. Just an honest look at your GTM.</p>
           </motion.div>
         </div>
       </section>

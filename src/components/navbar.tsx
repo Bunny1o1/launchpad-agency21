@@ -37,8 +37,8 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-lg font-bold tracking-tight">
-          <span className="text-accent">Vinod</span>{" "}
-          <span className="text-foreground">Yadav</span>
+          <span className="text-accent">Saas</span>
+          <span className="text-foreground">ible</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -60,7 +60,7 @@ export function Navbar() {
             href="/book"
             className="text-sm font-semibold px-5 py-2.5 rounded-lg bg-accent text-background hover:opacity-90 transition-opacity"
           >
-            Book a Call
+            Book a Free GTM Call
           </Link>
         </div>
 
