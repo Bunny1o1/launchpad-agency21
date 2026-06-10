@@ -28,16 +28,24 @@ export function AnimatedCounter({
     }
   }, [isInView, value, motionValue]);
 
+  // ⚡ Bolt Performance Optimization:
+  // Instantiating Intl.NumberFormat is computationally expensive.
+  // We memoize it outside the Framer Motion "change" event listener,
+  // preventing a new formatter from being created 60 times per second during the animation.
+  const formatter = useRef(
+    new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    })
+  ).current;
+
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${formatter.format(latest)}${suffix}`;
       }
     });
-  }, [springValue, prefix, suffix]);
+  }, [springValue, prefix, suffix, formatter]);
 
   return <motion.span ref={ref} className="tabular-nums" />;
 }
