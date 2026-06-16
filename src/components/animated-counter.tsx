@@ -29,14 +29,24 @@ export function AnimatedCounter({
   }, [isInView, value, motionValue]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    // ⚡ Bolt Performance Optimization
+    // Instantiating Intl.NumberFormat is expensive and causes jank when done at 60fps inside an animation loop.
+    // We instantiate it once here outside the callback.
+    const formatter = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    });
+
+    // We also need to capture the unsubscribe function returned by .on() to avoid memory leaks.
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${formatter.format(latest)}${suffix}`;
       }
     });
+
+    return () => {
+      unsubscribe();
+    };
   }, [springValue, prefix, suffix]);
 
   return <motion.span ref={ref} className="tabular-nums" />;
