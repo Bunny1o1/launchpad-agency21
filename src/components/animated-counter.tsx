@@ -3,6 +3,12 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
+// Cache the formatter to prevent re-instantiation 60 times per second during animation
+const numberFormatter = new Intl.NumberFormat("en-US", {
+  notation: "compact",
+  maximumFractionDigits: 1,
+});
+
 export function AnimatedCounter({
   value,
   prefix = "",
@@ -31,10 +37,7 @@ export function AnimatedCounter({
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${numberFormatter.format(latest)}${suffix}`;
       }
     });
   }, [springValue, prefix, suffix]);
