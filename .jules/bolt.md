@@ -1,0 +1,3 @@
+## 2024-05-24 - Intl.NumberFormat Instantiation Overhead in Animation Loops
+**Learning:** `Intl.NumberFormat` instantiation is very expensive in JavaScript (e.g. ~875ms for 10k creations vs ~14ms when instantiated once). When used inside an animation loop or high-frequency event callback like `framer-motion`'s `useSpring` on-change listener, the repeated instantiation of `Intl.NumberFormat` per frame causes noticeable performance jank and main-thread blocking.
+**Action:** Always instantiate `Intl.NumberFormat` (and other `Intl` object formatters) outside of high-frequency loops or render cycles, either using a module-level constant if the configuration is static or via `useMemo` if dynamically configured.
