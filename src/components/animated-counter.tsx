@@ -29,14 +29,22 @@ export function AnimatedCounter({
   }, [isInView, value, motionValue]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    // ⚡ Bolt Optimization: Instantiate expensive NumberFormat outside the high-frequency animation loop
+    // Expected impact: Eliminates up to 60 object allocations per second per counter during animation,
+    // significantly reducing garbage collection pressure and main thread blocking time.
+    const formatter = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    });
+
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = `${prefix}${formatter.format(latest)}${suffix}`;
       }
     });
+
+    // Clean up listener to prevent memory leaks when component unmounts
+    return () => unsubscribe();
   }, [springValue, prefix, suffix]);
 
   return <motion.span ref={ref} className="tabular-nums" />;
