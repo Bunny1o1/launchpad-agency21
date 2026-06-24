@@ -1,0 +1,3 @@
+## 2023-10-27 - [Framer Motion Re-rendering Bottleneck]
+**Learning:** Using React's `useState` to track high-frequency events like `mousemove` for Framer Motion animations causes significant performance bottlenecks by triggering complete component re-renders up to 60+ times per second.
+**Action:** Always use `useMotionValue` and hooks like `useSpring` instead of `useState` when passing rapidly changing values to Framer Motion. This approach directly updates the DOM, bypassing the React render cycle entirely and improving performance.
