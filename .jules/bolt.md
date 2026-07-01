@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimizing Continuous Interactions]
+**Learning:** For continuous user interactions like mouse movements or scrolling, using React's `useState` triggers unnecessary re-renders on every update, impacting performance. Framer Motion's `useMotionValue` combined with `useSpring` handles the animation state entirely outside the React render cycle.
+**Action:** When creating components with continuous input tracking (e.g., magnetic buttons, custom cursors, parallax effects), prefer `useMotionValue` and `useSpring` over `useState` to update animation values without re-rendering the component.
