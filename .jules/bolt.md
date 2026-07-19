@@ -1,0 +1,3 @@
+## 2024-07-19 - React useState Anti-pattern for Continuous Events
+**Learning:** Found components (like MagneticButton) using React's `useState` to track continuous mouse movements (e.g., `onMouseMove`). This forces a full React component re-render on every mouse movement (up to 60fps), which is highly inefficient for simple animation state and degrades performance.
+**Action:** When animating elements based on continuous user events (mouse movement, scrolling), always use Framer Motion's `useMotionValue` (and `useSpring` if damping is needed) and pass them directly to the `style` prop of a `motion` component to completely bypass the React render cycle.
