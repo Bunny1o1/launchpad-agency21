@@ -1,0 +1,3 @@
+## 2024-05-14 - Continuous Interaction State Handling
+**Learning:** For continuous user interactions like mouse movements (e.g., in a magnetic button effect), relying on React's `useState` triggers unnecessary re-renders on every frame. This can become a performance bottleneck on lower-end devices or complex pages.
+**Action:** Use Framer Motion's `useMotionValue` combined with `useSpring` (or similar tools bypassing the React render cycle) for all high-frequency continuous interactions (mouse/scroll). Apply these directly to the `style` object of `motion` components to update styles without triggering React component re-renders.
