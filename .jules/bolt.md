@@ -1,0 +1,3 @@
+## 2024-05-24 - Avoid `useState` for Continuous Mouse Events
+**Learning:** Using `useState` to track continuous interaction states like mouse coordinates (e.g., in a magnetic button effect) triggers unnecessary React re-renders for every pixel of movement. This can cause severe performance bottlenecks, especially if there's complex UI nested inside the interactive component.
+**Action:** When implementing continuous user interactions like mouse movements or scrolling, use Framer Motion's `useMotionValue` combined with `useSpring` (or similar tools) to bypass the React render cycle completely and update DOM styles directly.
