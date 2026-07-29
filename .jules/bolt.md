@@ -1,0 +1,3 @@
+## 2024-06-25 - Avoid `useState` for Framer Motion high-frequency events
+ **Learning:** Using React's `useState` for high-frequency interactions like `onMouseMove` triggers a full React render cycle for every single event frame, causing unnecessary overhead and janky animations.
+ **Action:** Prefer using Framer Motion's `useMotionValue` and `useSpring` hooks instead. These hooks manage the state outside of the React render cycle, directly updating the DOM node's styles for smooth and highly performant animations.
