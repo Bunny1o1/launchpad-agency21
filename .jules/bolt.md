@@ -1,0 +1,3 @@
+## 2024-05-24 - [Avoid React State for Continuous Animations]
+**Learning:** For continuous user interactions like mouse movements or scrolling, using React's `useState` triggers unnecessary re-renders (60+ per second), causing high main thread usage and potential micro-stutters.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` over `useState` for interactive animations to bypass the React render cycle and update the DOM directly.
