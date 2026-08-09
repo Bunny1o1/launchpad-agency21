@@ -1,0 +1,3 @@
+## 2024-05-15 - [Avoid React State for Continuous Interactions]
+**Learning:** Using React's `useState` for rapid, continuous interactions like `onMouseMove` or scroll events forces the entire component to re-render on every tiny pixel change (e.g., 60+ renders per second during mouse movement). This causes significant performance degradation and lag, especially when animating elements.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` to bypass the React render cycle entirely when updating values bound to animations during continuous events. This writes values directly to the DOM/Motion layer, keeping React renders at 0 during the interaction.
