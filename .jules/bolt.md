@@ -1,0 +1,3 @@
+## 2024-05-18 - Continuous User Interactions React Render Cycle Bypass
+**Learning:** For continuous user interactions like mousemove or scroll events, using React's `useState` triggers full component re-renders for every single event (every pixel of movement), which is a significant performance bottleneck.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` (or equivalent mechanisms) for continuous interactions, as they bypass the React render cycle entirely and apply updates directly to the DOM/style, resulting in smooth, high-performance animations without the overhead of React reconciliation.
