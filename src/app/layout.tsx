@@ -133,6 +133,14 @@ export default function RootLayout({
         `}
       </Script>
 
+      {/* Datafast Analytics */}
+      <Script
+        src="https://datafa.st/js/script.js"
+        data-website-id="dfid_Cyet9KSRTG1cTeIEHUWcN"
+        data-domain="saasible.in"
+        strategy="afterInteractive"
+      />
+
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
       >
