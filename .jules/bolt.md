@@ -1,0 +1,3 @@
+## 2024-06-25 - MagneticButton continuous interaction optimization
+**Learning:** The `MagneticButton` component triggers continuous re-renders when hovered by storing the x/y position in React state (`useState`). This causes unnecessary performance overhead since the visual updates (handled by framer-motion) don't strictly require React re-renders. Framer-motion provides motion values specifically designed to bypass the render cycle for high-frequency updates.
+**Action:** Always prefer `useMotionValue` and `useSpring` instead of `useState` for continuous user interactions like mouse movements or scrolling when using framer-motion. This avoids tying high-frequency animations to React's component rendering cycle.
