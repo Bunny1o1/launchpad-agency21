@@ -1,0 +1,3 @@
+## 2024-05-24 - [Bypass React Render Cycle with Framer Motion]
+ **Learning:** For continuous user interactions like mouse movements (e.g., magnetic button effect), using React's `useState` causes unnecessary re-renders on every mouse move event. This can lead to significant performance bottlenecks, especially when multiple interactive elements are present on the page.
+ **Action:** Prefer Framer Motion's `useMotionValue` and `useSpring` over `useState` for such continuous interactions. This approach bypasses the React render cycle completely and modifies the DOM directly for much smoother and more performant animations.
