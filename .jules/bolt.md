@@ -1,0 +1,3 @@
+## 2024-09-03 - Prevent unnecessary re-renders during continuous interactions
+**Learning:** Using `useState` to track continuous user interactions (like `onMouseMove` for tracking cursor position) forces React to re-render the component on every frame/event. This is a significant performance anti-pattern, especially in animations.
+**Action:** For continuous values (mouse movement, scroll position) with Framer Motion, prefer using `useMotionValue` combined with `useSpring` (or direct style binding). This allows Framer Motion to update the DOM node directly, entirely bypassing the React render cycle and improving performance.
