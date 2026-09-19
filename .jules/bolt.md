@@ -1,0 +1,3 @@
+## 2024-11-20 - [Performance Optimization: Bypassing React Render for Continuous Animation]
+**Learning:** For continuous user interactions like mouse movements (`onMouseMove`) mapped to animations (e.g., magnetic buttons), using React's `useState` causes the entire component tree to re-render on every tiny mouse movement, creating severe performance bottlenecks, especially in components near the top of the tree.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` hooks for high-frequency continuous interactions. Update motion values directly using `.set()` and bind the spring values directly to the `style` prop of the `motion` component. This updates the DOM directly and bypasses the React render cycle completely.
