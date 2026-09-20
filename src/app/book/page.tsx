@@ -149,18 +149,6 @@ function BookingContent() {
               <p className="text-center text-xs text-muted-foreground mt-4">
                 Secure payment via Razorpay · UPI / Cards / Net Banking accepted
               </p>
-
-              <div className="mt-6 pt-6 border-t border-border text-center">
-                <p className="text-xs text-muted-foreground">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent underline underline-offset-2"
-                  >
-                    Book your slot directly →
-                  </a>
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>
