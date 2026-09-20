@@ -14,8 +14,7 @@ const fade = {
   }),
 };
 
-const RAZORPAY_LINK = "https://rzp.io/rzp/rAcHkhL";
-const CALENDLY_LINK = "https://calendly.com/yuvinod/30min";
+const RAZORPAY_LINK = "https://rzp.io/rzp/saasible-gtm-call";
 
 const includes = [
   "30-minute focused GTM strategy session",
@@ -153,9 +152,7 @@ function BookingContent() {
 
               <div className="mt-6 pt-6 border-t border-border text-center">
                 <p className="text-xs text-muted-foreground">
-                  Already paid?{" "}
                   <a
-                    href={CALENDLY_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent underline underline-offset-2"
