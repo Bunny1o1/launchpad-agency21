@@ -103,7 +103,7 @@ export default function HomePage() {
                 href="/book"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_0_40px_rgba(232,168,56,0.3)]"
               >
-                Book a Free GTM Call <ArrowRight size={16} />
+                Book a GTM Strategy Call — ₹999 <ArrowRight size={16} />
               </Link>
             </MagneticButton>
             <MagneticButton>
@@ -297,15 +297,15 @@ export default function HomePage() {
               <span className="text-accent">Start getting customers.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Book a free 30-minute GTM call. We&apos;ll look at your product, your ICP,
-              and tell you exactly what outbound system we&apos;d build first.
+              Pay ₹999 for a focused 30-minute GTM session. Walk away with a clear outbound plan —
+              WhatsApp, Voice AI, or both.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/book"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                Book a Free GTM Call <ArrowRight size={16} />
+                Book a GTM Strategy Call — ₹999 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/services"
@@ -314,7 +314,7 @@ export default function HomePage() {
                 View Services
               </Link>
             </div>
-            <p className="text-xs text-muted-foreground mt-5">No pitch. No pressure. Just an honest look at your GTM.</p>
+            <p className="text-xs text-muted-foreground mt-5">Secure payment via Razorpay · UPI / Cards / Net Banking</p>
           </motion.div>
         </div>
       </section>
