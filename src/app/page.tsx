@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, Mic, Code2 } from "lucide-react";
+import { ArrowRight, MessageSquare, Mic, Code2, BookOpen, CheckCircle } from "lucide-react";
 import { AuroraBackground } from "@/components/aurora-background";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedCounter } from "@/components/animated-counter";
@@ -42,6 +42,15 @@ const icpCards = [
     description:
       "You can build anything. But you've never run outbound, never written a sales sequence, never closed a deal. You need a GTM partner, not a consultant.",
   },
+];
+
+const playbookItems = [
+  "7 GTM patterns killing most SaaS companies before ₹1Cr ARR",
+  "Real-world signals with India SaaS examples",
+  "3 action sprints per pattern — run this week",
+  "Self-score questions to find your blind spot",
+  "30-day pattern reset plan included",
+  "13-page PDF · Instant download after payment",
 ];
 
 export default function HomePage() {
@@ -279,6 +288,100 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ===== PLAYBOOK ===== */}
+      <section className="py-24 border-b border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Left — copy */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+                New Resource
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                The SaaS Pattern Playbook
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                7 hidden patterns that separate SaaS founders who scale from those
+                who stall — with real India SaaS signals and action sprints you
+                can run this week.
+              </p>
+
+              <ul className="space-y-3 mb-8">
+                {playbookItems.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle size={16} className="text-accent mt-0.5 shrink-0" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-xs text-muted-foreground">
+                Built from 8+ years running GTM for Netflix India, Google, HSBC &amp; Bosch
+              </p>
+            </div>
+
+            {/* Right — purchase card */}
+            <motion.div
+              className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-black/5"
+              variants={fade}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={2}
+            >
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
+                <BookOpen size={26} className="text-accent" />
+              </div>
+
+              <h3 className="text-xl font-bold mb-1">The SaaS Pattern Playbook</h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                13-page PDF · Instant download
+              </p>
+
+              {/* Steps */}
+              <div className="space-y-3 mb-8">
+                {[
+                  "Pay ₹1,999 via Razorpay (UPI, Card, Net Banking)",
+                  "Get instant access to the PDF download",
+                  "Apply the patterns to your GTM this week",
+                ].map((step, i) => (
+                  <div key={i} className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
+                    <span className="text-accent font-bold text-base shrink-0">{i + 1}</span>
+                    <span className="text-sm text-muted-foreground">{step}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Price + CTA */}
+              <div className="text-center mb-4">
+                <span className="text-4xl font-bold">₹1,999</span>
+                <span className="text-sm text-muted-foreground ml-2">one-time</span>
+              </div>
+
+              <a
+                href="https://rzp.io/rzp/Ds8a931"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-accent text-background font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
+              >
+                Buy the Playbook <ArrowRight size={18} />
+              </a>
+
+              <p className="text-center text-xs text-muted-foreground mt-4">
+                Secure payment via Razorpay · UPI / Card / Net Banking
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
