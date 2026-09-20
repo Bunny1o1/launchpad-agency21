@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import { ArrowRight, CheckCircle, Clock, Target, Zap } from "lucide-react";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -13,24 +14,30 @@ const fade = {
   }),
 };
 
+const RAZORPAY_LINK = "https://rzp.io/rzp/rAcHkhL";
+const CALENDLY_LINK = "https://calendly.com/yuvinod/30min";
+
+const includes = [
+  "30-minute focused GTM strategy session",
+  "ICP definition and channel recommendation",
+  "Top 3 quick wins you can implement immediately",
+  "WhatsApp or Voice AI system recommendation",
+  "Recorded session sent to your email",
+];
+
 function BookingContent() {
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
-  
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  let title = "Strategy Call";
-  if (serviceParam === "audit") title = "Audit Discovery Call";
-  if (serviceParam === "retainer") title = "Retainer Discovery Call";
-  if (serviceParam === "sprint") title = "Sprint Discovery Call";
+  let title = "GTM Strategy Call";
+  if (serviceParam === "audit") title = "Messaging Audit Call";
+  if (serviceParam === "retainer") title = "Growth Retainer Call";
+  if (serviceParam === "sprint") title = "Messaging Sprint Call";
   if (serviceParam === "workshop") title = "Workshop Planning Call";
 
   return (
     <>
+      {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-surface border-b border-border">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.03] via-transparent to-transparent pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 relative text-center">
@@ -41,7 +48,7 @@ function BookingContent() {
             animate="visible"
             custom={0}
           >
-            Let's Talk
+            Paid Strategy Session
           </motion.span>
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
@@ -59,39 +66,106 @@ function BookingContent() {
             animate="visible"
             custom={2}
           >
-            A free, 30-minute conversation. No pitch, no pressure. We'll discuss
-            your current messaging setup and identify the top 3 quick wins you can
-            implement immediately.
+            A focused 30-minute session where we map your GTM gaps and build a
+            clear outbound plan — using WhatsApp and Voice AI as your growth channel.
           </motion.p>
         </div>
       </section>
 
+      {/* Main content */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            className="rounded-2xl border border-border bg-card p-2 md:p-4 shadow-xl shadow-black/5"
-            variants={fade}
-            initial="hidden"
-            animate="visible"
-            custom={3}
-          >
-            {/* Calendly Inline Widget */}
-            {mounted && (
-              <div
-                className="w-full rounded-xl overflow-hidden"
-                style={{ height: "700px" }}
-              >
-                <iframe
-                  src="https://calendly.com/yuvinod/30min?embed_domain=localhost&embed_type=Inline&hide_gdpr_banner=1&background_color=1A1712&text_color=F5F0E8&primary_color=E8A838"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  title="Schedule a strategy call with Vinod Yadav"
-                  allowFullScreen
-                />
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+
+            {/* Left — What's included */}
+            <motion.div
+              variants={fade}
+              initial="hidden"
+              animate="visible"
+              custom={3}
+            >
+              <h2 className="text-2xl font-bold mb-6">What's included</h2>
+              <ul className="space-y-4 mb-8">
+                {includes.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="text-accent mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
+                <div className="text-center">
+                  <Clock size={20} className="mx-auto mb-2 text-accent" />
+                  <div className="text-xs text-muted-foreground">30 minutes</div>
+                </div>
+                <div className="text-center">
+                  <Target size={20} className="mx-auto mb-2 text-accent" />
+                  <div className="text-xs text-muted-foreground">GTM focused</div>
+                </div>
+                <div className="text-center">
+                  <Zap size={20} className="mx-auto mb-2 text-accent" />
+                  <div className="text-xs text-muted-foreground">Action plan</div>
+                </div>
               </div>
-            )}
-          </motion.div>
+            </motion.div>
+
+            {/* Right — Payment card */}
+            <motion.div
+              className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-black/5"
+              variants={fade}
+              initial="hidden"
+              animate="visible"
+              custom={4}
+            >
+              <div className="text-center mb-8">
+                <div className="text-5xl font-bold tracking-tight mb-1">₹999</div>
+                <div className="text-sm text-muted-foreground">One-time · No recurring charges</div>
+              </div>
+
+              <div className="space-y-4 mb-8 text-sm text-muted-foreground">
+                <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
+                  <span className="text-accent font-bold text-base">1</span>
+                  <span>Pay ₹999 via Razorpay (UPI, card, net banking)</span>
+                </div>
+                <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
+                  <span className="text-accent font-bold text-base">2</span>
+                  <span>Pick your slot on Calendly (link sent after payment)</span>
+                </div>
+                <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
+                  <span className="text-accent font-bold text-base">3</span>
+                  <span>Show up and get your GTM plan</span>
+                </div>
+              </div>
+
+              <a
+                href={RAZORPAY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
+              >
+                Pay ₹999 & Book Your Call <ArrowRight size={18} />
+              </a>
+
+              <p className="text-center text-xs text-muted-foreground mt-4">
+                Secure payment via Razorpay · UPI / Cards / Net Banking accepted
+              </p>
+
+              <div className="mt-6 pt-6 border-t border-border text-center">
+                <p className="text-xs text-muted-foreground">
+                  Already paid?{" "}
+                  <a
+                    href={CALENDLY_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline underline-offset-2"
+                  >
+                    Book your slot directly →
+                  </a>
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </>
@@ -100,11 +174,13 @@ function BookingContent() {
 
 export default function BookPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse-soft text-accent">Loading...</div>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-pulse-soft text-accent">Loading...</div>
+        </div>
+      }
+    >
       <BookingContent />
     </Suspense>
   );
