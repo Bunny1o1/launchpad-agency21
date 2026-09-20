@@ -60,7 +60,7 @@ export function Navbar() {
             href="/book"
             className="text-sm font-semibold px-5 py-2.5 rounded-lg bg-accent text-background hover:opacity-90 transition-opacity"
           >
-            Book a Free GTM Call
+            Book a Call — ₹999
           </Link>
         </div>
 
@@ -96,7 +96,7 @@ export function Navbar() {
             className="text-lg font-semibold px-8 py-3 rounded-lg bg-accent text-background mt-4"
             onClick={() => setOpen(false)}
           >
-            Book a Call
+            Book a Call — ₹999
           </Link>
         </div>
       )}
