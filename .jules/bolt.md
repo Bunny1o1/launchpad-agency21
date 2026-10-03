@@ -1,0 +1,3 @@
+## 2024-05-24 - [Bypassing React Render Cycle for Continuous Animations]
+**Learning:** Using `useState` to track high-frequency continuous interactions (like mouse coordinates in Framer Motion components) triggers expensive React render cycles on every tiny movement, causing layout thrashing and poor performance.
+**Action:** When implementing continuous user interactions (e.g., mouse move, scrolling), use Framer Motion's `useMotionValue` and `useSpring` hooks instead of `useState`. Bind these values directly to the `style` prop to bypass the React render phase entirely, maintaining smooth 60fps animations.
