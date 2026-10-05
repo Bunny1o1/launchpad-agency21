@@ -1,0 +1,3 @@
+## 2024-05-15 - [Framer Motion Render Optimization]
+**Learning:** For continuous user interactions like mouse movements or scrolling, using React's `useState` triggers a full component re-render on every frame. Framer Motion's `useMotionValue` combined with `useSpring` completely bypasses the React render cycle when bound directly to the `style` prop, resulting in significantly smoother animations and reduced CPU usage.
+**Action:** When creating interactive UI components that track continuous input (mouse/scroll), avoid `useState` for animation state. Instead, use `useMotionValue` and bind it to the component's `style` prop to update DOM nodes directly.
