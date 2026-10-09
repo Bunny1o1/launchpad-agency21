@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimization] Bypassing React Render Cycles for High-Frequency Events
+**Learning:** In Framer Motion components that track continuous user interactions like `onMouseMove` (e.g., `MagneticButton`), using React's `useState` triggers unnecessary renders for every pixel of movement. This can cause significant performance overhead and lag, particularly in complex UI structures or when multiple components are doing it.
+**Action:** Replace `useState` with Framer Motion's `useMotionValue` combined with `useSpring` (if physics are needed) and bind these directly to the `style` prop of `motion` elements. This updates the DOM directly, completely bypassing the React render cycle and ensuring smooth, 60fps animations.
