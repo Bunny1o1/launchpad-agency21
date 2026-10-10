@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimize Framer Motion Continuous Interactions]
+**Learning:** For continuous user interactions (like mouse movements or scrolling in `MagneticButton`), using React's `useState` triggers unnecessary React render cycles for every frame of the animation, causing performance bottlenecks in React/Framer Motion setups.
+**Action:** Prefer Framer Motion's `useMotionValue` and `useSpring` to track the state, binding them directly to the `style` prop (e.g., `style={{ x: springX, y: springY }}`). This completely bypasses the React render cycle and delegates the animation to Framer Motion's optimized rendering loop, greatly improving performance for continuous interactions.
