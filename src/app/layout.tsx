@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Vinod Yadav", url: "https://saasible.in" }],
   metadataBase: new URL("https://saasible.in"),
-  alternates: { canonical: "https://saasible.in" },
+  // No site-wide canonical: a shared one told Google every page was a copy of the homepage.
+  // Pages that need an explicit canonical set it in their own metadata.
   openGraph: {
     type: "website",
     locale: "en_US",
