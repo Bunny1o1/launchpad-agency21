@@ -17,6 +17,7 @@ const footerLinks: Record<string, FooterLink[]> = {
   resources: [
     { label: "Case Studies", href: "/case-studies" },
     { label: "Readiness Score", href: "/readiness-score" },
+    { label: "WhatsApp Template Checker", href: "/whatsapp-template-rejection-checker" },
     { label: "Blog", href: "/blog" },
     { label: "Substack", href: "https://vinod820.substack.com/", external: true },
   ],
