@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimization] Bypass React re-renders in continuous Framer Motion interactions
+**Learning:** Using React state (`useState`) to drive continuous user interactions (like `onMouseMove` for a magnetic effect) causes excessive React re-renders on every frame/event. The codebase pattern and Framer Motion best practices dictate using `useMotionValue` and `useSpring` bound directly to the `style` prop to bypass the React render cycle entirely while maintaining smooth animations.
+**Action:** When creating continuous interaction components, always prefer `useMotionValue` + `useSpring` over `useState` to manipulate styles dynamically without triggering React re-renders.
