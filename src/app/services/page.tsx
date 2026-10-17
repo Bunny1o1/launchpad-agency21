@@ -15,68 +15,72 @@ const fade = {
 
 const services = [
   {
-    id: "diagnostic",
-    title: "GTM Diagnostic",
-    tagline: "Clarity before you build anything",
-    price: "₹15,000",
+    id: "audit",
+    title: "Lifecycle Audit",
+    tagline: "Find out where your revenue is leaking",
+    price: "$400",
+    priceInr: "₹15,000 in India",
     duration: "5-day engagement",
     description:
-      "We define your ICP, pick the right outbound channel, and hand you a messaging framework ready to run — delivered as a Notion doc with a 60-minute walkthrough call.",
+      "We review your funnel, CRM, ads-to-lead flow and messaging channels, from first click to repeat purchase. You get a prioritized fix list and a 60-minute walkthrough call.",
     deliverables: [
-      "ICP definition workshop",
-      "Channel strategy (WhatsApp vs Voice vs both)",
-      "Messaging framework + first sequences",
-      "Notion doc with full findings",
-      "60-min walkthrough call",
+      "Full funnel and lifecycle map",
+      "Channel review: WhatsApp, SMS, RCS, email and voice",
+      "Lead response and follow-up speed check",
+      "Compliance check for your markets (WhatsApp policy, GDPR, TCPA)",
+      "Prioritized fix list with expected impact",
+      "60-minute walkthrough call",
     ],
-    bestFor: "Founders who need clarity before building anything.",
+    bestFor: "Brands that want clarity before spending on new tools or agents.",
   },
   {
     id: "build",
-    title: "GTM Build",
-    tagline: "Your first outbound engine — built and running in 30 days",
-    price: "₹75,000",
+    title: "AI Growth Build",
+    tagline: "One complete growth engine, built and running in 30 days",
+    price: "From $2,500",
+    priceInr: "From ₹75,000 in India",
     duration: "30-day engagement",
     description:
-      "We build the entire outbound system — WhatsApp automation flows, Voice AI agent, sequences — and run the first 30-day campaign with you. Full handoff with SOPs and Loom walkthroughs.",
+      "We build one full engine end to end. For example: ad campaign, landing page, an AI agent on WhatsApp or voice that qualifies and books, and the CRM journeys that follow up. Full handoff with SOPs and video walkthroughs.",
     deliverables: [
-      "Everything in GTM Diagnostic",
-      "WhatsApp automation flows built",
-      "Voice AI agent scripted and deployed",
-      "30-day campaign execution",
-      "Weekly performance reporting",
-      "Full handoff with SOPs and Loom walkthroughs",
+      "Everything in the Lifecycle Audit",
+      "Lead generation setup: ads, landing page, lead magnet",
+      "AI agent on WhatsApp, voice or web chat",
+      "CRM lifecycle journeys: onboarding, cart recovery, reminders, win-back",
+      "30-day launch with weekly reporting",
+      "Full handoff with SOPs and video walkthroughs",
     ],
-    bestFor: "Founders ready to launch their first GTM motion.",
+    bestFor: "Brands ready to turn more leads into buyers and buyers into repeat customers.",
     featured: true,
   },
   {
     id: "retainer",
-    title: "GTM Retainer",
-    tagline: "GTM as an ongoing function — without the full-time hire",
-    price: "₹40,000/month",
+    title: "Growth Retainer",
+    tagline: "AI execution plus a senior lifecycle consultant, every month",
+    price: "From $1,500/month",
+    priceInr: "From ₹40,000/month in India",
     duration: "Ongoing",
     description:
-      "We manage the system, build new sequences, and optimize every month. You get a dedicated GTM function without the salary, equity, or ramp time of a sales hire.",
+      "We run and improve your lifecycle every month. New journeys, new campaigns, agent tuning and reporting, plus a monthly strategy session with Vinod. A full lifecycle team without the hiring.",
     deliverables: [
-      "Ongoing system management and optimization",
+      "Ongoing management of agents, journeys and campaigns",
+      "New campaigns and journey builds each month",
       "Weekly performance review",
-      "New sequences and campaign builds",
-      "Dedicated Slack access to Vinod",
-      "Monthly strategy call",
+      "Direct Slack or WhatsApp access to Vinod",
+      "Monthly strategy and growth review",
     ],
-    bestFor: "Founders who want GTM as an ongoing function without hiring.",
+    bestFor: "Brands that want lifecycle and retention run as an ongoing function.",
   },
 ];
 
 const comparison = [
   { feature: "Starts in days, not months", saasible: true, salesHire: false, agency: false },
-  { feature: "Builds the actual system", saasible: true, salesHire: false, agency: false },
-  { feature: "WhatsApp + Voice AI expertise", saasible: true, salesHire: false, agency: false },
-  { feature: "India B2B market knowledge", saasible: true, salesHire: "Maybe", agency: false },
-  { feature: "No equity, no full-time cost", saasible: true, salesHire: false, agency: true },
-  { feature: "Proven enterprise GTM track record", saasible: true, salesHire: "Maybe", agency: false },
-  { feature: "Founder-facing, not account manager", saasible: true, salesHire: false, agency: false },
+  { feature: "Builds the actual AI agents and journeys", saasible: true, salesHire: false, agency: "Maybe" },
+  { feature: "WhatsApp, SMS, RCS, email and voice expertise", saasible: true, salesHire: false, agency: false },
+  { feature: "Global market and compliance knowledge", saasible: true, salesHire: "Maybe", agency: false },
+  { feature: "No full-time salary cost", saasible: true, salesHire: false, agency: true },
+  { feature: "Enterprise lifecycle track record", saasible: true, salesHire: "Maybe", agency: false },
+  { feature: "Senior strategist on every account", saasible: true, salesHire: false, agency: false },
 ];
 
 export default function ServicesPage() {
@@ -102,8 +106,8 @@ export default function ServicesPage() {
             animate="visible"
             custom={1}
           >
-            Build your GTM system.{" "}
-            <span className="text-accent">Start getting customers.</span>
+            AI agents for the work.{" "}
+            <span className="gradient-text">Human experience for the strategy.</span>
           </motion.h1>
           <motion.p
             className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto"
@@ -112,8 +116,9 @@ export default function ServicesPage() {
             animate="visible"
             custom={2}
           >
-            Three ways to work with Saasible — from quick clarity to a full
-            outbound engine built and running in 30 days.
+            Three ways to work with Saasible. From a quick lifecycle audit to a full
+            AI growth engine, built and running in 30 days. Priced in USD, with INR
+            pricing for brands in India.
           </motion.p>
         </div>
       </section>
@@ -146,6 +151,7 @@ export default function ServicesPage() {
 
                   <div className="flex flex-wrap items-center gap-4 mb-6">
                     <span className="text-xl font-bold text-foreground">{svc.price}</span>
+                    <span className="text-xs text-muted-foreground">{svc.priceInr}</span>
                     <span className="px-3 py-1 bg-surface border border-border rounded-full text-xs font-medium text-muted-foreground">
                       {svc.duration}
                     </span>
@@ -199,8 +205,8 @@ export default function ServicesPage() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-4">How we compare — honestly</h2>
-            <p className="text-muted-foreground">Saasible vs hiring a sales head vs a generic GTM agency.</p>
+            <h2 className="text-3xl font-bold mb-4">How we compare, honestly</h2>
+            <p className="text-muted-foreground">Saasible vs hiring an in-house lifecycle lead vs a generic AI agency.</p>
           </motion.div>
 
           <motion.div
@@ -216,8 +222,8 @@ export default function ServicesPage() {
                 <tr className="border-b border-border">
                   <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-muted-foreground">Feature</th>
                   <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-accent bg-accent/5">Saasible</th>
-                  <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-muted-foreground">Sales Head Hire</th>
-                  <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-muted-foreground">Generic GTM Agency</th>
+                  <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-muted-foreground">In-house Hire</th>
+                  <th className="py-4 px-6 text-xs font-bold uppercase tracking-wider text-muted-foreground">Generic AI Agency</th>
                 </tr>
               </thead>
               <tbody className="text-sm">
@@ -237,9 +243,9 @@ export default function ServicesPage() {
                 ))}
                 <tr className="border-b border-border/50">
                   <td className="py-4 px-6 font-medium text-foreground">Typical cost to start</td>
-                  <td className="py-4 px-6 font-bold text-accent bg-accent/5">₹15,000</td>
-                  <td className="py-4 px-6 text-muted-foreground">₹8L–15L/year</td>
-                  <td className="py-4 px-6 text-muted-foreground">₹1L–5L/month</td>
+                  <td className="py-4 px-6 font-bold text-accent bg-accent/5">$400</td>
+                  <td className="py-4 px-6 text-muted-foreground">Full salary plus tools</td>
+                  <td className="py-4 px-6 text-muted-foreground">Monthly retainer plus setup fees</td>
                 </tr>
               </tbody>
             </table>
@@ -258,14 +264,14 @@ export default function ServicesPage() {
           >
             <h2 className="text-3xl font-bold mb-5">Not sure which tier is right?</h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Book a free 30-minute GTM call. We&apos;ll look at your product, your ICP, and
-              recommend the right engagement — no pitch, no pressure.
+              Book a free 20-minute lifecycle call. We look at your funnel and your market,
+              then recommend the right engagement. No pitch, no pressure.
             </p>
             <Link
               href="/book"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Book a Free GTM Call <ArrowRight size={16} />
+              Book a Free Lifecycle Call <ArrowRight size={16} />
             </Link>
           </motion.div>
         </div>

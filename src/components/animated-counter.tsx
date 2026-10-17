@@ -28,16 +28,27 @@ export function AnimatedCounter({
     }
   }, [isInView, value, motionValue]);
 
+  const format = (n: number) =>
+    `${prefix}${Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(n)}${suffix}`;
+
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = `${prefix}${Intl.NumberFormat("en-US", {
-          notation: "compact",
-          maximumFractionDigits: 1,
-        }).format(latest)}${suffix}`;
+        ref.current.textContent = format(Math.round(latest));
       }
     });
+    return unsubscribe;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [springValue, prefix, suffix]);
 
-  return <motion.span ref={ref} className="tabular-nums" />;
+  // Render the final value up front so the number is visible to crawlers,
+  // no-JS visitors, and before the count-up animation kicks in.
+  return (
+    <motion.span ref={ref} className="tabular-nums">
+      {format(value)}
+    </motion.span>
+  );
 }

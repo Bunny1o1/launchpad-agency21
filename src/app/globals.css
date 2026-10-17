@@ -8,34 +8,34 @@
   --background: #FAFAF8;
   --foreground: #141414;
   --surface: #FFFFFF;
-  --accent: #2D5BE3;
-  --secondary: #141414;
+  --accent: #D9480F;
+  --secondary: #C92A2A;
   --muted: #F5F5F3;
   --muted-foreground: #6B6B6B;
   --border: #E5E5E0;
-  --ring: #2D5BE3;
+  --ring: #D9480F;
   --card: #FFFFFF;
   --card-foreground: #141414;
   --input: #E5E5E0;
 }
 
 .dark {
-  --background: #0A0A0A;        /* cold near-black */
+  --background: #0C0A08;        /* warm near-black */
   --foreground: #F5F5F5;
-  --surface: #111111;           /* clearly distinct card surface */
-  --accent: #00F5A0;            /* Cyber Emerald */
-  --secondary: #8A2BE2;         /* Deep Violet */
-  --muted: #1A1A1A;             /* muted bg */
+  --surface: #15120E;           /* warm card surface */
+  --accent: #FFC22B;            /* Marigold yellow */
+  --secondary: #E8352E;         /* Chilli red */
+  --muted: #1C1813;             /* muted bg */
   --muted-foreground: #A0A0A0;  /* brighter muted text for readability */
-  --border: #2A2A2A;            /* crisp border */
+  --border: #2E271E;            /* crisp border */
   --border-subtle: #1F1F1F;     /* ultra-subtle dividers */
-  --ring: #00F5A0;
-  --card: #111111;
+  --ring: #FFC22B;
+  --card: #15120E;
   --card-foreground: #F5F5F5;
-  --input: #1A1A1A;
+  --input: #1C1813;
   /* Glow layers */
-  --glow-accent: rgba(0, 245, 160, 0.06);
-  --glow-secondary: rgba(138, 43, 226, 0.04);
+  --glow-accent: rgba(255, 194, 43, 0.07);
+  --glow-secondary: rgba(232, 53, 46, 0.06);
 }
 
 /* ===== BASE ===== */
@@ -46,10 +46,10 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    /* Subtle cold ambient radial glow in the top-center */
+    /* Warm ambient glow: yellow on top, red at the bottom */
     background-image:
-      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(0, 245, 160, 0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(138, 43, 226, 0.05) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(255, 194, 43, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(232, 53, 46, 0.07) 0%, transparent 60%);
     background-attachment: fixed;
   }
 
@@ -70,7 +70,7 @@
   }
 
   .dark .gradient-text {
-    background-image: linear-gradient(135deg, #00F5A0, #00D9F5);
+    background-image: linear-gradient(135deg, #FFC22B, #FF8A1F 50%, #E8352E);
   }
 }
 

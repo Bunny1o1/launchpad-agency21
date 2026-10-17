@@ -19,21 +19,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
+    default: "Saasible | AI Growth Agency for Consumer Brands",
     template: "%s | Saasible",
   },
   description:
-    "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
+    "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
   keywords: [
-    "GTM agency India",
-    "WhatsApp outbound B2B",
-    "Voice AI GTM",
-    "SaaS go-to-market India",
-    "outbound system builder India",
-    "B2B SaaS founder GTM",
-    "conversational GTM",
-    "WhatsApp Business API",
-    "India B2B SaaS",
+    "AI growth agency",
+    "AI agency for consumer brands",
+    "CRM lifecycle marketing agency",
+    "customer retention agency",
+    "lead generation agency",
+    "WhatsApp marketing agency",
+    "AI agents for ecommerce",
+    "WhatsApp AI agent",
+    "voice AI agent for business",
+    "SMS and email lifecycle marketing",
   ],
   authors: [{ name: "Vinod Yadav", url: "https://saasible.in" }],
   metadataBase: new URL("https://saasible.in"),
@@ -43,16 +44,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://saasible.in",
-    title: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
+    title: "Saasible | AI Growth Agency for Consumer Brands",
     description:
-      "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
+      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
     siteName: "Saasible",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saasible — GTM Agency for AI-era B2B SaaS Founders in India",
+    title: "Saasible | AI Growth Agency for Consumer Brands",
     description:
-      "Saasible builds WhatsApp and Voice AI outbound systems for Indian B2B SaaS founders. Go from zero GTM to first revenue in 30 days.",
+      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
   },
   robots: {
     index: true,
@@ -65,9 +66,9 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Vinod Yadav",
-  jobTitle: "Conversational AI Growth Expert",
+  jobTitle: "Customer Lifecycle and AI Growth Consultant",
   description:
-    "8+ years managing WhatsApp Business and conversational AI for Netflix, Google, Bosch, and HSBC at Gupshup. Consulting enterprises on messaging strategy and customer adoption.",
+    "8+ years running WhatsApp, RCS, SMS and conversational AI lifecycle programs for global brands including Netflix, YouTube, Google, HSBC and Bosch. Founder of Saasible, an AI growth agency for consumer brands.",
   url: "https://saasible.in",
   email: "yuvinod@gmail.com",
   sameAs: [
@@ -81,6 +82,9 @@ const personSchema = {
     "RCS Messaging",
     "Customer Success",
     "Enterprise Growth",
+    "CRM Lifecycle Marketing",
+    "Lead Generation",
+    "AI Agents",
     "CPaaS",
     "Messaging Strategy",
   ],
@@ -94,17 +98,18 @@ const personSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Vinod Yadav — Conversational AI Consulting",
+  name: "Saasible",
   description:
-    "Expert consulting on WhatsApp Business strategy, RCS messaging, and conversational AI for enterprise brands.",
+    "AI growth agency for consumer brands. AI agents, CRM lifecycle journeys and lead generation across WhatsApp, SMS, RCS, email and voice, with human consulting on strategy.",
   url: "https://saasible.in",
   provider: { "@type": "Person", name: "Vinod Yadav" },
   areaServed: "Worldwide",
   serviceType: [
-    "WhatsApp Business Strategy",
-    "Conversational AI Consulting",
-    "Messaging Channel Audit",
-    "Customer Engagement Growth",
+    "CRM Lifecycle Marketing",
+    "Lead Generation",
+    "AI Agent Development",
+    "WhatsApp and SMS Marketing",
+    "Customer Retention Consulting",
   ],
 };
 

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, CheckCircle, Clock, Target, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Target, Zap, Mail, Globe2 } from "lucide-react";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -15,24 +15,31 @@ const fade = {
 };
 
 const RAZORPAY_LINK = "https://rzp.io/rzp/saasible-gtm-call";
+const CONTACT_EMAIL = "yuvinod@gmail.com";
 
 const includes = [
-  "30-minute focused GTM strategy session",
-  "ICP definition and channel recommendation",
-  "Top 3 quick wins you can implement immediately",
-  "WhatsApp or Voice AI system recommendation",
-  "Recorded session sent to your email",
+  "20-minute call on your funnel and customer lifecycle",
+  "Your biggest revenue leaks, from first click to repeat purchase",
+  "Top 3 quick wins you can implement right away",
+  "Which AI agent or journey to build first, and on which channel",
+  "The right engagement for you, with no pressure to buy",
 ];
 
 function BookingContent() {
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
 
-  let title = "GTM Strategy Call";
-  if (serviceParam === "audit") title = "Messaging Audit Call";
+  let title = "Free Lifecycle Call";
+  if (serviceParam === "audit") title = "Lifecycle Audit Call";
+  if (serviceParam === "build") title = "AI Growth Build Call";
   if (serviceParam === "retainer") title = "Growth Retainer Call";
-  if (serviceParam === "sprint") title = "Messaging Sprint Call";
-  if (serviceParam === "workshop") title = "Workshop Planning Call";
+  if (serviceParam === "workshop") title = "Team Workshop Call";
+
+  const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    `Saasible: ${title}`
+  )}&body=${encodeURIComponent(
+    "Hi Vinod,\n\nI would like to book a call.\n\nBrand and website:\nCountry or market:\nWhat I want help with:\nBest times for a call (with time zone):\n"
+  )}`;
 
   return (
     <>
@@ -47,7 +54,7 @@ function BookingContent() {
             animate="visible"
             custom={0}
           >
-            Paid Strategy Session
+            Free 20-Minute Call
           </motion.span>
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
@@ -65,8 +72,8 @@ function BookingContent() {
             animate="visible"
             custom={2}
           >
-            A focused 30-minute session where we map your GTM gaps and build a
-            clear outbound plan — using WhatsApp and Voice AI as your growth channel.
+            A focused call where we look at your funnel, find where customers drop
+            off, and map out the AI agents and lifecycle journeys that fix it.
           </motion.p>
         </div>
       </section>
@@ -83,7 +90,7 @@ function BookingContent() {
               animate="visible"
               custom={3}
             >
-              <h2 className="text-2xl font-bold mb-6">What's included</h2>
+              <h2 className="text-2xl font-bold mb-6">What you get</h2>
               <ul className="space-y-4 mb-8">
                 {includes.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -96,11 +103,11 @@ function BookingContent() {
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
                 <div className="text-center">
                   <Clock size={20} className="mx-auto mb-2 text-accent" />
-                  <div className="text-xs text-muted-foreground">30 minutes</div>
+                  <div className="text-xs text-muted-foreground">20 minutes</div>
                 </div>
                 <div className="text-center">
                   <Target size={20} className="mx-auto mb-2 text-accent" />
-                  <div className="text-xs text-muted-foreground">GTM focused</div>
+                  <div className="text-xs text-muted-foreground">Lifecycle focused</div>
                 </div>
                 <div className="text-center">
                   <Zap size={20} className="mx-auto mb-2 text-accent" />
@@ -109,46 +116,62 @@ function BookingContent() {
               </div>
             </motion.div>
 
-            {/* Right — Payment card */}
+            {/* Right — Booking card */}
             <motion.div
-              className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-black/5"
+              className="rounded-2xl border border-accent/40 bg-card p-8 shadow-xl shadow-black/5"
               variants={fade}
               initial="hidden"
               animate="visible"
               custom={4}
             >
               <div className="text-center mb-8">
-                <div className="text-5xl font-bold tracking-tight mb-1">₹999</div>
-                <div className="text-sm text-muted-foreground">One-time · No recurring charges</div>
+                <div className="text-5xl font-bold tracking-tight mb-1 gradient-text">Free</div>
+                <div className="text-sm text-muted-foreground">20 minutes · Any time zone</div>
               </div>
 
               <div className="space-y-4 mb-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">1</span>
-                  <span>Pay ₹999 via Razorpay (UPI, card, net banking)</span>
+                  <span>Send a short note about your brand and market</span>
                 </div>
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">2</span>
-                  <span>Pick your slot on Calendly (link sent after payment)</span>
+                  <span>Get a calendar slot in your time zone within 24 hours</span>
                 </div>
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">3</span>
-                  <span>Show up and get your GTM plan</span>
+                  <span>Join the call and leave with your quick wins</span>
                 </div>
               </div>
 
               <a
-                href={RAZORPAY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
+                href={mailto}
+                className="flex items-center justify-center gap-2 w-full bg-accent text-background font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
               >
-                Pay ₹999 & Book Your Call <ArrowRight size={18} />
+                <Mail size={18} /> Request My Free Call
               </a>
 
               <p className="text-center text-xs text-muted-foreground mt-4">
-                Secure payment via Razorpay · UPI / Cards / Net Banking accepted
+                Or email {CONTACT_EMAIL}
               </p>
+
+              <div className="mt-8 pt-6 border-t border-border">
+                <div className="flex items-center gap-2 mb-2">
+                  <Globe2 size={14} className="text-secondary" />
+                  <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Based in India?</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                  Want a deeper 45-minute strategy session with a written action plan? Book it for ₹999.
+                </p>
+                <a
+                  href={RAZORPAY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-secondary hover:underline"
+                >
+                  Pay ₹999 via Razorpay <ArrowRight size={12} />
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>

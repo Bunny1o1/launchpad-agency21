@@ -85,7 +85,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="text-center md:text-left">
                   <h2 className="text-2xl font-bold">Vinod Yadav</h2>
-                  <p className="text-muted-foreground text-sm">Bangalore, India</p>
+                  <p className="text-muted-foreground text-sm">Bangalore, India · Working with brands worldwide</p>
                 </div>
                 
                 <div className="flex flex-col gap-3">
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   I currently work as a Global Growth Manager at Gupshup, where I manage the post-sales journey for enterprise giants like Netflix, Google, YouTube, Bosch, HSBC, and Carl Zeiss. My mandate is simple: make sure these massive brands actually get ROI from WhatsApp Business, RCS, and conversational AI.
                 </p>
                 <p>
-                  I've personally contributed to a ₹10 Crore pipeline, run 60+ enterprise discovery workshops, and designed conversational journeys that boosted engagement by 30%.
+                  I've personally contributed to a ₹10 Crore (over $1M) pipeline, run 60+ enterprise discovery workshops, and designed conversational journeys that boosted engagement by 30%.
                 </p>
                 <p>
                   I started consulting because I see the exact same pattern everywhere: brands invest millions in acquiring customers and buying messaging tools, but fail entirely at building the actual conversational journeys that retain them.

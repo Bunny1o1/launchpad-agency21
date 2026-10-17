@@ -21,7 +21,7 @@ export function AuroraBackground() {
       <motion.div
         className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full mix-blend-screen filter blur-[100px] opacity-15"
         style={{
-          background: "radial-gradient(circle, rgba(0,245,160,1) 0%, rgba(0,217,245,0) 70%)",
+          background: "radial-gradient(circle, rgba(255,194,43,1) 0%, rgba(255,138,31,0) 70%)",
         }}
         animate={{
           x: ["0%", "20%", "0%", "-20%", "0%"],
@@ -38,7 +38,7 @@ export function AuroraBackground() {
       <motion.div
         className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full mix-blend-screen filter blur-[120px] opacity-15"
         style={{
-          background: "radial-gradient(circle, rgba(138,43,226,1) 0%, rgba(65,105,225,0) 70%)",
+          background: "radial-gradient(circle, rgba(232,53,46,1) 0%, rgba(255,138,31,0) 70%)",
         }}
         animate={{
           x: ["0%", "-20%", "0%", "20%", "0%"],
