@@ -441,7 +441,7 @@ export default function HomePage() {
               <span className="text-secondary">Start keeping them.</span>
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-8 max-w-lg mx-auto">
-              Book a free 20-minute lifecycle call. We look at your funnel, show you
+              Book a free 30-minute lifecycle call. We look at your funnel, show you
               the biggest leaks, and tell you which AI agent or journey to build first.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

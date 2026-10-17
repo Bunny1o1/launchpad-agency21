@@ -264,7 +264,7 @@ export default function ServicesPage() {
           >
             <h2 className="text-3xl font-bold mb-5">Not sure which tier is right?</h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Book a free 20-minute lifecycle call. We look at your funnel and your market,
+              Book a free 30-minute lifecycle call. We look at your funnel and your market,
               then recommend the right engagement. No pitch, no pressure.
             </p>
             <Link

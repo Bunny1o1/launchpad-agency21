@@ -43,11 +43,10 @@ export type CaseStudy = {
 
 /**
  * UiPath disclosure gate.
- * Set to true ONLY after Edlerhub confirms that UiPath can be named publicly.
- * While false, the UiPath case study is visible in local development and on
- * Vercel preview deployments, but hidden on the live site (saasible.in).
+ * Turned on 17 Oct 2026 at Vinod's request. Set back to false to hide the
+ * UiPath case study on the live site (it stays visible on previews).
  */
-export const UIPATH_DISCLOSURE_APPROVED = false;
+export const UIPATH_DISCLOSURE_APPROVED = true;
 
 export const ILLUSTRATIVE_NOTICE =
   "Illustrative case study: demonstrates my consulting approach. Not a representation of a verified client engagement or measured result.";
