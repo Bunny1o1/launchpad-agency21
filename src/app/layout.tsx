@@ -68,7 +68,7 @@ const personSchema = {
   name: "Vinod Yadav",
   jobTitle: "Customer Lifecycle and AI Growth Consultant",
   description:
-    "8+ years running WhatsApp, RCS, SMS and conversational AI lifecycle programs for global brands including Netflix, YouTube, Google, HSBC and Bosch. Founder of Saasible, an AI growth agency for consumer brands.",
+    "8+ years running WhatsApp, RCS, SMS and conversational AI lifecycle programs for global enterprise brands. Founder of Saasible, an AI growth agency for consumer brands.",
   url: "https://saasible.in",
   email: "yuvinod@gmail.com",
   sameAs: [

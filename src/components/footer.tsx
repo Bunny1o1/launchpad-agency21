@@ -15,7 +15,7 @@ const footerLinks: Record<string, FooterLink[]> = {
     { label: "Team Workshops", href: "/book?service=workshop" },
   ],
   resources: [
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "Portfolio", href: "/case-studies" },
     { label: "Lifecycle Score", href: "/readiness-score" },
     { label: "WhatsApp Template Checker", href: "/whatsapp-template-rejection-checker" },
     { label: "Blog", href: "/blog" },

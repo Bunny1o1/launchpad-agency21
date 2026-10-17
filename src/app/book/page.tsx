@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, CheckCircle, Clock, Target, Zap, Mail, Globe2 } from "lucide-react";
+import { EnquiryForm } from "@/components/enquiry-form";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -173,6 +174,27 @@ function BookingContent() {
                 </a>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consulting enquiry */}
+      <section id="enquiry" className="py-24 border-t border-border bg-surface scroll-mt-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block">
+                Consulting Enquiry
+              </span>
+              <h2 className="text-3xl font-bold mb-4">
+                Have a similar <span className="gradient-text">growth challenge?</span>
+              </h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Prefer to write first? Share a few details about your project and I will
+                come back with how I would approach it.
+              </p>
+            </div>
+            <EnquiryForm />
           </div>
         </div>
       </section>

@@ -6,6 +6,8 @@ import { ArrowRight, ShoppingBag, Megaphone, CalendarCheck, CheckCircle, Globe2,
 import { AuroraBackground } from "@/components/aurora-background";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedCounter } from "@/components/animated-counter";
+import { PortfolioCard } from "@/components/portfolio-card";
+import { getCaseStudies } from "@/lib/portfolio";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -17,10 +19,10 @@ const fade = {
 };
 
 const stats = [
-  { value: 1, prefix: "$", suffix: "M+", label: "Pipeline Influenced" },
-  { value: 326, prefix: "", suffix: "%", label: "Campaign ROI Delivered" },
-  { value: 2, prefix: "", suffix: "x", label: "Customer Activation Lift" },
   { value: 8, prefix: "", suffix: "+ Yrs", label: "Enterprise Lifecycle Experience" },
+  { value: 60, prefix: "", suffix: "+", label: "Enterprise Discovery Workshops" },
+  { value: 5, prefix: "", suffix: "", label: "Channels: WhatsApp, SMS, RCS, Email, Voice" },
+  { value: 30, prefix: "", suffix: " Days", label: "To a Running Lifecycle Engine" },
 ];
 
 const icpCards = [
@@ -49,7 +51,7 @@ const pillars = [
   { icon: Bot, title: "Convert", desc: "AI agents on WhatsApp, voice and web chat that reply in seconds, qualify leads and book calls around the clock." },
   { icon: Gauge, title: "Engage", desc: "CRM lifecycle journeys across WhatsApp, SMS, RCS and email. Onboarding, cart recovery, reminders and smart broadcasts." },
   { icon: CheckCircle, title: "Retain", desc: "Repeat purchase, win-back, reviews and referrals. We find the customers about to leave and bring them back." },
-  { icon: UserCheck, title: "Consult", desc: "The human layer. Audits, channel strategy and monthly reviews with someone who has run lifecycles for global brands." },
+  { icon: UserCheck, title: "Consult", desc: "The human layer. Audits, channel strategy and monthly reviews with someone who has run lifecycles for global enterprise brands." },
 ];
 
 const markets = [
@@ -77,10 +79,10 @@ export default function HomePage() {
             custom={0}
           >
             <span className="text-xs font-medium text-muted-foreground">
-              Built by someone who ran customer lifecycles for
+              Built on
             </span>
             <span className="text-xs font-semibold text-foreground">
-              Netflix · YouTube · Google · HSBC · Bosch
+              8+ years running customer lifecycles for global enterprise brands
             </span>
           </motion.div>
 
@@ -141,7 +143,7 @@ export default function HomePage() {
             custom={4}
           >
             <Globe2 size={14} className="text-secondary" />
-            Working with brands in the Middle East, UK, Europe, Southeast Asia, US and India
+            Built for brands in the Middle East, UK, Europe, Southeast Asia, the US and India
           </motion.p>
         </div>
       </section>
@@ -300,57 +302,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== PROOF NUMBERS ===== */}
+      {/* ===== PORTFOLIO ===== */}
       <section className="py-24 bg-surface border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end mb-12"
             variants={fade}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                Results
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What the systems actually produce
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Portfolio</p>
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                Strategy is only the beginning.{" "}
+                <span className="gradient-text">Execution is what matters.</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                These are not projections. Every number below came from a real
-                lifecycle or messaging program run for a global consumer brand.
-                The same playbook now powers every Saasible build.
+            </div>
+            <div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                See how I approach real business challenges and turn strategy into
+                actionable growth programmes.
               </p>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
               >
-                See the full case studies <ArrowRight size={14} />
+                Explore the portfolio <ArrowRight size={14} />
               </Link>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { metric: "34% → 71%", label: "Activation rate, banking WhatsApp journey" },
-                { metric: "326%", label: "Campaign ROI, global streaming brand" },
-                { metric: "+15pt", label: "NPS lift, consumer electronics brand" },
-                { metric: "30 days", label: "Time to first results" },
-              ].map((r) => (
-                <div
-                  key={r.label}
-                  className="p-6 rounded-xl border border-border bg-card text-center hover:border-accent/30 transition-all"
-                >
-                  <div className="text-xl md:text-2xl font-bold text-accent mb-1">
-                    {r.metric}
-                  </div>
-                  <div className="text-xs text-muted-foreground font-medium">
-                    {r.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {getCaseStudies().slice(0, 3).map((cs, i) => (
+              <PortfolioCard key={cs.slug} cs={cs} index={i} />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -61,7 +61,7 @@ export default function AboutPage() {
             animate="visible"
             custom={1}
           >
-            The operator behind the <span className="text-accent">enterprise logos</span>
+            The operator behind the <span className="text-accent">enterprise programmes</span>
           </motion.h1>
         </div>
       </section>
@@ -116,10 +116,10 @@ export default function AboutPage() {
                   For the last 8+ years, I've lived at the intersection of customer success, growth marketing, and conversational AI.
                 </p>
                 <p>
-                  I currently work as a Global Growth Manager at Gupshup, where I manage the post-sales journey for enterprise giants like Netflix, Google, YouTube, Bosch, HSBC, and Carl Zeiss. My mandate is simple: make sure these massive brands actually get ROI from WhatsApp Business, RCS, and conversational AI.
+                  I currently work as a Global Growth Manager at Gupshup, where I manage the post-sales journey for global enterprise brands across media, financial services, consumer technology and manufacturing. My mandate is simple: make sure these brands actually get ROI from WhatsApp Business, RCS, and conversational AI.
                 </p>
                 <p>
-                  I've personally contributed to a ₹10 Crore (over $1M) pipeline, run 60+ enterprise discovery workshops, and designed conversational journeys that boosted engagement by 30%.
+                  I've personally contributed to a ₹10 Crore pipeline, run 60+ enterprise discovery workshops, and designed conversational journeys that boosted engagement by 30%.
                 </p>
                 <p>
                   I started consulting because I see the exact same pattern everywhere: brands invest millions in acquiring customers and buying messaging tools, but fail entirely at building the actual conversational journeys that retain them.
