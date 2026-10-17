@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { getCaseStudies } from "@/lib/portfolio";
 
 const BASE_URL = "https://saasible.in";
 
@@ -64,5 +65,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  // Only approved real projects go in the sitemap. Illustrative examples are noindex.
+  const caseStudyRoutes: MetadataRoute.Sitemap = getCaseStudies()
+    .filter((cs) => !cs.illustrative)
+    .map((cs) => ({
+      url: `${BASE_URL}/case-studies/${cs.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
+
+  return [...staticRoutes, ...caseStudyRoutes, ...blogRoutes];
 }

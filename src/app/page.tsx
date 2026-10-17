@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, Mic, Code2, BookOpen, CheckCircle } from "lucide-react";
+import { ArrowRight, ShoppingBag, Megaphone, CalendarCheck, CheckCircle, Globe2, ShieldCheck, Gauge, Bot, UserCheck } from "lucide-react";
 import { AuroraBackground } from "@/components/aurora-background";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedCounter } from "@/components/animated-counter";
+import { PortfolioCard } from "@/components/portfolio-card";
+import { getCaseStudies } from "@/lib/portfolio";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -17,40 +19,47 @@ const fade = {
 };
 
 const stats = [
-  { value: 10, prefix: "₹", suffix: "Cr+", label: "Pipeline Generated" },
-  { value: 326, prefix: "", suffix: "%", label: "Campaign ROI Delivered" },
-  { value: 3, prefix: "", suffix: "x", label: "Average Activation Improvement" },
-  { value: 8, prefix: "", suffix: " Yrs", label: "Enterprise GTM Experience" },
+  { value: 8, prefix: "", suffix: "+ Yrs", label: "Enterprise Lifecycle Experience" },
+  { value: 60, prefix: "", suffix: "+", label: "Enterprise Discovery Workshops" },
+  { value: 5, prefix: "", suffix: "", label: "Channels: WhatsApp, SMS, RCS, Email, Voice" },
+  { value: 30, prefix: "", suffix: " Days", label: "To a Running Lifecycle Engine" },
 ];
 
 const icpCards = [
   {
-    icon: Code2,
-    title: "The AI SaaS Founder",
+    icon: ShoppingBag,
+    title: "The D2C and Ecommerce Founder",
     description:
-      "You shipped your product in 3 weeks. You've had 10 demos. Zero conversions. Your GTM motion is broken — and cold email isn't fixing it.",
+      "Traffic is coming in. Carts get abandoned. Customers buy once and never come back. You need a lifecycle engine, not another discount code.",
   },
   {
-    icon: MessageSquare,
-    title: "The WhatsApp-First Builder",
+    icon: Megaphone,
+    title: "The Consumer Brand Marketer",
     description:
-      "You know your buyers are on WhatsApp. You just don't have the system, the sequences, or the strategy to turn it into pipeline.",
+      "You spend on ads every month. Leads come in and go cold because nobody follows up fast enough. You need speed and follow-through at scale.",
   },
   {
-    icon: Mic,
-    title: "The Technical Co-founder",
+    icon: CalendarCheck,
+    title: "The Service Business Owner",
     description:
-      "You can build anything. But you've never run outbound, never written a sales sequence, never closed a deal. You need a GTM partner, not a consultant.",
+      "Clinics, coaching, real estate, salons, gyms. Enquiries arrive at all hours. Bookings slip through the cracks. You need an AI agent that never sleeps.",
   },
 ];
 
-const playbookItems = [
-  "7 GTM patterns killing most SaaS companies before ₹1Cr ARR",
-  "Real-world signals with India SaaS examples",
-  "3 action sprints per pattern — run this week",
-  "Self-score questions to find your blind spot",
-  "30-day pattern reset plan included",
-  "13-page PDF · Instant download after payment",
+const pillars = [
+  { icon: Megaphone, title: "Attract", desc: "Lead generation that fills the funnel. Meta and Google ads, landing pages, click-to-WhatsApp campaigns and AI lead magnets." },
+  { icon: Bot, title: "Convert", desc: "AI agents on WhatsApp, voice and web chat that reply in seconds, qualify leads and book calls around the clock." },
+  { icon: Gauge, title: "Engage", desc: "CRM lifecycle journeys across WhatsApp, SMS, RCS and email. Onboarding, cart recovery, reminders and smart broadcasts." },
+  { icon: CheckCircle, title: "Retain", desc: "Repeat purchase, win-back, reviews and referrals. We find the customers about to leave and bring them back." },
+  { icon: UserCheck, title: "Consult", desc: "The human layer. Audits, channel strategy and monthly reviews with someone who has run lifecycles for global enterprise brands." },
+];
+
+const markets = [
+  { region: "Middle East", note: "UAE, Saudi Arabia, Qatar" },
+  { region: "UK and Europe", note: "GDPR-ready journeys" },
+  { region: "Southeast Asia", note: "Singapore, Indonesia, Malaysia" },
+  { region: "United States", note: "SMS, email and voice first" },
+  { region: "India", note: "WhatsApp-first growth" },
 ];
 
 export default function HomePage() {
@@ -70,10 +79,10 @@ export default function HomePage() {
             custom={0}
           >
             <span className="text-xs font-medium text-muted-foreground">
-              Built by someone who drove GTM at
+              Built on
             </span>
             <span className="text-xs font-semibold text-foreground">
-              Netflix India · Google · HSBC · Bosch
+              8+ years running customer lifecycles for global enterprise brands
             </span>
           </motion.div>
 
@@ -84,9 +93,9 @@ export default function HomePage() {
             animate="visible"
             custom={1}
           >
-            Your buyers are on{" "}
-            <span className="text-accent">WhatsApp.</span>{" "}
-            Your GTM system isn&apos;t.
+            Your customers are on{" "}
+            <span className="gradient-text">WhatsApp, SMS and email.</span>{" "}
+            Your growth system isn&apos;t.
           </motion.h1>
 
           <motion.p
@@ -96,8 +105,9 @@ export default function HomePage() {
             animate="visible"
             custom={2}
           >
-            Saasible builds outbound and messaging systems for AI-era B2B SaaS
-            founders in India — using WhatsApp and Voice AI as the growth channel.
+            Saasible is an AI growth agency for consumer brands. We build AI agents
+            and CRM lifecycle systems that turn clicks into buyers and buyers into
+            repeat customers. AI does the volume. Human experience does the strategy.
           </motion.p>
 
           <motion.div
@@ -110,9 +120,9 @@ export default function HomePage() {
             <MagneticButton>
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_0_40px_rgba(232,168,56,0.3)]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_10px_40px_-10px_rgba(224,48,15,0.6)]"
               >
-                Book a GTM Strategy Call — ₹999 <ArrowRight size={16} />
+                Book a Free Lifecycle Call <ArrowRight size={16} />
               </Link>
             </MagneticButton>
             <MagneticButton>
@@ -120,15 +130,26 @@ export default function HomePage() {
                 href="/services"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all bg-card/50 backdrop-blur-sm"
               >
-                See How It Works
+                See What We Build
               </Link>
             </MagneticButton>
           </motion.div>
+
+          <motion.p
+            className="mt-8 flex items-center gap-2 text-xs text-muted-foreground"
+            variants={fade}
+            initial="hidden"
+            animate="visible"
+            custom={4}
+          >
+            <Globe2 size={14} className="text-secondary" />
+            Built for brands in the Middle East, UK, Europe, Southeast Asia, the US and India
+          </motion.p>
         </div>
       </section>
 
       {/* ===== STATS ===== */}
-      <section className="border-b border-border" style={{ background: 'linear-gradient(to right, var(--surface), color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), var(--surface))' }}>
+      <section className="band-gradient border-y border-border">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -138,7 +159,7 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             {stats.map((stat, i) => (
-              <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-accent/10 bg-accent/[0.03]">
+              <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-border bg-card shadow-[0_10px_30px_-15px_rgba(168,18,12,0.5)]">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2 tabular-nums">
                   <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
@@ -165,7 +186,7 @@ export default function HomePage() {
               Who This Is For
             </p>
             <h2 className="text-3xl md:text-4xl font-bold max-w-lg">
-              Built for founders who can build, but can&apos;t sell yet
+              Built for consumer brands that want more customers and more repeat buyers
             </h2>
           </motion.div>
 
@@ -193,8 +214,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS ===== */}
+      {/* ===== WHAT WE DO ===== */}
       <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            className="mb-16"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+              The Full Customer Lifecycle
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl">
+              AI agents for the work. <span className="text-secondary">Human judgment</span> for the strategy.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mt-4 max-w-2xl">
+              Most AI agencies sell you a bot. We design the whole journey, from the first
+              ad click to the fifth purchase, and we stay accountable for the result.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {pillars.map((p, i) => (
+              <motion.div
+                key={p.title}
+                className="p-6 rounded-xl border border-border bg-card hover:border-accent/40 transition-all"
+                variants={fade}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+              >
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${i === 4 ? "bg-secondary/10 border border-secondary/30" : "bg-accent/10 border border-accent/20"}`}>
+                  <p.icon size={18} className={i === 4 ? "text-secondary" : "text-accent"} />
+                </div>
+                <h3 className="text-base font-bold mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== HOW IT WORKS ===== */}
+      <section className="py-24 bg-surface border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
@@ -207,16 +272,16 @@ export default function HomePage() {
               How It Works
             </span>
             <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-              From zero GTM to first revenue — in 30 days
+              From leaky funnel to a running lifecycle engine in 30 days
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { num: "01", title: "ICP Workshop", days: "Day 1–2", desc: "We define exactly who you're selling to, what pain you solve, and why they should respond to you — not your competitor." },
-              { num: "02", title: "Channel Strategy", days: "Day 3–4", desc: "WhatsApp, Voice AI, or both? We pick the right outbound channel for your ICP and build the messaging framework." },
-              { num: "03", title: "System Build", days: "Day 5–25", desc: "We build the actual outbound system — WhatsApp automation flows, voice agent scripts, sequences, and integrations." },
-              { num: "04", title: "Launch + Optimize", days: "Day 26–30", desc: "We launch, track responses, iterate messaging, and hand off the full system with SOPs so you can run it independently." },
+              { num: "01", title: "Lifecycle Audit", days: "Day 1 to 3", desc: "We map your funnel from first click to repeat purchase and find exactly where revenue is leaking." },
+              { num: "02", title: "Journey and Channel Design", days: "Day 4 to 7", desc: "We pick the right mix of WhatsApp, SMS, RCS, email and voice for your market and design every customer journey." },
+              { num: "03", title: "AI Agent and Automation Build", days: "Day 8 to 25", desc: "We build the AI agents, CRM flows, templates and integrations. Compliant with WhatsApp policy, GDPR and TCPA." },
+              { num: "04", title: "Launch and Human Review", days: "Day 26 to 30", desc: "We launch, measure, and review results with you. Then we keep optimizing, or hand it over with full SOPs." },
             ].map((step, i) => (
               <motion.div
                 key={step.num}
@@ -237,11 +302,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== PROOF NUMBERS ===== */}
+      {/* ===== PORTFOLIO ===== */}
       <section className="py-24 bg-surface border-y border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end mb-12"
+            variants={fade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Portfolio</p>
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                Strategy is only the beginning.{" "}
+                <span className="gradient-text">Execution is what matters.</span>
+              </h2>
+            </div>
+            <div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                See how I approach real business challenges and turn strategy into
+                actionable growth programmes.
+              </p>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+              >
+                Explore the portfolio <ArrowRight size={14} />
+              </Link>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {getCaseStudies().slice(0, 3).map((cs, i) => (
+              <PortfolioCard key={cs.slug} cs={cs} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== MARKETS + COMPLIANCE ===== */}
+      <section className="py-24 border-b border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
             variants={fade}
             initial="hidden"
             whileInView="visible"
@@ -249,42 +353,37 @@ export default function HomePage() {
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                Results
+                Markets We Serve
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What the systems actually produce
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                One playbook. The right channels for every market.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                These aren&apos;t projections. Every number below came from a real
-                outbound or messaging system built for enterprise clients across
-                India — using the same WhatsApp and Voice AI approach we bring to
-                founder GTM.
+                WhatsApp leads in the Gulf, Europe and Asia. SMS, email and voice lead in
+                the US. We design for how your customers actually talk to brands, wherever
+                they are.
               </p>
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
-              >
-                See the full case studies <ArrowRight size={14} />
-              </Link>
+              <div className="flex items-start gap-3 p-5 rounded-xl border border-secondary/30 bg-secondary/[0.05]">
+                <ShieldCheck size={20} className="text-secondary mt-0.5 shrink-0" />
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Compliance built in.</span>{" "}
+                  Opt-in flows, consent records and message policies designed around WhatsApp
+                  Business policy, GDPR in Europe and TCPA in the US.
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { metric: "34% → 71%", label: "Activation rate — BFSI WhatsApp outbound" },
-                { metric: "326%", label: "Campaign ROI — Streaming giant" },
-                { metric: "+15pt", label: "NPS lift — Consumer electronics" },
-                { metric: "30 days", label: "Time to first results" },
-              ].map((r) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {markets.map((m, i) => (
                 <div
-                  key={r.label}
-                  className="p-6 rounded-xl border border-border bg-card text-center hover:border-accent/30 transition-all"
+                  key={m.region}
+                  className={`p-6 rounded-xl border border-border bg-card hover:border-accent/30 transition-all ${i === markets.length - 1 ? "sm:col-span-2" : ""}`}
                 >
-                  <div className="text-xl md:text-2xl font-bold text-accent mb-1">
-                    {r.metric}
+                  <div className="flex items-center gap-2 mb-1">
+                    <Globe2 size={16} className="text-accent" />
+                    <span className="font-bold">{m.region}</span>
                   </div>
-                  <div className="text-xs text-muted-foreground font-medium">
-                    {r.label}
-                  </div>
+                  <div className="text-xs text-muted-foreground">{m.note}</div>
                 </div>
               ))}
             </div>
@@ -292,102 +391,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== PLAYBOOK ===== */}
-      <section className="py-24 border-b border-border">
+      {/* ===== FREE TOOLS ===== */}
+      <section className="py-24 bg-surface border-b border-border">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            className="text-center mb-12"
             variants={fade}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Left — copy */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                New Resource
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                The SaaS Pattern Playbook
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                7 hidden patterns that separate SaaS founders who scale from those
-                who stall — with real India SaaS signals and action sprints you
-                can run this week.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {playbookItems.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle size={16} className="text-accent mt-0.5 shrink-0" />
-                    <span className="text-sm text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="text-xs text-muted-foreground">
-                Built from 8+ years running GTM for Netflix India, Google, HSBC &amp; Bosch
-              </p>
-            </div>
-
-            {/* Right — purchase card */}
-            <motion.div
-              className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-black/5"
-              variants={fade}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={2}
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
-                <BookOpen size={26} className="text-accent" />
-              </div>
-
-              <h3 className="text-xl font-bold mb-1">The SaaS Pattern Playbook</h3>
-              <p className="text-sm text-muted-foreground mb-6">
-                13-page PDF · Instant download
-              </p>
-
-              {/* Steps */}
-              <div className="space-y-3 mb-8">
-                {[
-                  "Pay ₹1,999 via Razorpay (UPI, Card, Net Banking)",
-                  "Get instant access to the PDF download",
-                  "Apply the patterns to your GTM this week",
-                ].map((step, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
-                    <span className="text-accent font-bold text-base shrink-0">{i + 1}</span>
-                    <span className="text-sm text-muted-foreground">{step}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Price + CTA */}
-              <div className="text-center mb-4">
-                <span className="text-4xl font-bold">₹1,999</span>
-                <span className="text-sm text-muted-foreground ml-2">one-time</span>
-              </div>
-
-              <a
-                href="https://rzp.io/rzp/Ds8a931"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-accent text-background font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
-              >
-                Buy the Playbook <ArrowRight size={18} />
-              </a>
-
-              <p className="text-center text-xs text-muted-foreground mt-4">
-                Secure payment via Razorpay · UPI / Card / Net Banking
-              </p>
-            </motion.div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+              Free Tools
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold">Find your revenue leaks in minutes</h2>
           </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              { href: "/whatsapp-template-rejection-checker", title: "WhatsApp Template Rejection Checker", desc: "Paste your template and see why Meta might reject it, before you submit." },
+              { href: "/readiness-score", title: "Lifecycle Readiness Score", desc: "Answer a few questions and get a score for your messaging and retention setup." },
+            ].map((t) => (
+              <Link
+                key={t.href}
+                href={t.href}
+                className="group p-8 rounded-xl border border-border bg-card hover:border-accent/50 transition-all"
+              >
+                <h3 className="text-lg font-bold mb-2 group-hover:text-accent transition-colors">{t.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{t.desc}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                  Try it free <ArrowRight size={14} />
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-24">
+      <section className="py-24 band-gradient">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div
             variants={fade}
@@ -396,28 +437,28 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-5">
-              Stop building features.{" "}
-              <span className="text-accent">Start getting customers.</span>
+              Stop losing customers.{" "}
+              <span className="text-secondary">Start keeping them.</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Pay ₹999 for a focused 30-minute GTM session. Walk away with a clear outbound plan —
-              WhatsApp, Voice AI, or both.
+            <p className="text-foreground/80 leading-relaxed mb-8 max-w-lg mx-auto">
+              Book a free 20-minute lifecycle call. We look at your funnel, show you
+              the biggest leaks, and tell you which AI agent or journey to build first.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/book"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                Book a GTM Strategy Call — ₹999 <ArrowRight size={16} />
+                Book a Free Lifecycle Call <ArrowRight size={16} />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border bg-card text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all"
               >
                 View Services
               </Link>
             </div>
-            <p className="text-xs text-muted-foreground mt-5">Secure payment via Razorpay · UPI / Cards / Net Banking</p>
+            <p className="text-xs text-foreground/70 mt-5">Pricing in USD for global brands. INR pricing available in India.</p>
           </motion.div>
         </div>
       </section>

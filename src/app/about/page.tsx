@@ -61,7 +61,7 @@ export default function AboutPage() {
             animate="visible"
             custom={1}
           >
-            The operator behind the <span className="text-accent">enterprise logos</span>
+            The operator behind the <span className="text-accent">enterprise programmes</span>
           </motion.h1>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="text-center md:text-left">
                   <h2 className="text-2xl font-bold">Vinod Yadav</h2>
-                  <p className="text-muted-foreground text-sm">Bangalore, India</p>
+                  <p className="text-muted-foreground text-sm">Bangalore, India · Working with brands worldwide</p>
                 </div>
                 
                 <div className="flex flex-col gap-3">
@@ -111,12 +111,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               custom={1}
             >
-              <div className="prose prose-invert prose-p:text-muted-foreground prose-p:leading-relaxed">
+              <div className="prose prose-p:text-muted-foreground prose-p:leading-relaxed">
                 <p className="text-xl text-foreground font-medium mb-8">
                   For the last 8+ years, I've lived at the intersection of customer success, growth marketing, and conversational AI.
                 </p>
                 <p>
-                  I currently work as a Global Growth Manager at Gupshup, where I manage the post-sales journey for enterprise giants like Netflix, Google, YouTube, Bosch, HSBC, and Carl Zeiss. My mandate is simple: make sure these massive brands actually get ROI from WhatsApp Business, RCS, and conversational AI.
+                  I currently work as a Global Growth Manager at Gupshup, where I manage the post-sales journey for global enterprise brands across media, financial services, consumer technology and manufacturing. My mandate is simple: make sure these brands actually get ROI from WhatsApp Business, RCS, and conversational AI.
                 </p>
                 <p>
                   I've personally contributed to a ₹10 Crore pipeline, run 60+ enterprise discovery workshops, and designed conversational journeys that boosted engagement by 30%.

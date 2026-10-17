@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Readiness Score", href: "/readiness-score" },
+  { label: "Portfolio", href: "/case-studies" },
+  { label: "Lifecycle Score", href: "/readiness-score" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
 ];
@@ -60,7 +60,7 @@ export function Navbar() {
             href="/book"
             className="text-sm font-semibold px-5 py-2.5 rounded-lg bg-accent text-background hover:opacity-90 transition-opacity"
           >
-            Book a Call — ₹999
+            Book a Free Call
           </Link>
         </div>
 
@@ -96,7 +96,7 @@ export function Navbar() {
             className="text-lg font-semibold px-8 py-3 rounded-lg bg-accent text-background mt-4"
             onClick={() => setOpen(false)}
           >
-            Book a Call — ₹999
+            Book a Free Call
           </Link>
         </div>
       )}

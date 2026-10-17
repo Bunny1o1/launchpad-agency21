@@ -16,36 +16,36 @@ const steps = [
     step: "01",
     title: "User Sends Message",
     desc: "A customer reaches out on WhatsApp, RCS, Instagram, or any channel you operate.",
-    color: "text-[#00F5A0]",
-    bg: "bg-[#00F5A0]/10 border-[#00F5A0]/20",
-    lineGlow: "from-transparent to-[#00F5A0]"
+    color: "text-[#FFC22B]",
+    bg: "bg-[#FFC22B]/10 border-[#FFC22B]/20",
+    lineGlow: "from-transparent to-[#FFC22B]"
   },
   {
     icon: Zap,
     step: "02",
     title: "AI Understands Intent",
     desc: "NLP classifies the intent — support, purchase, onboarding, complaint — and routes intelligently.",
-    color: "text-[#00D9F5]",
-    bg: "bg-[#00D9F5]/10 border-[#00D9F5]/20",
-    lineGlow: "from-[#00F5A0] to-[#00D9F5]"
+    color: "text-[#FFA62B]",
+    bg: "bg-[#FFA62B]/10 border-[#FFA62B]/20",
+    lineGlow: "from-[#FFC22B] to-[#FFA62B]"
   },
   {
     icon: RefreshCw,
     step: "03",
     title: "Journey Executes",
     desc: "A pre-built conversational journey triggers — personalized, context-aware, and on-brand.",
-    color: "text-[#8A2BE2]",
-    bg: "bg-[#8A2BE2]/10 border-[#8A2BE2]/20",
-    lineGlow: "from-[#00D9F5] to-[#8A2BE2]"
+    color: "text-[#FF6B2B]",
+    bg: "bg-[#FF6B2B]/10 border-[#FF6B2B]/20",
+    lineGlow: "from-[#FFA62B] to-[#FF6B2B]"
   },
   {
     icon: BarChart2,
     step: "04",
     title: "Outcome Tracked",
     desc: "Conversion, resolution, or escalation is logged. Health scores update. You prove ROI.",
-    color: "text-[#4169E1]",
-    bg: "bg-[#4169E1]/10 border-[#4169E1]/20",
-    lineGlow: "from-[#8A2BE2] to-[#4169E1]"
+    color: "text-[#E8352E]",
+    bg: "bg-[#E8352E]/10 border-[#E8352E]/20",
+    lineGlow: "from-[#FF6B2B] to-[#E8352E]"
   },
 ];
 

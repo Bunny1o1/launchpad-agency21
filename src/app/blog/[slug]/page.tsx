@@ -115,7 +115,7 @@ export default function BlogPostPage({ params }: Props) {
           <div className="h-px bg-border mb-12" />
 
           {/* MDX Content */}
-          <div className="prose prose-invert prose-lg max-w-none
+          <div className="prose prose-lg max-w-none
             prose-headings:font-bold prose-headings:tracking-tight
             prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
             prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
@@ -158,11 +158,11 @@ export default function BlogPostPage({ params }: Props) {
             </div>
             <div>
               <div className="font-bold mb-1">Vinod Yadav</div>
-              <div className="text-sm text-accent mb-3">Conversational AI Growth Expert</div>
+              <div className="text-sm text-accent mb-3">Customer Lifecycle and AI Growth Consultant</div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                8+ years managing WhatsApp Business and conversational AI for
-                Netflix, Google, Bosch, and HSBC at Gupshup. Now consulting
-                enterprises on messaging strategy.
+                8+ years running WhatsApp, RCS, SMS and conversational AI
+                programmes for global enterprise brands. Now helping consumer
+                brands build AI-led customer lifecycles.
               </p>
               <div className="flex gap-4 mt-4">
                 <a

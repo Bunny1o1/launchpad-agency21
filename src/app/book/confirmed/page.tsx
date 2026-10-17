@@ -17,7 +17,7 @@ const fade = {
 const RAZORPAY_LINK = "https://rzp.io/rzp/saasible-gtm-call";
 
 const includes = [
-  "30-minute focused GTM strategy session",
+  "45-minute lifecycle strategy session",
   "ICP definition and channel recommendation",
   "Top 3 quick wins you can implement immediately",
   "WhatsApp or Voice AI system recommendation",
@@ -28,7 +28,7 @@ function BookingContent() {
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
 
-  let title = "GTM Strategy Call";
+  let title = "Lifecycle Strategy Session";
   if (serviceParam === "audit") title = "Messaging Audit Call";
   if (serviceParam === "retainer") title = "Growth Retainer Call";
   if (serviceParam === "sprint") title = "Messaging Sprint Call";
@@ -65,8 +65,8 @@ function BookingContent() {
             animate="visible"
             custom={2}
           >
-            A focused 30-minute session where we map your GTM gaps and build a
-            clear outbound plan — using WhatsApp and Voice AI as your growth channel.
+            A focused session where we map your lifecycle gaps and build a clear
+            plan for AI agents, lead follow-up and repeat-purchase journeys.
           </motion.p>
         </div>
       </section>
@@ -100,7 +100,7 @@ function BookingContent() {
                 </div>
                 <div className="text-center">
                   <Target size={20} className="mx-auto mb-2 text-accent" />
-                  <div className="text-xs text-muted-foreground">GTM focused</div>
+                  <div className="text-xs text-muted-foreground">Lifecycle focused</div>
                 </div>
                 <div className="text-center">
                   <Zap size={20} className="mx-auto mb-2 text-accent" />
@@ -133,7 +133,7 @@ function BookingContent() {
                 </div>
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">3</span>
-                  <span>Show up and get your GTM plan</span>
+                  <span>Show up and get your lifecycle plan</span>
                 </div>
               </div>
 

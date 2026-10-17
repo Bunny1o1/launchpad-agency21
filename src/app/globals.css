@@ -4,38 +4,19 @@
 
 /* ===== DESIGN TOKENS ===== */
 :root {
-  /* Light mode */
-  --background: #FAFAF8;
-  --foreground: #141414;
-  --surface: #FFFFFF;
-  --accent: #2D5BE3;
-  --secondary: #141414;
-  --muted: #F5F5F3;
-  --muted-foreground: #6B6B6B;
-  --border: #E5E5E0;
-  --ring: #2D5BE3;
-  --card: #FFFFFF;
-  --card-foreground: #141414;
-  --input: #E5E5E0;
-}
-
-.dark {
-  --background: #0A0A0A;        /* cold near-black */
-  --foreground: #F5F5F5;
-  --surface: #111111;           /* clearly distinct card surface */
-  --accent: #00F5A0;            /* Cyber Emerald */
-  --secondary: #8A2BE2;         /* Deep Violet */
-  --muted: #1A1A1A;             /* muted bg */
-  --muted-foreground: #A0A0A0;  /* brighter muted text for readability */
-  --border: #2A2A2A;            /* crisp border */
-  --border-subtle: #1F1F1F;     /* ultra-subtle dividers */
-  --ring: #00F5A0;
-  --card: #111111;
-  --card-foreground: #F5F5F5;
-  --input: #1A1A1A;
-  /* Glow layers */
-  --glow-accent: rgba(0, 245, 160, 0.06);
-  --glow-secondary: rgba(138, 43, 226, 0.04);
+  /* Warm yellow and red theme */
+  --background: #FFF1BF;        /* soft marigold */
+  --foreground: #2A0E06;        /* deep red-brown text */
+  --surface: #FFE2A8;           /* warm peach-yellow */
+  --accent: #E0300F;            /* chilli red-orange, primary actions */
+  --secondary: #A8120C;         /* deep red */
+  --muted: #FFE6A3;
+  --muted-foreground: #6B3419;
+  --border: #EDB86A;
+  --ring: #E0300F;
+  --card: #FFF8DF;
+  --card-foreground: #2A0E06;
+  --input: #FFFBEB;
 }
 
 /* ===== BASE ===== */
@@ -46,10 +27,8 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    /* Subtle cold ambient radial glow in the top-center */
-    background-image:
-      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(0, 245, 160, 0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 30% at 80% 100%, rgba(138, 43, 226, 0.05) 0%, transparent 60%);
+    /* Yellow at the top melting into red at the bottom */
+    background-image: linear-gradient(170deg, #FFE45C 0%, #FFC94D 35%, #FFA45E 70%, #FF8066 100%);
     background-attachment: fixed;
   }
 
@@ -66,11 +45,12 @@
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, var(--accent), var(--secondary));
+    background-image: linear-gradient(135deg, #F07800, #E0300F 55%, #A8120C);
   }
 
-  .dark .gradient-text {
-    background-image: linear-gradient(135deg, #00F5A0, #00D9F5);
+  /* Bold full-bleed yellow-to-red band for key sections */
+  .band-gradient {
+    background-image: linear-gradient(110deg, #FFD23F 0%, #FF9F1C 45%, #E63912 100%);
   }
 }
 

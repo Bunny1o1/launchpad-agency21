@@ -9,14 +9,14 @@ type FooterLink = {
 
 const footerLinks: Record<string, FooterLink[]> = {
   services: [
-    { label: "Messaging Audit", href: "/services#audit" },
+    { label: "Lifecycle Audit", href: "/services#audit" },
+    { label: "AI Growth Build", href: "/services#build" },
     { label: "Growth Retainer", href: "/services#retainer" },
-    { label: "Messaging Sprint", href: "/services#sprint" },
-    { label: "Workshops", href: "/services#workshop" },
+    { label: "Team Workshops", href: "/book?service=workshop" },
   ],
   resources: [
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Readiness Score", href: "/readiness-score" },
+    { label: "Portfolio", href: "/case-studies" },
+    { label: "Lifecycle Score", href: "/readiness-score" },
     { label: "WhatsApp Template Checker", href: "/whatsapp-template-rejection-checker" },
     { label: "Blog", href: "/blog" },
     { label: "Substack", href: "https://vinod820.substack.com/", external: true },
@@ -40,9 +40,8 @@ export function Footer() {
               <span className="text-accent">Vinod</span> Yadav
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Conversational AI Growth Expert. Helping enterprises drive
-              adoption and revenue through WhatsApp Business, RCS, and messaging
-              platforms.
+              Customer lifecycle and AI growth consultant. 8+ years running
+              WhatsApp, RCS, SMS and AI programs for global consumer brands.
             </p>
           </div>
 
