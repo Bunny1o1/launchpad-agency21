@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, CheckCircle, Clock, Target, Zap, Mail, Globe2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Target, Zap, Globe2 } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
+import { CalendlyEmbed } from "@/components/calendly-embed";
+import { CALENDLY_URL, CONTACT_EMAIL, RAZORPAY_LINK } from "@/lib/booking";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -15,11 +17,9 @@ const fade = {
   }),
 };
 
-const RAZORPAY_LINK = "https://rzp.io/rzp/saasible-gtm-call";
-const CONTACT_EMAIL = "yuvinod@gmail.com";
 
 const includes = [
-  "20-minute call on your funnel and customer lifecycle",
+  "30-minute call on your funnel and customer lifecycle",
   "Your biggest revenue leaks, from first click to repeat purchase",
   "Top 3 quick wins you can implement right away",
   "Which AI agent or journey to build first, and on which channel",
@@ -55,7 +55,7 @@ function BookingContent() {
             animate="visible"
             custom={0}
           >
-            Free 20-Minute Call
+            Free 30-Minute Call
           </motion.span>
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
@@ -104,7 +104,7 @@ function BookingContent() {
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
                 <div className="text-center">
                   <Clock size={20} className="mx-auto mb-2 text-accent" />
-                  <div className="text-xs text-muted-foreground">20 minutes</div>
+                  <div className="text-xs text-muted-foreground">30 minutes</div>
                 </div>
                 <div className="text-center">
                   <Target size={20} className="mx-auto mb-2 text-accent" />
@@ -127,17 +127,17 @@ function BookingContent() {
             >
               <div className="text-center mb-8">
                 <div className="text-5xl font-bold tracking-tight mb-1 gradient-text">Free</div>
-                <div className="text-sm text-muted-foreground">20 minutes · Any time zone</div>
+                <div className="text-sm text-muted-foreground">30 minutes · Any time zone</div>
               </div>
 
               <div className="space-y-4 mb-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">1</span>
-                  <span>Send a short note about your brand and market</span>
+                  <span>Pick a time that suits you on my calendar</span>
                 </div>
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">2</span>
-                  <span>Get a calendar slot in your time zone within 24 hours</span>
+                  <span>Get an instant invite in your own time zone</span>
                 </div>
                 <div className="flex items-center gap-3 bg-accent/5 rounded-lg p-3">
                   <span className="text-accent font-bold text-base">3</span>
@@ -146,14 +146,21 @@ function BookingContent() {
               </div>
 
               <a
-                href={mailto}
+                href="#schedule"
                 className="flex items-center justify-center gap-2 w-full bg-accent text-background font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-base"
               >
-                <Mail size={18} /> Request My Free Call
+                <Clock size={18} /> Pick a Time on My Calendar
               </a>
 
               <p className="text-center text-xs text-muted-foreground mt-4">
-                Or email {CONTACT_EMAIL}
+                Or{" "}
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">
+                  open Calendly
+                </a>
+                {" · "}
+                <a href={mailto} className="font-semibold text-accent hover:underline">
+                  email me
+                </a>
               </p>
 
               <div className="mt-8 pt-6 border-t border-border">
@@ -162,7 +169,7 @@ function BookingContent() {
                   <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Based in India?</span>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-                  Want a deeper 45-minute strategy session with a written action plan? Book it for ₹999.
+                  Want a paid strategy session with a written action plan? Book it for ₹999.
                 </p>
                 <a
                   href={RAZORPAY_LINK}
@@ -175,6 +182,19 @@ function BookingContent() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Calendly scheduler */}
+      <section id="schedule" className="py-20 border-t border-border scroll-mt-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-accent mb-3 block">
+              Pick a Time
+            </span>
+            <h2 className="text-3xl font-bold">Book your free 30-minute call</h2>
+          </div>
+          <CalendlyEmbed />
         </div>
       </section>
 
