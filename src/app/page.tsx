@@ -120,7 +120,7 @@ export default function HomePage() {
             <MagneticButton>
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_0_40px_rgba(255,194,43,0.3)]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_10px_40px_-10px_rgba(224,48,15,0.6)]"
               >
                 Book a Free Lifecycle Call <ArrowRight size={16} />
               </Link>
@@ -149,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== STATS ===== */}
-      <section className="border-b border-border" style={{ background: 'linear-gradient(to right, var(--surface), color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), var(--surface))' }}>
+      <section className="band-gradient border-y border-border">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -159,7 +159,7 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             {stats.map((stat, i) => (
-              <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-accent/10 bg-accent/[0.03]">
+              <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-border bg-card shadow-[0_10px_30px_-15px_rgba(168,18,12,0.5)]">
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2 tabular-nums">
                   <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
@@ -428,7 +428,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-24">
+      <section className="py-24 band-gradient">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div
             variants={fade}
@@ -438,9 +438,9 @@ export default function HomePage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-5">
               Stop losing customers.{" "}
-              <span className="gradient-text">Start keeping them.</span>
+              <span className="text-secondary">Start keeping them.</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
+            <p className="text-foreground/80 leading-relaxed mb-8 max-w-lg mx-auto">
               Book a free 20-minute lifecycle call. We look at your funnel, show you
               the biggest leaks, and tell you which AI agent or journey to build first.
             </p>
@@ -453,12 +453,12 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border bg-card text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all"
               >
                 View Services
               </Link>
             </div>
-            <p className="text-xs text-muted-foreground mt-5">Pricing in USD for global brands. INR pricing available in India.</p>
+            <p className="text-xs text-foreground/70 mt-5">Pricing in USD for global brands. INR pricing available in India.</p>
           </motion.div>
         </div>
       </section>

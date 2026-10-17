@@ -122,7 +122,7 @@ export default function RootLayout({
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
 
       {/* Google Ads Conversion Tag */}

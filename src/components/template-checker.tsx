@@ -62,7 +62,7 @@ export function TemplateChecker() {
   const isExample = JSON.stringify(t) === JSON.stringify(EXAMPLE);
 
   const toneClasses = {
-    good: "border-green-500/40 bg-green-500/[0.06] text-green-400",
+    good: "border-green-500/40 bg-green-500/[0.06] text-green-800",
     warn: "border-amber-400/40 bg-amber-400/[0.06] text-amber-300",
     bad: "border-red-500/40 bg-red-500/[0.06] text-red-400",
     idle: "border-border bg-surface text-foreground",

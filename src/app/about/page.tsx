@@ -111,7 +111,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               custom={1}
             >
-              <div className="prose prose-invert prose-p:text-muted-foreground prose-p:leading-relaxed">
+              <div className="prose prose-p:text-muted-foreground prose-p:leading-relaxed">
                 <p className="text-xl text-foreground font-medium mb-8">
                   For the last 8+ years, I've lived at the intersection of customer success, growth marketing, and conversational AI.
                 </p>
