@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { NewsletterSubscribe, NEWSLETTER_NAME } from "@/components/newsletter-subscribe";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 
 type Props = { params: { slug: string } };
@@ -16,13 +17,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
+  const url = `https://saasible.in/blog/${post.slug}`;
+  const description = post.metaDescription ?? post.excerpt;
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle ? { absolute: post.seoTitle } : post.title,
+    description,
+    // Canonical always points at saasible.in, including for issues that are
+    // also sent from Substack, so search credit goes to this site.
+    alternates: { canonical: url },
     authors: [{ name: post.author ?? "Vinod Yadav" }],
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle ?? post.title,
+      description,
+      url,
       type: "article",
       publishedTime: post.date,
       authors: [post.author ?? "Vinod Yadav"],
@@ -30,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle ?? post.title,
+      description,
     },
   };
 }
@@ -89,7 +97,9 @@ export default function BlogPostPage({ params }: Props) {
           <header className="mb-12">
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <span className="text-[10px] font-bold uppercase tracking-widest text-accent px-3 py-1 rounded-full bg-accent/10 border border-accent/20">
-                {post.category}
+                {post.newsletterIssue
+                  ? `${NEWSLETTER_NAME} · Issue ${post.newsletterIssue}`
+                  : post.category}
               </span>
               <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
                 <Clock size={12} /> {post.readingTime}
@@ -133,6 +143,8 @@ export default function BlogPostPage({ params }: Props) {
             prose-hr:border-border">
             <MDXRemote source={post.content} />
           </div>
+
+          {post.newsletterIssue && <NewsletterSubscribe />}
 
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (

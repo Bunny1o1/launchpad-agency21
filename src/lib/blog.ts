@@ -15,6 +15,12 @@ export type Post = {
   readingTime: string;
   author?: string;
   tags?: string[];
+  /** Full <title> for search results. Falls back to "title | Saasible". */
+  seoTitle?: string;
+  /** Meta description for search results. Falls back to the excerpt. */
+  metaDescription?: string;
+  /** Set on newsletter issues mirrored from Substack (Revenue After The Sale). */
+  newsletterIssue?: number;
 };
 
 export function getAllPosts(): Post[] {
@@ -39,6 +45,9 @@ export function getAllPosts(): Post[] {
         readingTime: stats.text,
         author: data.author ?? "Vinod Yadav",
         tags: data.tags ?? [],
+        seoTitle: data.seoTitle,
+        metaDescription: data.metaDescription,
+        newsletterIssue: data.newsletterIssue,
       } as Post;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1)); // newest first
@@ -62,5 +71,8 @@ export function getPostBySlug(slug: string): Post | null {
     readingTime: stats.text,
     author: data.author ?? "Vinod Yadav",
     tags: data.tags ?? [],
+    seoTitle: data.seoTitle,
+    metaDescription: data.metaDescription,
+    newsletterIssue: data.newsletterIssue,
   };
 }
