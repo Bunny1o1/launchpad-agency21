@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { LeadWidget } from "@/components/lead-widget";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -170,6 +171,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
         </SmoothScroll>
         <Footer />
+        <LeadWidget />
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>

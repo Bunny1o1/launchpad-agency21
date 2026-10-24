@@ -90,7 +90,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-6 border-t border-border gap-3 font-mono text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Saasible · All rights reserved</p>
+          <p>&copy; {new Date().getFullYear()} Saasible · All rights reserved · <Link href="/privacy-policy" className="hover:text-foreground underline-offset-4 hover:underline">Privacy</Link></p>
           <p>Made in Bengaluru, for brands everywhere · ✦</p>
         </div>
       </div>
