@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== DESIGN TOKENS ===== */
+/* ===== DESIGN TOKENS =====
+   Editorial "paper and ink" theme: cream paper, ink-black type,
+   serif display headlines with italic accents, hairline rules. */
 :root {
-  /* Warm yellow and red theme */
-  --background: #FFF1BF;        /* soft marigold */
-  --foreground: #2A0E06;        /* deep red-brown text */
-  --surface: #FFE2A8;           /* warm peach-yellow */
-  --accent: #E0300F;            /* chilli red-orange, primary actions */
-  --secondary: #A8120C;         /* deep red */
-  --muted: #FFE6A3;
-  --muted-foreground: #6B3419;
-  --border: #EDB86A;
-  --ring: #E0300F;
-  --card: #FFF8DF;
-  --card-foreground: #2A0E06;
-  --input: #FFFBEB;
+  --background: #F4EEDF;        /* paper */
+  --foreground: #1A1814;        /* ink */
+  --surface: #EDE5D1;           /* deeper paper for alternating sections */
+  --accent: #1A1814;            /* ink: primary buttons, links, highlights */
+  --secondary: #9C3A1F;         /* brick red: rare emphasis only */
+  --muted: #E8DFC8;
+  --muted-foreground: #5E584B;
+  --border: #D6CCB3;            /* hairline rule */
+  --ring: #1A1814;
+  --card: #F8F3E7;
+  --card-foreground: #1A1814;
+  --input: #FBF8F0;
 }
 
 /* ===== BASE ===== */
@@ -27,14 +28,59 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    /* Yellow at the top melting into red at the bottom */
-    background-image: linear-gradient(170deg, #FFE45C 0%, #FFC94D 35%, #FFA45E 70%, #FF8066 100%);
-    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
+    text-wrap: balance;
   }
+}
+
+/* ===== EDITORIAL TYPOGRAPHY =====
+   Sits after the utilities so it wins over the old font-bold classes
+   on page headings without editing every page. */
+h1, h2 {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+h1 em, h2 em, h3 em {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Small uppercase eyebrows become typewriter-style kickers */
+.uppercase.tracking-widest {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 500 !important;
+  letter-spacing: 0.14em;
+}
+
+/* Prose (blog, case studies) */
+.prose :where(h1, h2) {
+  font-weight: 400;
+}
+
+/* ===== SHAPE =====
+   Thin rules and quiet corners instead of soft glowing cards;
+   primary buttons become ink pills. */
+.rounded-xl, .rounded-2xl {
+  border-radius: 6px;
+}
+
+a.bg-accent, button.bg-accent {
+  border-radius: 9999px;
+}
+
+a.border.rounded-lg, button.border.rounded-lg {
+  border-radius: 9999px;
+}
+
+[class*="shadow-["] {
+  box-shadow: none !important;
 }
 
 /* ===== UTILITIES ===== */
@@ -43,14 +89,21 @@
     text-wrap: balance;
   }
 
+  /* Former gradient highlight: now an italic serif accent in ink */
   .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #F07800, #E0300F 55%, #A8120C);
+    font-family: var(--font-display), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--foreground);
   }
 
-  /* Bold full-bleed yellow-to-red band for key sections */
+  /* Former full-bleed gradient band: now a deeper paper band */
   .band-gradient {
-    background-image: linear-gradient(110deg, #FFD23F 0%, #FF9F1C 45%, #E63912 100%);
+    background-color: var(--surface);
+  }
+
+  .font-display {
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 }
 
@@ -61,6 +114,12 @@ html {
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: var(--accent);
+  background: var(--foreground);
   color: var(--background);
+}
+
+/* ===== FOCUS ===== */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
 }

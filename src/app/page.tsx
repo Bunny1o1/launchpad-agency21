@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShoppingBag, Megaphone, CalendarCheck, CheckCircle, Globe2, ShieldCheck, Gauge, Bot, UserCheck } from "lucide-react";
-import { AuroraBackground } from "@/components/aurora-background";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedCounter } from "@/components/animated-counter";
 import { PortfolioCard } from "@/components/portfolio-card";
@@ -66,28 +65,25 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        <AuroraBackground />
+      <section className="relative pt-36 pb-16 md:pt-48 md:pb-24 overflow-hidden border-b border-border">
 
         <div className="max-w-6xl mx-auto px-6 relative">
           {/* Credential bar */}
           <motion.div
-            className="flex flex-wrap items-center gap-2 mb-16"
+            className="flex flex-wrap items-center gap-3 mb-10 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
             variants={fade}
             initial="hidden"
             animate="visible"
             custom={0}
           >
-            <span className="text-xs font-medium text-muted-foreground">
-              Built on
-            </span>
-            <span className="text-xs font-semibold text-foreground">
-              8+ years running customer lifecycles for global enterprise brands
-            </span>
+            <span className="w-6 h-px bg-muted-foreground" aria-hidden="true" />
+            <span>The AI growth agency</span>
+            <span aria-hidden="true">·</span>
+            <span className="text-foreground">8+ years of enterprise lifecycle experience</span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-6 max-w-4xl"
+            className="text-5xl md:text-7xl lg:text-[104px] leading-[0.95] tracking-[-0.025em] mb-8 max-w-5xl"
             variants={fade}
             initial="hidden"
             animate="visible"
@@ -120,7 +116,7 @@ export default function HomePage() {
             <MagneticButton>
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_10px_40px_-10px_rgba(224,48,15,0.6)]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-background font-medium text-[15px] hover:opacity-85 transition-opacity"
               >
                 Book a Free Lifecycle Call <ArrowRight size={16} />
               </Link>
@@ -128,7 +124,7 @@ export default function HomePage() {
             <MagneticButton>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all bg-card/50 backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-foreground text-foreground font-medium text-[15px] hover:bg-foreground hover:text-background transition-colors"
               >
                 See What We Build
               </Link>
@@ -142,7 +138,7 @@ export default function HomePage() {
             animate="visible"
             custom={4}
           >
-            <Globe2 size={14} className="text-secondary" />
+            <Globe2 size={14} />
             Built for brands in the Middle East, UK, Europe, Southeast Asia, the US and India
           </motion.p>
         </div>
@@ -160,7 +156,7 @@ export default function HomePage() {
           >
             {stats.map((stat, i) => (
               <motion.div key={stat.label} variants={fade} custom={i} className="text-center p-8 rounded-xl border border-border bg-card shadow-[0_10px_30px_-15px_rgba(168,18,12,0.5)]">
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2 tabular-nums">
+                <div className="font-display text-5xl md:text-6xl text-foreground mb-2 tabular-nums">
                   <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">
@@ -185,7 +181,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
               Who This Is For
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold max-w-lg">
+            <h2 className="text-4xl md:text-5xl font-bold max-w-lg">
               Built for consumer brands that want more customers and more repeat buyers
             </h2>
           </motion.div>
@@ -227,8 +223,8 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
               The Full Customer Lifecycle
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl">
-              AI agents for the work. <span className="text-secondary">Human judgment</span> for the strategy.
+            <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">
+              AI agents for the work. <em>Human judgment</em> for the strategy.
             </h2>
             <p className="text-muted-foreground leading-relaxed mt-4 max-w-2xl">
               Most AI agencies sell you a bot. We design the whole journey, from the first
@@ -271,7 +267,7 @@ export default function HomePage() {
             <span className="text-xs font-semibold uppercase tracking-widest text-accent mb-3 block">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold max-w-2xl mx-auto">
               From leaky funnel to a running lifecycle engine in 30 days
             </h2>
           </motion.div>
@@ -292,7 +288,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 custom={i}
               >
-                <span className="text-4xl font-bold text-accent/20 block mb-3">{step.num}</span>
+                <span className="font-display italic text-5xl text-secondary block mb-3 leading-none">{step.num}</span>
                 <h3 className="text-base font-bold mb-2">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">{step.desc}</p>
                 <span className="text-xs font-bold uppercase tracking-widest text-accent">{step.days}</span>
@@ -314,7 +310,7 @@ export default function HomePage() {
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Portfolio</p>
-              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight">
                 Strategy is only the beginning.{" "}
                 <span className="gradient-text">Execution is what matters.</span>
               </h2>
@@ -355,7 +351,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
                 Markets We Serve
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 One playbook. The right channels for every market.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -404,7 +400,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
               Free Tools
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold">Find your revenue leaks in minutes</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Find your revenue leaks in minutes</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
@@ -428,17 +424,19 @@ export default function HomePage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-24 band-gradient">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+        <div className="border border-foreground bg-card px-6 py-14 md:px-16 md:py-20 text-center">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-secondary mb-5">✦ Free 30-minute call ✦</p>
           <motion.div
             variants={fade}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-5">
+            <h2 className="text-4xl md:text-6xl mb-6">
               Stop losing customers.{" "}
-              <span className="text-secondary">Start keeping them.</span>
+              <em>Start keeping them.</em>
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-8 max-w-lg mx-auto">
               Book a free 30-minute lifecycle call. We look at your funnel, show you
@@ -447,19 +445,20 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-background font-semibold text-sm hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-background font-medium text-[15px] hover:opacity-85 transition-opacity"
               >
                 Book a Free Lifecycle Call <ArrowRight size={16} />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border bg-card text-foreground font-semibold text-sm hover:border-accent hover:text-accent transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-foreground text-foreground font-medium text-[15px] hover:bg-foreground hover:text-background transition-colors"
               >
                 View Services
               </Link>
             </div>
-            <p className="text-xs text-foreground/70 mt-5">Pricing in USD for global brands. INR pricing available in India.</p>
+            <p className="font-mono text-xs text-muted-foreground mt-6">Pricing in USD for global brands · INR pricing available in India</p>
           </motion.div>
+        </div>
         </div>
       </section>
     </>

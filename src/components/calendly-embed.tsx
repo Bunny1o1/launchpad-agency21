@@ -4,7 +4,7 @@ import { CALENDLY_EMBED_URL, CALENDLY_URL } from "@/lib/booking";
 export function CalendlyEmbed() {
   return (
     <div>
-      <div className="rounded-2xl overflow-hidden border border-border bg-card shadow-[0_20px_60px_-25px_rgba(168,18,12,0.45)]">
+      <div className="rounded-2xl overflow-hidden border border-border bg-card">
         <iframe
           src={CALENDLY_EMBED_URL}
           title="Book a call with Vinod on Calendly"
