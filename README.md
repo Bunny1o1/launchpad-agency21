@@ -23,6 +23,10 @@ Personal consulting website built with **Next.js 14 (App Router)**, **Tailwind C
 | `/about` | Bio, timeline, social links |
 | `/book` | Calendly booking embed |
 
+## Newsletter
+
+New *Revenue After The Sale* issues on Substack are mirrored to `/blog` by a scheduled GitHub Action. It is off by default. See [docs/newsletter-sync.md](docs/newsletter-sync.md) for how to switch it on, run it once or turn it off.
+
 ## Getting Started
 
 ```bash
