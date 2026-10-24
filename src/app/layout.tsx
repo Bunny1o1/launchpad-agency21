@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -7,9 +7,16 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import { SmoothScroll } from "@/components/smooth-scroll";
 
-const inter = Inter({
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-display",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -148,7 +155,7 @@ export default function RootLayout({
       />
 
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans`}
       >
         <script
           type="application/ld+json"

@@ -37,7 +37,7 @@ export function PortfolioCard({
         "group relative flex flex-col h-full rounded-2xl p-8 transition-all duration-300",
         cs.illustrative
           ? "border border-dashed border-border bg-transparent hover:border-muted-foreground/50"
-          : "border border-accent/40 bg-card hover:border-accent shadow-[0_20px_60px_-25px_rgba(168,18,12,0.45)]",
+          : "border border-accent/40 bg-card hover:border-accent",
         featured && "md:p-12"
       )}
     >

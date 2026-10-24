@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Linkedin, Github, Mail } from "lucide-react";
 
 type FooterLink = {
   label: string;
@@ -7,100 +6,92 @@ type FooterLink = {
   external?: boolean;
 };
 
-const footerLinks: Record<string, FooterLink[]> = {
-  services: [
-    { label: "Lifecycle Audit", href: "/services#audit" },
-    { label: "AI Growth Build", href: "/services#build" },
-    { label: "Growth Retainer", href: "/services#retainer" },
-    { label: "Team Workshops", href: "/book?service=workshop" },
-  ],
-  resources: [
-    { label: "Portfolio", href: "/case-studies" },
-    { label: "Lifecycle Score", href: "/readiness-score" },
-    { label: "WhatsApp Template Checker", href: "/whatsapp-template-rejection-checker" },
-    { label: "Blog", href: "/blog" },
-    { label: "Substack", href: "https://vinod820.substack.com/", external: true },
-  ],
-  connect: [
-    { label: "Book a Call", href: "/book" },
-    { label: "Email", href: "mailto:yuvinod@gmail.com", external: true },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/yuvinod/", external: true },
-    { label: "GitHub", href: "https://github.com/Bunny1o1", external: true },
-  ],
-};
+const footerColumns: { title: string; links: FooterLink[] }[] = [
+  {
+    title: "The work",
+    links: [
+      { label: "Lifecycle Audit", href: "/services#audit" },
+      { label: "AI Growth Build", href: "/services#build" },
+      { label: "Growth Retainer", href: "/services#retainer" },
+      { label: "Team Workshops", href: "/book?service=workshop" },
+    ],
+  },
+  {
+    title: "The library",
+    links: [
+      { label: "Portfolio", href: "/case-studies" },
+      { label: "Lifecycle Score", href: "/readiness-score" },
+      { label: "WhatsApp Template Checker", href: "/whatsapp-template-rejection-checker" },
+      { label: "Blog", href: "/blog" },
+      { label: "Substack", href: "https://vinod820.substack.com/", external: true },
+    ],
+  },
+  {
+    title: "Get in touch",
+    links: [
+      { label: "Book a call", href: "/book" },
+      { label: "Email", href: "mailto:yuvinod@gmail.com", external: true },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/yuvinod/", external: true },
+      { label: "GitHub", href: "https://github.com/Bunny1o1", external: true },
+    ],
+  },
+];
+
+const linkClass =
+  "text-[15px] text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-colors";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <h3 className="text-lg font-bold mb-3">
-              <span className="text-accent">Vinod</span> Yadav
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Customer lifecycle and AI growth consultant. 8+ years running
-              WhatsApp, RCS, SMS and AI programs for global consumer brands.
+    <footer className="border-t border-foreground bg-background">
+      <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-12 mb-14">
+          {/* Masthead */}
+          <div className="sm:col-span-2 md:col-span-1">
+            <Link href="/" className="font-display text-5xl leading-none tracking-tight">
+              Saas<em className="italic">ible</em>
+            </Link>
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground mt-3 mb-5">
+              AI growth agency · est. Bengaluru
+            </p>
+            <p className="text-[15px] text-muted-foreground leading-relaxed max-w-xs">
+              AI agents for the work, human experience for the strategy. CRM
+              lifecycle, lead generation and AI agents for consumer brands
+              worldwide, led by Vinod Yadav.
             </p>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">
-                {title}
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <h4 className="font-display italic text-[22px] font-normal tracking-normal mb-4">
+                {col.title}
               </h4>
-              <div className="flex flex-col gap-2.5">
-                {links.map((link) =>
-                  link.external ? (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  ) : (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  )
-                )}
-              </div>
+              <ul className="flex flex-col gap-2.5">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={linkClass}
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className={linkClass}>
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-border gap-4">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Vinod Yadav. All rights reserved.
-          </p>
-          <div className="flex items-center gap-3">
-            {[
-              { icon: Linkedin, href: "https://www.linkedin.com/in/yuvinod/", label: "LinkedIn" },
-              { icon: Github, href: "https://github.com/Bunny1o1", label: "GitHub" },
-              { icon: Mail, href: "mailto:yuvinod@gmail.com", label: "Email" },
-            ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent hover:bg-accent/5 transition-all duration-200"
-              >
-                <Icon size={20} />
-              </a>
-            ))}
-          </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-6 border-t border-border gap-3 font-mono text-xs text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Saasible · All rights reserved</p>
+          <p>Made in Bengaluru, for brands everywhere · ✦</p>
         </div>
       </div>
     </footer>
