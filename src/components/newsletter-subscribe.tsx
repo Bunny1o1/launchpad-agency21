@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const NEWSLETTER_NAME = "Revenue After The Sale";
 
 /** Substack is the email engine; issues are mirrored on saasible.in/blog. */
@@ -30,17 +28,6 @@ export function NewsletterSubscribe() {
       >
         Subscribe on Substack ↗
       </a>
-      <p className="text-[14px] text-muted-foreground mt-6">
-        Want to see where your own customers drop off?{" "}
-        <Link href="/readiness-score" className="text-foreground underline underline-offset-4">
-          Take the Lifecycle Score
-        </Link>{" "}
-        or{" "}
-        <Link href="/book" className="text-foreground underline underline-offset-4">
-          book a call
-        </Link>
-        .
-      </p>
     </aside>
   );
 }
