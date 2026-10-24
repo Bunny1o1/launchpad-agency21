@@ -1,0 +1,108 @@
+# Mirrors new "Revenue After The Sale" issues from Substack to saasible.in/blog.
+# How it works, how to run it and how to switch it off: docs/newsletter-sync.md
+#
+# The scheduled run is controlled by the repository variable NEWSLETTER_SYNC_MODE:
+#   off  (or unset)  do nothing. This is the default.
+#   pr               open a pull request per new issue, for review before it goes live
+#   push             commit new issues straight to main, so Vercel deploys them
+
+name: Newsletter sync
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # every 3 hours, at minute 17 (UTC)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run: report only. pr: open a pull request. push: commit to main."
+        type: choice
+        options: [dry-run, pr, push]
+        default: dry-run
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: newsletter-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Choose mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ inputs.mode }}"
+          else
+            MODE="${{ vars.NEWSLETTER_SYNC_MODE }}"
+          fi
+          MODE="${MODE:-off}"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Newsletter sync mode: $MODE"
+
+      - uses: actions/checkout@v4
+        if: steps.mode.outputs.mode != 'off'
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        if: steps.mode.outputs.mode != 'off'
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        if: steps.mode.outputs.mode != 'off'
+        run: npm ci --no-audit --no-fund
+
+      - name: Mirror new issues
+        id: sync
+        if: steps.mode.outputs.mode != 'off'
+        env:
+          NEWSLETTER_FEED_URL: ${{ vars.NEWSLETTER_FEED_URL }}
+          NEWSLETTER_SYNC_SINCE: ${{ vars.NEWSLETTER_SYNC_SINCE }}
+        run: |
+          if [ "${{ steps.mode.outputs.mode }}" = "dry-run" ]; then
+            node scripts/sync-substack.mjs --dry-run
+          else
+            node scripts/sync-substack.mjs
+          fi
+
+      - name: Open pull request
+        if: steps.mode.outputs.mode == 'pr' && steps.sync.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLUGS: ${{ steps.sync.outputs.slugs }}
+          SUMMARY: ${{ steps.sync.outputs.summary }}
+        run: |
+          FIRST="${SLUGS%% *}"
+          BRANCH="newsletter/$FIRST"
+          # A pull request for this issue is already waiting. Merge it first,
+          # so later issues get the right issue number on the next run.
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            echo "Pull request branch $BRANCH already exists. Skipping until it is merged."
+            exit 0
+          fi
+          git config user.name "saasible-newsletter-sync"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add src/content/blog
+          git commit -m "Mirror newsletter: $SUMMARY"
+          git push origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title "Mirror newsletter: $SUMMARY" \
+            --body "Mirrored automatically from the Revenue After The Sale Substack feed. Check the Vercel preview, then merge to publish on saasible.in/blog. See docs/newsletter-sync.md."
+
+      - name: Commit to main
+        if: steps.mode.outputs.mode == 'push' && steps.sync.outputs.count != '0'
+        env:
+          SUMMARY: ${{ steps.sync.outputs.summary }}
+        run: |
+          git config user.name "saasible-newsletter-sync"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/blog
+          git commit -m "Mirror newsletter: $SUMMARY"
+          git push origin HEAD:main
