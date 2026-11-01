@@ -18,7 +18,7 @@ const field =
 
 /**
  * Consulting enquiry form. There is no backend yet, so submitting opens the
- * visitor's email app with a pre-filled message to Vinod. Swap the submit
+ * visitor's email app with a pre-filled message to Saasible. Swap the submit
  * handler for a form service later without changing the fields.
  */
 export function EnquiryForm() {

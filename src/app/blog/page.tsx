@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Practical essays, frameworks, and lessons from managing enterprise WhatsApp Business, RCS, and conversational AI channels at scale.",
   openGraph: {
-    title: "Blog — Vinod Yadav",
+    title: "Blog — Ankit Yadav",
     description:
       "Practical essays on conversational AI, messaging strategy, and enterprise growth.",
   },

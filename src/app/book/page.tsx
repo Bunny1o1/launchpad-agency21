@@ -39,7 +39,7 @@ function BookingContent() {
   const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
     `Saasible: ${title}`
   )}&body=${encodeURIComponent(
-    "Hi Vinod,\n\nI would like to book a call.\n\nBrand and website:\nCountry or market:\nWhat I want help with:\nBest times for a call (with time zone):\n"
+    "Hi Ankit,\n\nI would like to book a call.\n\nBrand and website:\nCountry or market:\nWhat I want help with:\nBest times for a call (with time zone):\n"
   )}`;
 
   return (

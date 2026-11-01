@@ -26,14 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // Canonical always points at saasible.in, including for issues that are
     // also sent from Substack, so search credit goes to this site.
     alternates: { canonical: url },
-    authors: [{ name: post.author ?? "Vinod Yadav" }],
+    authors: [{ name: post.author ?? "Ankit Yadav" }],
     openGraph: {
       title: post.seoTitle ?? post.title,
       description,
       url,
       type: "article",
       publishedTime: post.date,
-      authors: [post.author ?? "Vinod Yadav"],
+      authors: [post.author ?? "Ankit Yadav"],
       tags: post.tags,
     },
     twitter: {
@@ -56,16 +56,12 @@ export default function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     author: {
       "@type": "Person",
-      name: "Vinod Yadav",
+      name: "Ankit Yadav",
       url: "https://saasible.in/about",
-      sameAs: [
-        "https://www.linkedin.com/in/yuvinod/",
-        "https://vinod820.substack.com/",
-      ],
     },
     publisher: {
       "@type": "Person",
-      name: "Vinod Yadav",
+      name: "Ankit Yadav",
     },
     datePublished: post.date,
     url: `https://saasible.in/blog/${post.slug}`,
@@ -166,25 +162,16 @@ export default function BlogPostPage({ params }: Props) {
           {/* Author box */}
           <div className="mt-12 p-8 rounded-2xl border border-border bg-card flex flex-col sm:flex-row gap-6 items-start">
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-surface to-border border border-border flex items-center justify-center text-lg font-bold text-muted-foreground shrink-0">
-              VY
+              AY
             </div>
             <div>
-              <div className="font-bold mb-1">Vinod Yadav</div>
-              <div className="text-sm text-accent mb-3">Customer Lifecycle and AI Growth Consultant</div>
+              <div className="font-bold mb-1">Ankit Yadav</div>
+              <div className="text-sm text-accent mb-3">Founder, Saasible</div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                8+ years running WhatsApp, RCS, SMS and conversational AI
-                programmes for global enterprise brands. Now helping consumer
+                Founder of Saasible, an AI growth agency helping consumer
                 brands build AI-led customer lifecycles.
               </p>
               <div className="flex gap-4 mt-4">
-                <a
-                  href="https://www.linkedin.com/in/yuvinod/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-accent hover:underline"
-                >
-                  LinkedIn ↗
-                </a>
                 <Link
                   href="/book"
                   className="text-xs font-semibold text-accent hover:underline"

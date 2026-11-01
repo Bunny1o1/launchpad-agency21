@@ -79,7 +79,7 @@ export default function HomePage() {
             <span className="w-6 h-px bg-muted-foreground" aria-hidden="true" />
             <span>The AI growth agency</span>
             <span aria-hidden="true">·</span>
-            <span className="text-foreground">8+ years of enterprise lifecycle experience</span>
+            <span className="text-foreground">Founded by Ankit Yadav</span>
           </motion.div>
 
           <motion.h1

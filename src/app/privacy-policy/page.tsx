@@ -15,7 +15,7 @@ const sections: { title: string; body: React.ReactNode }[] = [
     title: "Who we are",
     body: (
       <p>
-        Saasible is an AI growth agency run by Vinod Yadav from Bengaluru, India.
+        Saasible is an AI growth agency founded by Ankit Yadav, based in Bengaluru, India.
         This policy covers saasible.in. For any privacy question, email{" "}
         <span className="text-foreground select-all">yuvinod@gmail.com</span>.
       </p>

@@ -7,7 +7,7 @@ export function CalendlyEmbed() {
       <div className="rounded-2xl overflow-hidden border border-border bg-card">
         <iframe
           src={CALENDLY_EMBED_URL}
-          title="Book a call with Vinod on Calendly"
+          title="Book a call with Saasible on Calendly"
           className="w-full h-[720px] block"
           loading="lazy"
         />

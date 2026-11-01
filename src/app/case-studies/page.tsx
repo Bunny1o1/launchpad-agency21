@@ -7,7 +7,7 @@ import { PortfolioGrid } from "@/components/portfolio-card";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "How Vinod Yadav approaches growth strategy, paid acquisition, customer engagement and experimentation, with real projects and clearly labelled methodology examples.",
+    "How Saasible founder Ankit Yadav approaches growth strategy, paid acquisition, customer engagement and experimentation, with real projects and clearly labelled methodology examples.",
 };
 
 export default function PortfolioPage() {
