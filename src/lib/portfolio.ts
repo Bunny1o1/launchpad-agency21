@@ -43,7 +43,7 @@ export type CaseStudy = {
 
 /**
  * UiPath disclosure gate.
- * Turned on 17 Oct 2026 at Vinod's request. Set back to false to hide the
+ * Turned on 17 Oct 2026 at the founder's request. Set back to false to hide the
  * UiPath case study on the live site (it stays visible on previews).
  */
 export const UIPATH_DISCLOSURE_APPROVED = true;

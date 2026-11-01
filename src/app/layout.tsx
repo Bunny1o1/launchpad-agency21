@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Saasible",
   },
   description:
-    "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
+    "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, founded by Ankit Yadav.",
   keywords: [
     "AI growth agency",
     "AI agency for consumer brands",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "voice AI agent for business",
     "SMS and email lifecycle marketing",
   ],
-  authors: [{ name: "Vinod Yadav", url: "https://saasible.in" }],
+  authors: [{ name: "Ankit Yadav", url: "https://saasible.in" }],
   metadataBase: new URL("https://saasible.in"),
   // No site-wide canonical: a shared one told Google every page was a copy of the homepage.
   // Pages that need an explicit canonical set it in their own metadata.
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     url: "https://saasible.in",
     title: "Saasible | AI Growth Agency for Consumer Brands",
     description:
-      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
+      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, founded by Ankit Yadav.",
     siteName: "Saasible",
   },
   twitter: {
     card: "summary_large_image",
     title: "Saasible | AI Growth Agency for Consumer Brands",
     description:
-      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, led by enterprise lifecycle experience.",
+      "Saasible builds AI agents and CRM lifecycle systems for consumer brands worldwide. Lead generation, WhatsApp, SMS, RCS, email and voice AI, founded by Ankit Yadav.",
   },
   robots: {
     index: true,
@@ -73,17 +73,11 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Vinod Yadav",
-  jobTitle: "Customer Lifecycle and AI Growth Consultant",
+  name: "Ankit Yadav",
+  jobTitle: "Founder, Saasible",
   description:
-    "8+ years running WhatsApp, RCS, SMS and conversational AI lifecycle programs for global enterprise brands. Founder of Saasible, an AI growth agency for consumer brands.",
+    "Founder of Saasible, an AI growth agency for consumer brands.",
   url: "https://saasible.in",
-  email: "yuvinod@gmail.com",
-  sameAs: [
-    "https://www.linkedin.com/in/yuvinod/",
-    "https://github.com/Bunny1o1",
-    "https://vinod820.substack.com/",
-  ],
   knowsAbout: [
     "WhatsApp Business API",
     "Conversational AI",
@@ -98,8 +92,8 @@ const personSchema = {
   ],
   worksFor: {
     "@type": "Organization",
-    name: "Gupshup",
-    url: "https://www.gupshup.io",
+    name: "Saasible",
+    url: "https://saasible.in",
   },
 };
 
@@ -110,7 +104,7 @@ const serviceSchema = {
   description:
     "AI growth agency for consumer brands. AI agents, CRM lifecycle journeys and lead generation across WhatsApp, SMS, RCS, email and voice, with human consulting on strategy.",
   url: "https://saasible.in",
-  provider: { "@type": "Person", name: "Vinod Yadav" },
+  provider: { "@type": "Person", name: "Ankit Yadav" },
   areaServed: "Worldwide",
   serviceType: [
     "CRM Lifecycle Marketing",

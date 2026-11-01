@@ -1,4 +1,4 @@
-# Vinod Yadav — Conversational AI Growth Expert
+# Saasible — AI Growth Agency (founded by Ankit Yadav)
 
 Personal consulting website built with **Next.js 14 (App Router)**, **Tailwind CSS**, and **Framer Motion**.
 
@@ -39,5 +39,4 @@ Deploy to Vercel with one click. Update `embed_domain` in `/src/app/book/page.ts
 ## Contact
 
 - **Email:** yuvinod@gmail.com
-- **LinkedIn:** [linkedin.com/in/yuvinod](https://www.linkedin.com/in/yuvinod/)
 - **Substack:** [vinod820.substack.com](https://vinod820.substack.com/)

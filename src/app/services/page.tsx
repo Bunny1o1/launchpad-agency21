@@ -61,12 +61,12 @@ const services = [
     priceInr: "From ₹40,000/month in India",
     duration: "Ongoing",
     description:
-      "We run and improve your lifecycle every month. New journeys, new campaigns, agent tuning and reporting, plus a monthly strategy session with Vinod. A full lifecycle team without the hiring.",
+      "We run and improve your lifecycle every month. New journeys, new campaigns, agent tuning and reporting, plus a monthly strategy session with Ankit. A full lifecycle team without the hiring.",
     deliverables: [
       "Ongoing management of agents, journeys and campaigns",
       "New campaigns and journey builds each month",
       "Weekly performance review",
-      "Direct Slack or WhatsApp access to Vinod",
+      "Direct Slack or WhatsApp access to Ankit",
       "Monthly strategy and growth review",
     ],
     bestFor: "Brands that want lifecycle and retention run as an ongoing function.",

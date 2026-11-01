@@ -31,8 +31,6 @@ const footerColumns: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: "Book a call", href: "/book" },
       { label: "Email", href: "mailto:yuvinod@gmail.com", external: true },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/yuvinod/", external: true },
-      { label: "GitHub", href: "https://github.com/Bunny1o1", external: true },
     ],
   },
 ];
@@ -56,7 +54,7 @@ export function Footer() {
             <p className="text-[15px] text-muted-foreground leading-relaxed max-w-xs">
               AI agents for the work, human experience for the strategy. CRM
               lifecycle, lead generation and AI agents for consumer brands
-              worldwide, led by Vinod Yadav.
+              worldwide. Founded by Ankit Yadav.
             </p>
           </div>
 
