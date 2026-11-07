@@ -3,6 +3,7 @@ import { Instrument_Serif, Instrument_Sans, JetBrains_Mono } from "next/font/goo
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -165,6 +166,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
         </SmoothScroll>
         <Footer />
+        <WhatsAppButton />
         <LeadWidget />
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>

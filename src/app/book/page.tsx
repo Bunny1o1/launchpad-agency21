@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { ArrowRight, CheckCircle, Clock, Target, Zap } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { CalendlyEmbed } from "@/components/calendly-embed";
-import { CALENDLY_URL, CONTACT_EMAIL } from "@/lib/booking";
+import { CALENDLY_URL, CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/booking";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -156,6 +156,10 @@ function BookingContent() {
                 Or{" "}
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">
                   open Calendly
+                </a>
+                {" · "}
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">
+                  message on WhatsApp
                 </a>
                 {" · "}
                 <a href={mailto} className="font-semibold text-accent hover:underline">
