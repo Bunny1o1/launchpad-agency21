@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, CheckCircle, Clock, Target, Zap } from "lucide-react";
+import { CheckCircle, Clock, Target, Zap } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { CalendlyEmbed } from "@/components/calendly-embed";
 import { CALENDLY_URL, CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/booking";
