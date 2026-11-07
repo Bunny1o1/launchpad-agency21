@@ -176,7 +176,7 @@ export default function BlogPostPage({ params }: Props) {
                   href="/book"
                   className="text-xs font-semibold text-accent hover:underline"
                 >
-                  Book a Call ↗
+                  Book a Free Call ↗
                 </Link>
               </div>
             </div>

@@ -287,7 +287,7 @@ export function TemplateChecker() {
             href="/book"
             className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-bold text-black transition-opacity hover:opacity-90 sm:w-auto"
           >
-            Book a GTM Strategy Call — ₹999 <ArrowRight size={16} aria-hidden />
+            Book a Free 30-Minute Call <ArrowRight size={16} aria-hidden />
           </Link>
         </div>
       </section>

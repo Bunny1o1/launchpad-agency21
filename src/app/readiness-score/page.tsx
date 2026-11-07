@@ -253,7 +253,7 @@ export default function ReadinessScorePage() {
                     href="/book"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-surface border border-border text-foreground font-semibold hover:border-accent hover:text-accent transition-all"
                   >
-                    Book a Strategy Call <ArrowRight size={16} />
+                    Book a Free Strategy Call <ArrowRight size={16} />
                   </Link>
                 </div>
               )}

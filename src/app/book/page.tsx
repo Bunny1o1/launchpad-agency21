@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, CheckCircle, Clock, Target, Zap, Globe2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Target, Zap } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { CalendlyEmbed } from "@/components/calendly-embed";
-import { CALENDLY_URL, CONTACT_EMAIL, RAZORPAY_LINK } from "@/lib/booking";
+import { CALENDLY_URL, CONTACT_EMAIL } from "@/lib/booking";
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -163,23 +163,6 @@ function BookingContent() {
                 </a>
               </p>
 
-              <div className="mt-8 pt-6 border-t border-border">
-                <div className="flex items-center gap-2 mb-2">
-                  <Globe2 size={14} className="text-secondary" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Based in India?</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-                  Want a paid strategy session with a written action plan? Book it for ₹999.
-                </p>
-                <a
-                  href={RAZORPAY_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-secondary hover:underline"
-                >
-                  Pay ₹999 via Razorpay <ArrowRight size={12} />
-                </a>
-              </div>
             </motion.div>
           </div>
         </div>
