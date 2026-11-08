@@ -1,0 +1,20 @@
+
+> site@0.1.0 dev /app
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1911ms
+ ○ Compiling / ...
+ ✓ Compiled / in 8.8s (1482 modules)
+ GET / 200 in 10252ms
+ ✓ Compiled in 1463ms (707 modules)
+ ELIFECYCLE  Command failed.
+[?25h
