@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WHATSAPP_URL } from "@/lib/booking";
 
 type FooterLink = {
   label: string;
@@ -30,7 +31,7 @@ const footerColumns: { title: string; links: FooterLink[] }[] = [
     title: "Get in touch",
     links: [
       { label: "Book a call", href: "/book" },
-      { label: "WhatsApp", href: "https://wa.me/919424898865", external: true },
+      { label: "WhatsApp", href: WHATSAPP_URL, external: true },
       { label: "Email", href: "mailto:yuvinod@gmail.com", external: true },
     ],
   },
