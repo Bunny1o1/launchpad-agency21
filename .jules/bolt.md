@@ -1,0 +1,3 @@
+## 2024-03-21 - Avoiding React Re-renders in Continuous Interactions
+**Learning:** For continuous interactions like mouse tracking or scrolling (`onMouseMove`, `onScroll`), using React's `useState` triggers full component re-renders for every single event frame, causing massive performance overhead. In this codebase (using Framer Motion), `useMotionValue` and `useSpring` can replace state for these variables.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` and pass them directly to `style={{ x, y }}` properties rather than standard React state for UI properties rapidly changing from user events to bypass the React rendering lifecycle entirely.
