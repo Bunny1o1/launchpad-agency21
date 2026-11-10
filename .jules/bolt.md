@@ -1,0 +1,3 @@
+## 2024-10-24 - Bypass React Render Cycle for Continuous Animations
+**Learning:** Using `useState` to track continuous user interactions (like `onMouseMove` or `onScroll`) and pass those values to Framer Motion's `animate` prop triggers a full React component re-render on every single event frame. This severely degrades performance.
+**Action:** Instead of `useState`, use Framer Motion's `useMotionValue` combined with `useSpring` (if physics are needed) to track values. Bind these motion values directly to the `style` prop of a `motion` component. This bypasses the React render cycle completely and updates the DOM directly, resulting in smooth 60fps animations.
