@@ -1,0 +1,3 @@
+## 2024-08-16 - Replacing useState with useMotionValue for continuous interactions
+**Learning:** Using React's `useState` for continuous interactions like tracking mouse movements (e.g., in a magnetic button effect) triggers unnecessary and expensive full-component re-renders on every pixel move. This can severely degrade rendering performance and cause visual stuttering.
+**Action:** Always prefer Framer Motion's `useMotionValue` and `useSpring` hooks to store rapidly updating values. These hooks update values outside of React's standard render cycle, significantly improving performance for animations.
