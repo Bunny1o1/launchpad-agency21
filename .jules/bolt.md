@@ -1,0 +1,3 @@
+## 2024-05-24 - Bypass React Render Cycle for High-Frequency Mouse Animation
+**Learning:** Using `useState` within high-frequency events like `onMouseMove` to drive UI animations (e.g., in a magnetic button component) causes the component and its children to unnecessarily re-render on every frame. This can block the main thread and degrade overall responsiveness.
+**Action:** Always prefer updating the DOM directly to bypass React's render cycle for interactive high-frequency animations. In Framer Motion, this can be done by using `useMotionValue` and `useSpring` and passing them directly to the `style` prop of a `motion.div`.
