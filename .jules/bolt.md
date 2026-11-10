@@ -1,0 +1,3 @@
+## 2024-05-17 - React state for mouse tracking causes excessive re-renders
+**Learning:** Using React's `useState` for continuous user interactions like mouse movements (e.g., `onMouseMove`) triggers the full React component render cycle on every pixel change, leading to significant performance bottlenecks, especially in complex components or animated layouts.
+**Action:** For continuous interactions, bypass the React render cycle by utilizing Framer Motion's `useMotionValue` and `useSpring` hooks. This updates values directly on the DOM element via Framer Motion without causing React to re-render the entire component tree.
