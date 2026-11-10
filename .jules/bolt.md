@@ -1,0 +1,3 @@
+## 2024-03-24 - Optimizing high-frequency events with Framer Motion
+**Learning:** For continuous user interactions like mouse movements (`onMouseMove`) or scrolling, using React `useState` triggers unnecessary and expensive re-renders for every state update. This can degrade performance significantly in interactive components like magnetic buttons.
+**Action:** Prefer Framer Motion`s `useMotionValue` combined with `useSpring` (or `useTransform`). These hooks update the DOM directly, bypassing the React render cycle entirely, leading to smoother animations and better overall performance for high-frequency events.
