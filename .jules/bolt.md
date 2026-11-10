@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimization] Framer Motion useMotionValue over useState
+**Learning:** Using React's `useState` for continuous user interactions (like mousemove events in the `MagneticButton` component) triggers an expensive React render cycle on every frame. This is a significant anti-pattern for performance when using Framer Motion.
+**Action:** Always prefer Framer Motion's `useMotionValue` combined with `useSpring` for continuous updates. Bind the resulting values directly to the `style` prop of the `motion` component. This bypasses the React render cycle entirely, resulting in much smoother animations and significantly reduced CPU usage.
