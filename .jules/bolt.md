@@ -1,0 +1,3 @@
+## 2024-03-24 - [Avoid React State for Continuous Animations]
+**Learning:** Using React `useState` for high-frequency interactions like `onMouseMove` triggers a full render cycle on every pixel movement, causing significant main thread blockage and jank. Framer Motion provides a specific escape hatch for this.
+**Action:** For continuous user interactions (mouse tracking, scrolling), ALWAYS prefer Framer Motion's `useMotionValue` and `useSpring` over React's `useState`. This updates values independently of the React render cycle, keeping the 60fps animation perfectly smooth.
