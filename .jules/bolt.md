@@ -1,0 +1,3 @@
+## 2024-03-21 - Optimize MagneticButton rendering
+**Learning:** For continuous user interactions like mouse movements that trigger constant updates, using React state (`useState`) causes performance issues due to the React render cycle triggering on every event. Framer Motion's `useMotionValue` and `useSpring` can bypass the React render cycle entirely by applying values directly to the DOM element's style.
+**Action:** Replace `useState` with `useMotionValue` and `useSpring`, and bind the spring values directly to the `style` prop of the `motion.div` instead of using `animate` and `transition` props.
