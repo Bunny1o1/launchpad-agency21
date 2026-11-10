@@ -1,0 +1,3 @@
+## 2024-11-10 - Bypassing React Render Cycle for Continuous Interactions
+**Learning:** For continuous user interactions like mouse movements (e.g., hover effects on buttons), using React's `useState` causes the component to re-render on every frame or event, which can lead to performance bottlenecks and janky animations. Framer Motion provides `useMotionValue` and `useSpring` which can manage state and animate styles directly on the DOM element, bypassing the React render cycle entirely.
+**Action:** When implementing continuous interactive effects (like parallax, magnetic buttons, custom cursors), prefer `useMotionValue` and bind it directly to the `style` prop of a `motion` component rather than using `useState` and passing it to the `animate` prop.
