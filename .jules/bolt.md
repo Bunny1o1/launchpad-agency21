@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimized Framer Motion Magnetic Button]
+ **Learning:** In Next.js with React 18, tracking mouse position via `useState` for Framer Motion components triggers a full component re-render on every single pixel movement. This causes significant main thread work, especially if the component wraps complex children or is used multiple times on a page.
+ **Action:** For frequent events like `onMouseMove` or `onScroll` in Framer Motion components, always use `useMotionValue` combined with `useSpring` (or other motion hooks) and pass them directly to the `style` prop (e.g., `style={{ x: springX }}`). This bypasses the React render cycle entirely, directly updating the DOM element for smooth, jank-free performance.
