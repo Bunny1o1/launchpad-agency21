@@ -1,0 +1,3 @@
+## 2026-08-11 - [Optimize Framer Motion Continuous Interactions]
+**Learning:** React state (`useState`) is inappropriate for values that update rapidly on every animation frame or continuous user interactions (e.g. `mousemove` or scrolling). Doing so triggers full component re-renders (O(N) renders for N events), degrading performance and sometimes causing visual stuttering, especially on low-end devices.
+**Action:** When tracking rapid, continuous interactions for animations, always use Framer Motion's `useMotionValue` (and derived values like `useSpring` or `useTransform`) and pass them directly to the `style` prop of a `motion` component. This updates the DOM directly and bypasses the React render cycle completely.
