@@ -1,0 +1,3 @@
+## 2024-05-24 - React state for continuous user interaction
+**Learning:** Using `useState` to track rapid user interactions (like `onMouseMove`) triggers continuous React render cycles, degrading performance and causing janky animations, particularly in components that are used frequently.
+**Action:** Use Framer Motion's `useMotionValue` combined with `useSpring` (or similar mechanisms) to handle animation states directly via the DOM/styles. This bypasses the React render cycle entirely, leading to significantly smoother animations and reduced CPU overhead.
