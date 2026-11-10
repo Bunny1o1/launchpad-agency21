@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimization: Bypass React Render Cycle for Continuous Animations]
+**Learning:** For continuous user interactions like mouse movements or scrolling (e.g. `onMouseMove`), using React's `useState` causes the component to re-render constantly. Framer Motion provides a pattern (`useMotionValue` and `useSpring`) to update motion values directly and bypass the React render cycle entirely.
+**Action:** Always prefer Framer Motion's direct value APIs (`useMotionValue` bound to the `style` prop) over `useState` for frequently updating values driven by continuous input like mouse movement.
