@@ -1,0 +1,3 @@
+## 2024-05-24 - Avoiding React Render Cycle for Continuous Interactions
+**Learning:** Using React state (`useState`) for continuous interactions like `onMouseMove` triggers a full React component render cycle on every frame. When combined with Framer Motion, this is inefficient. Framer Motion provides `useMotionValue` and `useSpring` which can be bound directly to the `style` prop, completely bypassing the React render cycle while maintaining smooth animations.
+**Action:** Always prefer `useMotionValue` and `useSpring` bound directly to `style` props over `useState` for frequent/continuous value updates in Framer Motion animations to optimize rendering performance.
