@@ -1,0 +1,3 @@
+## 2024-05-14 - Bypass React Render Cycle on Hover
+**Learning:** In continuous mouse event handlers like `onMouseMove` in components like `MagneticButton`, using React's `useState` triggers unnecessary renders of the component tree every time the mouse moves by a pixel. This is extremely inefficient.
+**Action:** Use Framer Motion's `useMotionValue` and `useSpring` hooks instead. These primitives can be bound directly to the `style` prop of motion components (e.g., `<motion.div style={{ x, y }} />`), which bypassed the React render cycle and updates the DOM styles directly, offering massive performance improvements for continuous interactions.
