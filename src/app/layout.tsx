@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  other: {
+    "google-adsense-account": "ca-pub-8127414846194241",
+  },
 };
 
 const personSchema = {
@@ -126,6 +129,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {/* Google AdSense: plain script tag so it is in the server-rendered <head> on every page */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8127414846194241"
+          crossOrigin="anonymous"
+        />
+      </head>
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
 
       {/* Google Ads Conversion Tag */}
